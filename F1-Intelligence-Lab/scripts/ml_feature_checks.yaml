@@ -1,0 +1,31 @@
+checks:
+  - id: nonempty_split
+    type: row_count_between
+    min: 1
+    max: 1000000
+  - id: unique_prediction
+    type: unique
+    column: row_id
+  - id: complete_history
+    type: not_null
+    column: rolling_mean_3_s
+    threshold: 0
+  - id: complete_cutoff
+    type: not_null
+    column: prediction_at
+    threshold: 0
+  - id: verified_only
+    type: between
+    column: session_verified
+    min: 1
+    max: 1
+  - id: finite_target_bounds
+    type: between
+    column: target_lap_time_s
+    min: 1
+    max: 3600
+  - id: finite_lag_bounds
+    type: between
+    column: lag_1_s
+    min: 1
+    max: 3600

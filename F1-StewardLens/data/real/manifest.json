@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "corpus": "Official FIA Formula 1 steward decisions",
+  "retrieved_at": "2026-10-25",
+  "output": "decisions.json",
+  "documents": [
+    {
+      "id": "fia-2024-italian-gp-doc-55",
+      "title": "Infringement - Car 27 - Causing a collision",
+      "championship": "FIA Formula One World Championship",
+      "season": 2024,
+      "event": "Italian Grand Prix",
+      "event_dates": "2024-08-30/2024-09-01",
+      "published_at": "2024-09-01T16:28:00+02:00",
+      "source_page_url": "https://www.fia.com/documents/season/season-2024-2043/event/Italian%20Grand%20Prix/championships/fia-formula-one-world-championship-14",
+      "source_document_url": "https://api.fia.com/sites/default/files/decision-document/2024%20Italian%20Grand%20Prix%20-%20Infringement%20-%20Car%2027%20-%20Causing%20a%20collision.pdf",
+      "local_pdf": "documents/2024-italian-gp-doc-55-car-27.pdf",
+      "sha256": "2875015c962e5f3f28799c9a4e10e32ab5e41625d3c5840d03b0c3301d894cf2",
+      "size_bytes": 330435,
+      "expected": {
+        "season": 2024,
+        "document_number": 55,
+        "driver_number": 27,
+        "driver_name": "Nico Hulkenberg",
+        "decision": "10 second time penalty."
+      }
+    },
+    {
+      "id": "fia-2024-italian-gp-doc-57",
+      "title": "Infringement - Car 20 - Causing a collision",
+      "championship": "FIA Formula One World Championship",
+      "season": 2024,
+      "event": "Italian Grand Prix",
+      "event_dates": "2024-08-30/2024-09-01",
+      "published_at": "2024-09-01T16:38:00+02:00",
+      "source_page_url": "https://www.fia.com/documents/season/season-2024-2043/event/Italian%20Grand%20Prix/championships/fia-formula-one-world-championship-14",
+      "source_document_url": "https://api.fia.com/sites/default/files/decision-document/2024%20Italian%20Grand%20Prix%20-%20Infringement%20-%20Car%2020%20-%20Causing%20a%20collision.pdf",
+      "local_pdf": "documents/2024-italian-gp-doc-57-car-20.pdf",
+      "sha256": "07b852e4671b05a7fc877763251f0bb9e423220b63a71fb39a6fd6d5ed365a5f",
+      "size_bytes": 334014,
+      "expected": {
+        "season": 2024,
+        "document_number": 57,
+        "driver_number": 20,
+        "driver_name": "Kevin Magnussen",
+        "decision": "10 second time penalty."
+      }
+    }
+  ]
+}
+

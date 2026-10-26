@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ev-aurora-position",
+    "kind": "fact",
+    "summary": "Driver Blue was approximately half a car length ahead when both cars began turning into the corner.",
+    "source": "sample://aurora/verified-observation/position",
+    "quality": 0.9
+  },
+  {
+    "id": "ev-aurora-braking",
+    "kind": "telemetry",
+    "summary": "The sample trace marks a front-wheel lock-up and a later braking point for Driver Amber relative to the preceding lap.",
+    "source": "sample://aurora/telemetry/braking",
+    "quality": 0.85
+  },
+  {
+    "id": "ev-aurora-control",
+    "kind": "race_control",
+    "summary": "The fictional race-control log records contact at Turn 6 and notes that the incident was reviewed after the race.",
+    "source": "sample://aurora/race-control/18",
+    "quality": 0.95
+  },
+  {
+    "id": "ev-solstice-position",
+    "kind": "fact",
+    "summary": "The cars were substantially alongside from the braking point through the corner apex.",
+    "source": "sample://solstice/verified-observation/position",
+    "quality": 0.9
+  },
+  {
+    "id": "ev-solstice-lines",
+    "kind": "telemetry",
+    "summary": "Both sample position traces remain within their respective halves of the track until the exit kerb narrows the available space.",
+    "source": "sample://solstice/telemetry/lines",
+    "quality": 0.8
+  },
+  {
+    "id": "ev-solstice-control",
+    "kind": "race_control",
+    "summary": "The fictional race-control log records minor contact with no stopped car, debris or immediate investigation.",
+    "source": "sample://solstice/race-control/31",
+    "quality": 0.95
+  },
+  {
+    "id": "ev-northstar-offtrack",
+    "kind": "fact",
+    "summary": "Driver Ember left the defined circuit before the corner and remained outside the track boundary for several seconds.",
+    "source": "sample://northstar/verified-observation/offtrack",
+    "quality": 0.9
+  },
+  {
+    "id": "ev-northstar-rejoin",
+    "kind": "telemetry",
+    "summary": "The sample position trace crosses from outside the track to the racing line while Driver Frost closes at a much higher speed.",
+    "source": "sample://northstar/telemetry/rejoin",
+    "quality": 0.88
+  },
+  {
+    "id": "ev-northstar-control",
+    "kind": "race_control",
+    "summary": "The fictional race-control log records contact immediately after Driver Ember rejoined at Turn 11.",
+    "source": "sample://northstar/race-control/42",
+    "quality": 0.95
+  }
+]
+

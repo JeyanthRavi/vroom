@@ -1,0 +1,35 @@
+[
+  {
+    "id": "sample-rule-2026-4.1",
+    "season": 2026,
+    "article": "4.1",
+    "title": "Loss of control during an overtake",
+    "text": "For this fictional exercise, a driver attempting an overtake must remain in reasonable control and take reasonable steps to avoid contact.",
+    "source": "sample://rules/2026/4.1-not-an-fia-rule"
+  },
+  {
+    "id": "sample-rule-2026-4.2",
+    "season": 2026,
+    "article": "4.2",
+    "title": "Substantially alongside",
+    "text": "For this fictional exercise, when cars are substantially alongside, both drivers should provide reasonable racing room and maintain a predictable line.",
+    "source": "sample://rules/2026/4.2-not-an-fia-rule"
+  },
+  {
+    "id": "sample-rule-2026-5.3",
+    "season": 2026,
+    "article": "5.3",
+    "title": "Safe rejoining",
+    "text": "For this fictional exercise, a driver who leaves the circuit may rejoin only when it is safe and without crossing unpredictably into the path of an approaching car.",
+    "source": "sample://rules/2026/5.3-not-an-fia-rule"
+  },
+  {
+    "id": "sample-rule-2026-7.1",
+    "season": 2026,
+    "article": "7.1",
+    "title": "Assessment of responsibility",
+    "text": "For this fictional exercise, contact alone does not establish responsibility; position, control, predictability, available space and avoidability should be considered together.",
+    "source": "sample://rules/2026/7.1-not-an-fia-rule"
+  }
+]
+

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "sample-aurora-2026-01",
+    "season": 2026,
+    "event": "Aurora Grand Prix (fictional)",
+    "session": "Race",
+    "lap": 18,
+    "driver_a": "Driver Amber",
+    "driver_b": "Driver Blue",
+    "category": "causing a collision",
+    "summary": "Driver Amber attempted a late inside overtake, locked the front tyres under braking, missed the apex and made contact with Driver Blue, who was ahead at turn-in.",
+    "evidence_ids": ["ev-aurora-position", "ev-aurora-braking", "ev-aurora-control"],
+    "official_decision": "penalty",
+    "official_penalty": "time_penalty"
+  },
+  {
+    "id": "sample-solstice-2026-02",
+    "season": 2026,
+    "event": "Solstice Grand Prix (fictional)",
+    "session": "Race",
+    "lap": 31,
+    "driver_a": "Driver Cedar",
+    "driver_b": "Driver Dune",
+    "category": "causing a collision",
+    "summary": "The drivers entered a medium-speed corner side by side, each maintained a predictable line, and minor wheel contact occurred near the exit without either driver losing control.",
+    "evidence_ids": ["ev-solstice-position", "ev-solstice-lines", "ev-solstice-control"],
+    "official_decision": "racing_incident",
+    "official_penalty": "none"
+  },
+  {
+    "id": "sample-northstar-2026-03",
+    "season": 2026,
+    "event": "Northstar Grand Prix (fictional)",
+    "session": "Race",
+    "lap": 42,
+    "driver_a": "Driver Ember",
+    "driver_b": "Driver Frost",
+    "category": "causing a collision",
+    "summary": "After leaving the circuit, Driver Ember rejoined across the racing line at reduced speed and contacted Driver Frost, who was approaching on the established racing line.",
+    "evidence_ids": ["ev-northstar-offtrack", "ev-northstar-rejoin", "ev-northstar-control"],
+    "official_decision": "penalty",
+    "official_penalty": "time_penalty"
+  }
+]
+

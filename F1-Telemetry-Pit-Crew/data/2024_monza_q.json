@@ -1,0 +1,6127 @@
+{
+  "schema_version": 1,
+  "session": {
+    "id": "2024-monza-q",
+    "name": "2024 Italian Grand Prix \u2014 Qualifying",
+    "year": 2024,
+    "event": "Italian Grand Prix",
+    "session_code": "Q",
+    "source_type": "openf1_processed",
+    "source_url": "https://openf1.org/",
+    "source_endpoints": [
+      "https://api.openf1.org/v1/sessions?session_key=9586",
+      "https://api.openf1.org/v1/laps?session_key=9586&driver_number=4",
+      "https://api.openf1.org/v1/laps?session_key=9586&driver_number=81",
+      "https://api.openf1.org/v1/car_data?session_key=9586&driver_number=4",
+      "https://api.openf1.org/v1/car_data?session_key=9586&driver_number=81"
+    ],
+    "generated_at": "2026-10-25",
+    "notes": "Compact educational fixture from OpenF1 car_data and laps endpoints. Distance is derived by integrating the public speed samples and is approximate. Formula 1 names and timing data remain subject to their original rights; this project is unofficial and not affiliated with Formula 1, FIA, teams, or drivers."
+  },
+  "laps": [
+    {
+      "id": "2024-monza-q-nor-fastest",
+      "driver": "NOR",
+      "circuit": "Italian Grand Prix \u2014 Monza",
+      "lap_number": 11,
+      "lap_time": 79.327,
+      "compound": "UNKNOWN",
+      "tyre_life": 0,
+      "samples": [
+        {
+          "distance": 0.0,
+          "time": 0.099,
+          "speed": 321.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11334.0,
+          "drs": 14
+        },
+        {
+          "distance": 17.86,
+          "time": 0.299,
+          "speed": 322.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11378.0,
+          "drs": 14
+        },
+        {
+          "distance": 46.62,
+          "time": 0.619,
+          "speed": 325.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11457.0,
+          "drs": 14
+        },
+        {
+          "distance": 82.89,
+          "time": 1.019,
+          "speed": 328.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11542.0,
+          "drs": 14
+        },
+        {
+          "distance": 115.79,
+          "time": 1.379,
+          "speed": 330.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11615.0,
+          "drs": 14
+        },
+        {
+          "distance": 148.89,
+          "time": 1.739,
+          "speed": 332.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11681.0,
+          "drs": 14
+        },
+        {
+          "distance": 167.37,
+          "time": 1.939,
+          "speed": 333.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11738.0,
+          "drs": 14
+        },
+        {
+          "distance": 185.89,
+          "time": 2.139,
+          "speed": 334.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11763.0,
+          "drs": 14
+        },
+        {
+          "distance": 200.83,
+          "time": 2.3,
+          "speed": 334.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11782.0,
+          "drs": 14
+        },
+        {
+          "distance": 230.61,
+          "time": 2.62,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11824.0,
+          "drs": 14
+        },
+        {
+          "distance": 252.95,
+          "time": 2.859,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11906.0,
+          "drs": 14
+        },
+        {
+          "distance": 282.95,
+          "time": 3.179,
+          "speed": 338.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11884.0,
+          "drs": 14
+        },
+        {
+          "distance": 297.97,
+          "time": 3.339,
+          "speed": 338.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11927.0,
+          "drs": 14
+        },
+        {
+          "distance": 328.06,
+          "time": 3.659,
+          "speed": 339.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11964.0,
+          "drs": 14
+        },
+        {
+          "distance": 358.28,
+          "time": 3.979,
+          "speed": 341.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12002.0,
+          "drs": 14
+        },
+        {
+          "distance": 384.84,
+          "time": 4.259,
+          "speed": 342.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12042.0,
+          "drs": 14
+        },
+        {
+          "distance": 422.84,
+          "time": 4.659,
+          "speed": 342.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12081.0,
+          "drs": 14
+        },
+        {
+          "distance": 457.09,
+          "time": 5.019,
+          "speed": 343.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12078.0,
+          "drs": 14
+        },
+        {
+          "distance": 472.36,
+          "time": 5.179,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12078.0,
+          "drs": 14
+        },
+        {
+          "distance": 502.94,
+          "time": 5.499,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12111.0,
+          "drs": 14
+        },
+        {
+          "distance": 518.25,
+          "time": 5.659,
+          "speed": 345.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12101.0,
+          "drs": 14
+        },
+        {
+          "distance": 537.42,
+          "time": 5.859,
+          "speed": 345.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12149.0,
+          "drs": 14
+        },
+        {
+          "distance": 556.58,
+          "time": 6.059,
+          "speed": 345.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12154.0,
+          "drs": 14
+        },
+        {
+          "distance": 579.62,
+          "time": 6.299,
+          "speed": 346.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12174.0,
+          "drs": 14
+        },
+        {
+          "distance": 602.68,
+          "time": 6.539,
+          "speed": 346.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12188.0,
+          "drs": 14
+        },
+        {
+          "distance": 621.9,
+          "time": 6.739,
+          "speed": 346.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12182.0,
+          "drs": 14
+        },
+        {
+          "distance": 652.7,
+          "time": 7.059,
+          "speed": 347.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12193.0,
+          "drs": 14
+        },
+        {
+          "distance": 671.98,
+          "time": 7.259,
+          "speed": 347.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12138.0,
+          "drs": 14
+        },
+        {
+          "distance": 698.89,
+          "time": 7.539,
+          "speed": 345.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12093.0,
+          "drs": 14
+        },
+        {
+          "distance": 721.89,
+          "time": 7.779,
+          "speed": 345.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12121.0,
+          "drs": 14
+        },
+        {
+          "distance": 744.86,
+          "time": 8.019,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12099.0,
+          "drs": 14
+        },
+        {
+          "distance": 774.33,
+          "time": 8.339,
+          "speed": 319.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 11439.0,
+          "drs": 8
+        },
+        {
+          "distance": 801.08,
+          "time": 8.659,
+          "speed": 283.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9790.0,
+          "drs": 8
+        },
+        {
+          "distance": 823.46,
+          "time": 8.98,
+          "speed": 219.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9642.0,
+          "drs": 8
+        },
+        {
+          "distance": 838.98,
+          "time": 9.26,
+          "speed": 180.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10349.0,
+          "drs": 8
+        },
+        {
+          "distance": 856.66,
+          "time": 9.659,
+          "speed": 139.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 7,
+          "rpm": 9632.0,
+          "drs": 8
+        },
+        {
+          "distance": 863.94,
+          "time": 9.859,
+          "speed": 123.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 10162.0,
+          "drs": 8
+        },
+        {
+          "distance": 875.39,
+          "time": 10.219,
+          "speed": 106.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 2,
+          "rpm": 9150.0,
+          "drs": 8
+        },
+        {
+          "distance": 880.03,
+          "time": 10.379,
+          "speed": 103.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 2,
+          "rpm": 9085.0,
+          "drs": 8
+        },
+        {
+          "distance": 884.5,
+          "time": 10.539,
+          "speed": 98.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 2,
+          "rpm": 8343.0,
+          "drs": 8
+        },
+        {
+          "distance": 889.83,
+          "time": 10.739,
+          "speed": 94.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 2,
+          "rpm": 8060.0,
+          "drs": 8
+        },
+        {
+          "distance": 897.96,
+          "time": 11.059,
+          "speed": 89.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7751.0,
+          "drs": 8
+        },
+        {
+          "distance": 908.47,
+          "time": 11.499,
+          "speed": 83.0,
+          "throttle": 12.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7939.0,
+          "drs": 8
+        },
+        {
+          "distance": 915.05,
+          "time": 11.779,
+          "speed": 86.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 2,
+          "rpm": 7063.0,
+          "drs": 8
+        },
+        {
+          "distance": 923.4,
+          "time": 12.139,
+          "speed": 81.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 2,
+          "rpm": 6806.0,
+          "drs": 8
+        },
+        {
+          "distance": 930.33,
+          "time": 12.459,
+          "speed": 75.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 6617.0,
+          "drs": 8
+        },
+        {
+          "distance": 935.26,
+          "time": 12.699,
+          "speed": 73.0,
+          "throttle": 7.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 6534.0,
+          "drs": 8
+        },
+        {
+          "distance": 940.98,
+          "time": 12.979,
+          "speed": 74.0,
+          "throttle": 22.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 6984.0,
+          "drs": 8
+        },
+        {
+          "distance": 946.08,
+          "time": 13.219,
+          "speed": 79.0,
+          "throttle": 37.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7743.0,
+          "drs": 8
+        },
+        {
+          "distance": 951.48,
+          "time": 13.459,
+          "speed": 83.0,
+          "throttle": 37.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 8729.0,
+          "drs": 8
+        },
+        {
+          "distance": 959.17,
+          "time": 13.779,
+          "speed": 90.0,
+          "throttle": 47.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 9760.0,
+          "drs": 8
+        },
+        {
+          "distance": 968.92,
+          "time": 14.139,
+          "speed": 105.0,
+          "throttle": 70.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 9911.0,
+          "drs": 8
+        },
+        {
+          "distance": 977.67,
+          "time": 14.419,
+          "speed": 120.0,
+          "throttle": 79.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 11205.0,
+          "drs": 8
+        },
+        {
+          "distance": 984.59,
+          "time": 14.619,
+          "speed": 129.0,
+          "throttle": 97.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 11625.0,
+          "drs": 8
+        },
+        {
+          "distance": 992.09,
+          "time": 14.819,
+          "speed": 141.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 10785.0,
+          "drs": 8
+        },
+        {
+          "distance": 1005.33,
+          "time": 15.139,
+          "speed": 157.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 11056.0,
+          "drs": 8
+        },
+        {
+          "distance": 1018.17,
+          "time": 15.42,
+          "speed": 172.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10782.0,
+          "drs": 8
+        },
+        {
+          "distance": 1027.86,
+          "time": 15.62,
+          "speed": 177.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 11300.0,
+          "drs": 8
+        },
+        {
+          "distance": 1046.41,
+          "time": 15.98,
+          "speed": 194.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10281.0,
+          "drs": 8
+        },
+        {
+          "distance": 1057.41,
+          "time": 16.18,
+          "speed": 202.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10742.0,
+          "drs": 8
+        },
+        {
+          "distance": 1066.49,
+          "time": 16.339,
+          "speed": 209.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11054.0,
+          "drs": 8
+        },
+        {
+          "distance": 1083.14,
+          "time": 16.619,
+          "speed": 219.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11592.0,
+          "drs": 8
+        },
+        {
+          "distance": 1092.96,
+          "time": 16.779,
+          "speed": 223.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10892.0,
+          "drs": 8
+        },
+        {
+          "distance": 1110.61,
+          "time": 17.059,
+          "speed": 231.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10643.0,
+          "drs": 8
+        },
+        {
+          "distance": 1128.89,
+          "time": 17.339,
+          "speed": 239.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10977.0,
+          "drs": 8
+        },
+        {
+          "distance": 1142.31,
+          "time": 17.539,
+          "speed": 244.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11223.0,
+          "drs": 8
+        },
+        {
+          "distance": 1164.31,
+          "time": 17.859,
+          "speed": 251.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11403.0,
+          "drs": 8
+        },
+        {
+          "distance": 1175.57,
+          "time": 18.019,
+          "speed": 256.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11698.0,
+          "drs": 8
+        },
+        {
+          "distance": 1189.91,
+          "time": 18.219,
+          "speed": 260.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11032.0,
+          "drs": 8
+        },
+        {
+          "distance": 1204.46,
+          "time": 18.419,
+          "speed": 264.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10588.0,
+          "drs": 8
+        },
+        {
+          "distance": 1237.16,
+          "time": 18.859,
+          "speed": 271.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10864.0,
+          "drs": 8
+        },
+        {
+          "distance": 1258.39,
+          "time": 19.139,
+          "speed": 275.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11045.0,
+          "drs": 8
+        },
+        {
+          "distance": 1280.01,
+          "time": 19.419,
+          "speed": 281.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11248.0,
+          "drs": 8
+        },
+        {
+          "distance": 1298.81,
+          "time": 19.659,
+          "speed": 283.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11340.0,
+          "drs": 8
+        },
+        {
+          "distance": 1311.46,
+          "time": 19.819,
+          "speed": 286.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11455.0,
+          "drs": 8
+        },
+        {
+          "distance": 1327.4,
+          "time": 20.019,
+          "speed": 288.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11490.0,
+          "drs": 8
+        },
+        {
+          "distance": 1349.92,
+          "time": 20.299,
+          "speed": 291.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11457.0,
+          "drs": 8
+        },
+        {
+          "distance": 1379.17,
+          "time": 20.659,
+          "speed": 294.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10427.0,
+          "drs": 8
+        },
+        {
+          "distance": 1402.19,
+          "time": 20.939,
+          "speed": 298.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10513.0,
+          "drs": 8
+        },
+        {
+          "distance": 1422.09,
+          "time": 21.179,
+          "speed": 299.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10605.0,
+          "drs": 8
+        },
+        {
+          "distance": 1442.12,
+          "time": 21.419,
+          "speed": 302.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10650.0,
+          "drs": 8
+        },
+        {
+          "distance": 1462.29,
+          "time": 21.659,
+          "speed": 303.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10698.0,
+          "drs": 8
+        },
+        {
+          "distance": 1482.52,
+          "time": 21.899,
+          "speed": 304.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10767.0,
+          "drs": 8
+        },
+        {
+          "distance": 1502.98,
+          "time": 22.14,
+          "speed": 307.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10831.0,
+          "drs": 8
+        },
+        {
+          "distance": 1520.06,
+          "time": 22.34,
+          "speed": 308.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10856.0,
+          "drs": 8
+        },
+        {
+          "distance": 1544.09,
+          "time": 22.62,
+          "speed": 310.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10889.0,
+          "drs": 8
+        },
+        {
+          "distance": 1557.87,
+          "time": 22.78,
+          "speed": 310.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10942.0,
+          "drs": 8
+        },
+        {
+          "distance": 1571.58,
+          "time": 22.939,
+          "speed": 311.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11016.0,
+          "drs": 8
+        },
+        {
+          "distance": 1585.43,
+          "time": 23.099,
+          "speed": 312.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11015.0,
+          "drs": 8
+        },
+        {
+          "distance": 1609.77,
+          "time": 23.379,
+          "speed": 314.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11048.0,
+          "drs": 8
+        },
+        {
+          "distance": 1623.73,
+          "time": 23.539,
+          "speed": 314.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11106.0,
+          "drs": 8
+        },
+        {
+          "distance": 1637.68,
+          "time": 23.699,
+          "speed": 314.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11107.0,
+          "drs": 8
+        },
+        {
+          "distance": 1655.16,
+          "time": 23.899,
+          "speed": 315.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11135.0,
+          "drs": 8
+        },
+        {
+          "distance": 1672.68,
+          "time": 24.099,
+          "speed": 316.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11181.0,
+          "drs": 8
+        },
+        {
+          "distance": 1700.86,
+          "time": 24.419,
+          "speed": 318.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11220.0,
+          "drs": 8
+        },
+        {
+          "distance": 1722.1,
+          "time": 24.659,
+          "speed": 319.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11223.0,
+          "drs": 8
+        },
+        {
+          "distance": 1743.4,
+          "time": 24.899,
+          "speed": 320.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11276.0,
+          "drs": 8
+        },
+        {
+          "distance": 1764.76,
+          "time": 25.139,
+          "speed": 321.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11323.0,
+          "drs": 8
+        },
+        {
+          "distance": 1786.2,
+          "time": 25.379,
+          "speed": 322.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11330.0,
+          "drs": 8
+        },
+        {
+          "distance": 1811.28,
+          "time": 25.659,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11376.0,
+          "drs": 8
+        },
+        {
+          "distance": 1847.28,
+          "time": 26.059,
+          "speed": 325.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11421.0,
+          "drs": 8
+        },
+        {
+          "distance": 1865.33,
+          "time": 26.259,
+          "speed": 325.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11450.0,
+          "drs": 8
+        },
+        {
+          "distance": 1894.22,
+          "time": 26.579,
+          "speed": 325.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11414.0,
+          "drs": 8
+        },
+        {
+          "distance": 1923.07,
+          "time": 26.899,
+          "speed": 324.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11394.0,
+          "drs": 8
+        },
+        {
+          "distance": 1937.47,
+          "time": 27.059,
+          "speed": 324.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11374.0,
+          "drs": 8
+        },
+        {
+          "distance": 1962.63,
+          "time": 27.339,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11359.0,
+          "drs": 8
+        },
+        {
+          "distance": 1980.41,
+          "time": 27.539,
+          "speed": 317.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 11324.0,
+          "drs": 8
+        },
+        {
+          "distance": 2003.23,
+          "time": 27.819,
+          "speed": 270.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9694.0,
+          "drs": 8
+        },
+        {
+          "distance": 2027.93,
+          "time": 28.179,
+          "speed": 224.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10009.0,
+          "drs": 8
+        },
+        {
+          "distance": 2037.31,
+          "time": 28.339,
+          "speed": 198.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9729.0,
+          "drs": 8
+        },
+        {
+          "distance": 2051.32,
+          "time": 28.62,
+          "speed": 161.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 9748.0,
+          "drs": 8
+        },
+        {
+          "distance": 2061.52,
+          "time": 28.86,
+          "speed": 145.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 9644.0,
+          "drs": 8
+        },
+        {
+          "distance": 2072.22,
+          "time": 29.14,
+          "speed": 130.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 3,
+          "rpm": 9154.0,
+          "drs": 8
+        },
+        {
+          "distance": 2080.68,
+          "time": 29.38,
+          "speed": 124.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 3,
+          "rpm": 8706.0,
+          "drs": 8
+        },
+        {
+          "distance": 2090.06,
+          "time": 29.659,
+          "speed": 118.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 8435.0,
+          "drs": 8
+        },
+        {
+          "distance": 2097.89,
+          "time": 29.899,
+          "speed": 117.0,
+          "throttle": 1.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 8014.0,
+          "drs": 8
+        },
+        {
+          "distance": 2105.56,
+          "time": 30.139,
+          "speed": 113.0,
+          "throttle": 29.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 8343.0,
+          "drs": 8
+        },
+        {
+          "distance": 2114.58,
+          "time": 30.419,
+          "speed": 119.0,
+          "throttle": 57.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 8656.0,
+          "drs": 8
+        },
+        {
+          "distance": 2126.88,
+          "time": 30.779,
+          "speed": 127.0,
+          "throttle": 40.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 9357.0,
+          "drs": 8
+        },
+        {
+          "distance": 2141.33,
+          "time": 31.179,
+          "speed": 133.0,
+          "throttle": 44.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 10150.0,
+          "drs": 8
+        },
+        {
+          "distance": 2153.28,
+          "time": 31.499,
+          "speed": 136.0,
+          "throttle": 62.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 10291.0,
+          "drs": 8
+        },
+        {
+          "distance": 2166.04,
+          "time": 31.819,
+          "speed": 151.0,
+          "throttle": 96.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 11450.0,
+          "drs": 8
+        },
+        {
+          "distance": 2174.68,
+          "time": 32.019,
+          "speed": 160.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 11882.0,
+          "drs": 8
+        },
+        {
+          "distance": 2183.87,
+          "time": 32.219,
+          "speed": 171.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 10902.0,
+          "drs": 8
+        },
+        {
+          "distance": 2203.82,
+          "time": 32.619,
+          "speed": 188.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 11150.0,
+          "drs": 8
+        },
+        {
+          "distance": 2212.24,
+          "time": 32.779,
+          "speed": 191.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10294.0,
+          "drs": 8
+        },
+        {
+          "distance": 2225.24,
+          "time": 33.019,
+          "speed": 199.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10716.0,
+          "drs": 8
+        },
+        {
+          "distance": 2234.24,
+          "time": 33.179,
+          "speed": 206.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10950.0,
+          "drs": 8
+        },
+        {
+          "distance": 2248.31,
+          "time": 33.419,
+          "speed": 216.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11411.0,
+          "drs": 8
+        },
+        {
+          "distance": 2262.91,
+          "time": 33.659,
+          "speed": 222.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10151.0,
+          "drs": 8
+        },
+        {
+          "distance": 2285.56,
+          "time": 34.019,
+          "speed": 231.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10622.0,
+          "drs": 8
+        },
+        {
+          "distance": 2309.16,
+          "time": 34.379,
+          "speed": 241.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11065.0,
+          "drs": 8
+        },
+        {
+          "distance": 2325.46,
+          "time": 34.619,
+          "speed": 248.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11399.0,
+          "drs": 8
+        },
+        {
+          "distance": 2339.37,
+          "time": 34.819,
+          "speed": 253.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11581.0,
+          "drs": 8
+        },
+        {
+          "distance": 2350.66,
+          "time": 34.979,
+          "speed": 255.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11643.0,
+          "drs": 8
+        },
+        {
+          "distance": 2373.62,
+          "time": 35.3,
+          "speed": 260.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11890.0,
+          "drs": 8
+        },
+        {
+          "distance": 2391.06,
+          "time": 35.54,
+          "speed": 263.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11970.0,
+          "drs": 8
+        },
+        {
+          "distance": 2411.51,
+          "time": 35.82,
+          "speed": 263.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 12163.0,
+          "drs": 8
+        },
+        {
+          "distance": 2431.46,
+          "time": 36.1,
+          "speed": 250.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 11290.0,
+          "drs": 8
+        },
+        {
+          "distance": 2450.25,
+          "time": 36.379,
+          "speed": 235.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 12203.0,
+          "drs": 8
+        },
+        {
+          "distance": 2463.14,
+          "time": 36.579,
+          "speed": 229.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 11736.0,
+          "drs": 8
+        },
+        {
+          "distance": 2485.44,
+          "time": 36.939,
+          "speed": 217.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11224.0,
+          "drs": 8
+        },
+        {
+          "distance": 2511.35,
+          "time": 37.379,
+          "speed": 207.0,
+          "throttle": 71.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11083.0,
+          "drs": 8
+        },
+        {
+          "distance": 2520.62,
+          "time": 37.539,
+          "speed": 210.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11244.0,
+          "drs": 8
+        },
+        {
+          "distance": 2534.79,
+          "time": 37.779,
+          "speed": 215.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11555.0,
+          "drs": 8
+        },
+        {
+          "distance": 2561.74,
+          "time": 38.219,
+          "speed": 226.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11172.0,
+          "drs": 8
+        },
+        {
+          "distance": 2576.94,
+          "time": 38.459,
+          "speed": 230.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10633.0,
+          "drs": 8
+        },
+        {
+          "distance": 2592.47,
+          "time": 38.699,
+          "speed": 236.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10806.0,
+          "drs": 8
+        },
+        {
+          "distance": 2611.06,
+          "time": 38.979,
+          "speed": 242.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11110.0,
+          "drs": 8
+        },
+        {
+          "distance": 2644.06,
+          "time": 39.459,
+          "speed": 253.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11533.0,
+          "drs": 8
+        },
+        {
+          "distance": 2672.56,
+          "time": 39.859,
+          "speed": 260.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11892.0,
+          "drs": 8
+        },
+        {
+          "distance": 2695.89,
+          "time": 40.179,
+          "speed": 265.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 12023.0,
+          "drs": 8
+        },
+        {
+          "distance": 2707.72,
+          "time": 40.339,
+          "speed": 267.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 12116.0,
+          "drs": 8
+        },
+        {
+          "distance": 2725.58,
+          "time": 40.579,
+          "speed": 269.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 12259.0,
+          "drs": 8
+        },
+        {
+          "distance": 2740.58,
+          "time": 40.779,
+          "speed": 271.0,
+          "throttle": 46.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 12016.0,
+          "drs": 8
+        },
+        {
+          "distance": 2757.88,
+          "time": 41.019,
+          "speed": 248.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 11991.0,
+          "drs": 8
+        },
+        {
+          "distance": 2785.99,
+          "time": 41.459,
+          "speed": 212.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 10729.0,
+          "drs": 8
+        },
+        {
+          "distance": 2811.23,
+          "time": 41.9,
+          "speed": 200.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10280.0,
+          "drs": 8
+        },
+        {
+          "distance": 2820.03,
+          "time": 42.06,
+          "speed": 196.0,
+          "throttle": 2.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 9939.0,
+          "drs": 8
+        },
+        {
+          "distance": 2828.61,
+          "time": 42.22,
+          "speed": 190.0,
+          "throttle": 42.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10124.0,
+          "drs": 8
+        },
+        {
+          "distance": 2843.46,
+          "time": 42.5,
+          "speed": 192.0,
+          "throttle": 68.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10293.0,
+          "drs": 8
+        },
+        {
+          "distance": 2854.18,
+          "time": 42.7,
+          "speed": 194.0,
+          "throttle": 98.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10636.0,
+          "drs": 8
+        },
+        {
+          "distance": 2876.41,
+          "time": 43.099,
+          "speed": 207.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11164.0,
+          "drs": 8
+        },
+        {
+          "distance": 2890.41,
+          "time": 43.339,
+          "speed": 213.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11119.0,
+          "drs": 8
+        },
+        {
+          "distance": 2902.41,
+          "time": 43.539,
+          "speed": 219.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10452.0,
+          "drs": 8
+        },
+        {
+          "distance": 2917.24,
+          "time": 43.779,
+          "speed": 226.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10439.0,
+          "drs": 8
+        },
+        {
+          "distance": 2932.64,
+          "time": 44.019,
+          "speed": 236.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10699.0,
+          "drs": 8
+        },
+        {
+          "distance": 2945.89,
+          "time": 44.219,
+          "speed": 241.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11003.0,
+          "drs": 8
+        },
+        {
+          "distance": 2967.62,
+          "time": 44.539,
+          "speed": 248.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11357.0,
+          "drs": 8
+        },
+        {
+          "distance": 2981.54,
+          "time": 44.739,
+          "speed": 253.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11549.0,
+          "drs": 8
+        },
+        {
+          "distance": 3001.45,
+          "time": 45.019,
+          "speed": 259.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10653.0,
+          "drs": 8
+        },
+        {
+          "distance": 3027.65,
+          "time": 45.379,
+          "speed": 265.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10650.0,
+          "drs": 14
+        },
+        {
+          "distance": 3039.54,
+          "time": 45.539,
+          "speed": 270.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10784.0,
+          "drs": 14
+        },
+        {
+          "distance": 3054.65,
+          "time": 45.739,
+          "speed": 274.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10942.0,
+          "drs": 14
+        },
+        {
+          "distance": 3076.16,
+          "time": 46.019,
+          "speed": 279.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11179.0,
+          "drs": 14
+        },
+        {
+          "distance": 3088.6,
+          "time": 46.179,
+          "speed": 281.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11283.0,
+          "drs": 14
+        },
+        {
+          "distance": 3107.5,
+          "time": 46.419,
+          "speed": 286.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11489.0,
+          "drs": 14
+        },
+        {
+          "distance": 3123.47,
+          "time": 46.619,
+          "speed": 289.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11574.0,
+          "drs": 14
+        },
+        {
+          "distance": 3142.81,
+          "time": 46.859,
+          "speed": 291.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10454.0,
+          "drs": 14
+        },
+        {
+          "distance": 3162.34,
+          "time": 47.099,
+          "speed": 295.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10502.0,
+          "drs": 14
+        },
+        {
+          "distance": 3178.81,
+          "time": 47.299,
+          "speed": 298.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10580.0,
+          "drs": 14
+        },
+        {
+          "distance": 3195.45,
+          "time": 47.499,
+          "speed": 301.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10739.0,
+          "drs": 14
+        },
+        {
+          "distance": 3215.62,
+          "time": 47.739,
+          "speed": 304.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10786.0,
+          "drs": 14
+        },
+        {
+          "distance": 3239.42,
+          "time": 48.019,
+          "speed": 308.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10892.0,
+          "drs": 14
+        },
+        {
+          "distance": 3260.02,
+          "time": 48.259,
+          "speed": 310.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10943.0,
+          "drs": 14
+        },
+        {
+          "distance": 3284.37,
+          "time": 48.54,
+          "speed": 314.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11066.0,
+          "drs": 14
+        },
+        {
+          "distance": 3312.37,
+          "time": 48.86,
+          "speed": 316.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11148.0,
+          "drs": 14
+        },
+        {
+          "distance": 3329.95,
+          "time": 49.06,
+          "speed": 317.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11229.0,
+          "drs": 14
+        },
+        {
+          "distance": 3347.62,
+          "time": 49.26,
+          "speed": 319.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11309.0,
+          "drs": 14
+        },
+        {
+          "distance": 3372.59,
+          "time": 49.54,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11383.0,
+          "drs": 14
+        },
+        {
+          "distance": 3404.9,
+          "time": 49.899,
+          "speed": 325.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11489.0,
+          "drs": 14
+        },
+        {
+          "distance": 3441.17,
+          "time": 50.299,
+          "speed": 328.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11604.0,
+          "drs": 14
+        },
+        {
+          "distance": 3466.76,
+          "time": 50.579,
+          "speed": 330.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11633.0,
+          "drs": 14
+        },
+        {
+          "distance": 3485.12,
+          "time": 50.779,
+          "speed": 331.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11659.0,
+          "drs": 14
+        },
+        {
+          "distance": 3507.26,
+          "time": 51.019,
+          "speed": 333.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11749.0,
+          "drs": 14
+        },
+        {
+          "distance": 3525.79,
+          "time": 51.219,
+          "speed": 334.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11769.0,
+          "drs": 14
+        },
+        {
+          "distance": 3544.37,
+          "time": 51.419,
+          "speed": 335.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11790.0,
+          "drs": 14
+        },
+        {
+          "distance": 3574.19,
+          "time": 51.739,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11809.0,
+          "drs": 14
+        },
+        {
+          "distance": 3592.86,
+          "time": 51.939,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11853.0,
+          "drs": 14
+        },
+        {
+          "distance": 3619.03,
+          "time": 52.219,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11903.0,
+          "drs": 14
+        },
+        {
+          "distance": 3634.01,
+          "time": 52.379,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11892.0,
+          "drs": 14
+        },
+        {
+          "distance": 3652.76,
+          "time": 52.579,
+          "speed": 338.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11898.0,
+          "drs": 14
+        },
+        {
+          "distance": 3671.54,
+          "time": 52.779,
+          "speed": 338.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11918.0,
+          "drs": 14
+        },
+        {
+          "distance": 3709.09,
+          "time": 53.179,
+          "speed": 338.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11882.0,
+          "drs": 14
+        },
+        {
+          "distance": 3731.59,
+          "time": 53.419,
+          "speed": 337.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11858.0,
+          "drs": 14
+        },
+        {
+          "distance": 3761.5,
+          "time": 53.739,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11822.0,
+          "drs": 14
+        },
+        {
+          "distance": 3791.37,
+          "time": 54.059,
+          "speed": 336.0,
+          "throttle": 30.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11698.0,
+          "drs": 14
+        },
+        {
+          "distance": 3815.95,
+          "time": 54.339,
+          "speed": 296.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10268.0,
+          "drs": 8
+        },
+        {
+          "distance": 3837.14,
+          "time": 54.619,
+          "speed": 249.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9966.0,
+          "drs": 8
+        },
+        {
+          "distance": 3850.36,
+          "time": 54.819,
+          "speed": 227.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10217.0,
+          "drs": 8
+        },
+        {
+          "distance": 3865.16,
+          "time": 55.06,
+          "speed": 215.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 11028.0,
+          "drs": 8
+        },
+        {
+          "distance": 3881.49,
+          "time": 55.34,
+          "speed": 205.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10591.0,
+          "drs": 8
+        },
+        {
+          "distance": 3892.8,
+          "time": 55.54,
+          "speed": 202.0,
+          "throttle": 3.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10213.0,
+          "drs": 8
+        },
+        {
+          "distance": 3910.4,
+          "time": 55.86,
+          "speed": 194.0,
+          "throttle": 43.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10245.0,
+          "drs": 8
+        },
+        {
+          "distance": 3923.36,
+          "time": 56.1,
+          "speed": 195.0,
+          "throttle": 79.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10498.0,
+          "drs": 8
+        },
+        {
+          "distance": 3936.53,
+          "time": 56.34,
+          "speed": 200.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10956.0,
+          "drs": 8
+        },
+        {
+          "distance": 3959.64,
+          "time": 56.739,
+          "speed": 217.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11599.0,
+          "drs": 8
+        },
+        {
+          "distance": 3971.83,
+          "time": 56.939,
+          "speed": 222.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10619.0,
+          "drs": 8
+        },
+        {
+          "distance": 3991.83,
+          "time": 57.259,
+          "speed": 228.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10653.0,
+          "drs": 8
+        },
+        {
+          "distance": 4014.98,
+          "time": 57.619,
+          "speed": 235.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11068.0,
+          "drs": 8
+        },
+        {
+          "distance": 4038.83,
+          "time": 57.979,
+          "speed": 242.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11128.0,
+          "drs": 8
+        },
+        {
+          "distance": 4057.97,
+          "time": 58.259,
+          "speed": 250.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11531.0,
+          "drs": 8
+        },
+        {
+          "distance": 4074.67,
+          "time": 58.499,
+          "speed": 251.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11647.0,
+          "drs": 8
+        },
+        {
+          "distance": 4094.42,
+          "time": 58.779,
+          "speed": 257.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10323.0,
+          "drs": 8
+        },
+        {
+          "distance": 4108.76,
+          "time": 58.979,
+          "speed": 259.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10445.0,
+          "drs": 8
+        },
+        {
+          "distance": 4129.02,
+          "time": 59.259,
+          "speed": 262.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10593.0,
+          "drs": 8
+        },
+        {
+          "distance": 4143.71,
+          "time": 59.459,
+          "speed": 267.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10694.0,
+          "drs": 8
+        },
+        {
+          "distance": 4170.71,
+          "time": 59.819,
+          "speed": 273.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10909.0,
+          "drs": 8
+        },
+        {
+          "distance": 4182.89,
+          "time": 59.979,
+          "speed": 275.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10909.0,
+          "drs": 8
+        },
+        {
+          "distance": 4201.36,
+          "time": 60.219,
+          "speed": 279.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11138.0,
+          "drs": 8
+        },
+        {
+          "distance": 4220.06,
+          "time": 60.459,
+          "speed": 282.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11329.0,
+          "drs": 8
+        },
+        {
+          "distance": 4254.89,
+          "time": 60.899,
+          "speed": 288.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11452.0,
+          "drs": 8
+        },
+        {
+          "distance": 4267.73,
+          "time": 61.059,
+          "speed": 290.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11579.0,
+          "drs": 8
+        },
+        {
+          "distance": 4300.32,
+          "time": 61.46,
+          "speed": 295.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10357.0,
+          "drs": 8
+        },
+        {
+          "distance": 4316.76,
+          "time": 61.66,
+          "speed": 297.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10518.0,
+          "drs": 8
+        },
+        {
+          "distance": 4330.0,
+          "time": 61.82,
+          "speed": 299.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10530.0,
+          "drs": 8
+        },
+        {
+          "distance": 4346.67,
+          "time": 62.02,
+          "speed": 301.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10620.0,
+          "drs": 8
+        },
+        {
+          "distance": 4363.45,
+          "time": 62.22,
+          "speed": 303.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10712.0,
+          "drs": 8
+        },
+        {
+          "distance": 4383.72,
+          "time": 62.46,
+          "speed": 305.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10796.0,
+          "drs": 8
+        },
+        {
+          "distance": 4400.69,
+          "time": 62.66,
+          "speed": 306.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10827.0,
+          "drs": 8
+        },
+        {
+          "distance": 4421.15,
+          "time": 62.9,
+          "speed": 308.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10906.0,
+          "drs": 8
+        },
+        {
+          "distance": 4455.4,
+          "time": 63.299,
+          "speed": 310.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10959.0,
+          "drs": 8
+        },
+        {
+          "distance": 4469.22,
+          "time": 63.459,
+          "speed": 312.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11010.0,
+          "drs": 8
+        },
+        {
+          "distance": 4500.57,
+          "time": 63.819,
+          "speed": 315.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11082.0,
+          "drs": 8
+        },
+        {
+          "distance": 4518.1,
+          "time": 64.019,
+          "speed": 316.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11151.0,
+          "drs": 8
+        },
+        {
+          "distance": 4535.66,
+          "time": 64.219,
+          "speed": 316.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11161.0,
+          "drs": 8
+        },
+        {
+          "distance": 4556.79,
+          "time": 64.459,
+          "speed": 318.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11196.0,
+          "drs": 8
+        },
+        {
+          "distance": 4592.18,
+          "time": 64.859,
+          "speed": 319.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11266.0,
+          "drs": 8
+        },
+        {
+          "distance": 4609.9,
+          "time": 65.059,
+          "speed": 319.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11287.0,
+          "drs": 8
+        },
+        {
+          "distance": 4631.17,
+          "time": 65.299,
+          "speed": 319.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11287.0,
+          "drs": 8
+        },
+        {
+          "distance": 4648.97,
+          "time": 65.499,
+          "speed": 322.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11365.0,
+          "drs": 8
+        },
+        {
+          "distance": 4674.06,
+          "time": 65.779,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11378.0,
+          "drs": 8
+        },
+        {
+          "distance": 4692.03,
+          "time": 65.979,
+          "speed": 324.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11405.0,
+          "drs": 8
+        },
+        {
+          "distance": 4710.03,
+          "time": 66.179,
+          "speed": 324.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11431.0,
+          "drs": 8
+        },
+        {
+          "distance": 4731.7,
+          "time": 66.419,
+          "speed": 326.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11461.0,
+          "drs": 8
+        },
+        {
+          "distance": 4749.78,
+          "time": 66.619,
+          "speed": 325.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11487.0,
+          "drs": 8
+        },
+        {
+          "distance": 4775.13,
+          "time": 66.899,
+          "speed": 327.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11516.0,
+          "drs": 8
+        },
+        {
+          "distance": 4789.67,
+          "time": 67.059,
+          "speed": 327.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11504.0,
+          "drs": 8
+        },
+        {
+          "distance": 4804.2,
+          "time": 67.219,
+          "speed": 327.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11542.0,
+          "drs": 8
+        },
+        {
+          "distance": 4829.67,
+          "time": 67.499,
+          "speed": 328.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11553.0,
+          "drs": 8
+        },
+        {
+          "distance": 4844.25,
+          "time": 67.659,
+          "speed": 328.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11595.0,
+          "drs": 8
+        },
+        {
+          "distance": 4858.85,
+          "time": 67.819,
+          "speed": 329.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11596.0,
+          "drs": 8
+        },
+        {
+          "distance": 4888.19,
+          "time": 68.14,
+          "speed": 329.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11498.0,
+          "drs": 8
+        },
+        {
+          "distance": 4906.47,
+          "time": 68.34,
+          "speed": 329.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11567.0,
+          "drs": 8
+        },
+        {
+          "distance": 4921.07,
+          "time": 68.5,
+          "speed": 328.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11550.0,
+          "drs": 8
+        },
+        {
+          "distance": 4942.93,
+          "time": 68.74,
+          "speed": 328.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11531.0,
+          "drs": 8
+        },
+        {
+          "distance": 4979.27,
+          "time": 69.14,
+          "speed": 326.0,
+          "throttle": 95.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11518.0,
+          "drs": 8
+        },
+        {
+          "distance": 5007.4,
+          "time": 69.46,
+          "speed": 307.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10818.0,
+          "drs": 8
+        },
+        {
+          "distance": 5020.51,
+          "time": 69.62,
+          "speed": 283.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 11175.0,
+          "drs": 8
+        },
+        {
+          "distance": 5039.08,
+          "time": 69.86,
+          "speed": 274.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 7,
+          "rpm": 11507.0,
+          "drs": 8
+        },
+        {
+          "distance": 5053.59,
+          "time": 70.059,
+          "speed": 251.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 11189.0,
+          "drs": 8
+        },
+        {
+          "distance": 5072.64,
+          "time": 70.339,
+          "speed": 239.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 12202.0,
+          "drs": 8
+        },
+        {
+          "distance": 5090.88,
+          "time": 70.619,
+          "speed": 230.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11807.0,
+          "drs": 8
+        },
+        {
+          "distance": 5101.04,
+          "time": 70.779,
+          "speed": 227.0,
+          "throttle": 1.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11617.0,
+          "drs": 8
+        },
+        {
+          "distance": 5115.97,
+          "time": 71.019,
+          "speed": 221.0,
+          "throttle": 15.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11219.0,
+          "drs": 8
+        },
+        {
+          "distance": 5140.19,
+          "time": 71.419,
+          "speed": 215.0,
+          "throttle": 75.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11417.0,
+          "drs": 8
+        },
+        {
+          "distance": 5152.19,
+          "time": 71.619,
+          "speed": 217.0,
+          "throttle": 91.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11611.0,
+          "drs": 8
+        },
+        {
+          "distance": 5166.79,
+          "time": 71.859,
+          "speed": 221.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11782.0,
+          "drs": 8
+        },
+        {
+          "distance": 5186.7,
+          "time": 72.179,
+          "speed": 227.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10638.0,
+          "drs": 8
+        },
+        {
+          "distance": 5196.9,
+          "time": 72.339,
+          "speed": 232.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10788.0,
+          "drs": 8
+        },
+        {
+          "distance": 5209.9,
+          "time": 72.539,
+          "speed": 236.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10871.0,
+          "drs": 8
+        },
+        {
+          "distance": 5220.41,
+          "time": 72.699,
+          "speed": 237.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10936.0,
+          "drs": 8
+        },
+        {
+          "distance": 5236.41,
+          "time": 72.939,
+          "speed": 243.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11258.0,
+          "drs": 8
+        },
+        {
+          "distance": 5247.26,
+          "time": 73.099,
+          "speed": 245.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11258.0,
+          "drs": 8
+        },
+        {
+          "distance": 5272.06,
+          "time": 73.459,
+          "speed": 251.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11616.0,
+          "drs": 8
+        },
+        {
+          "distance": 5303.04,
+          "time": 73.899,
+          "speed": 256.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11036.0,
+          "drs": 8
+        },
+        {
+          "distance": 5326.11,
+          "time": 74.219,
+          "speed": 263.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10613.0,
+          "drs": 8
+        },
+        {
+          "distance": 5346.76,
+          "time": 74.499,
+          "speed": 268.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10756.0,
+          "drs": 8
+        },
+        {
+          "distance": 5361.81,
+          "time": 74.7,
+          "speed": 271.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10919.0,
+          "drs": 8
+        },
+        {
+          "distance": 5392.25,
+          "time": 75.1,
+          "speed": 277.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11108.0,
+          "drs": 8
+        },
+        {
+          "distance": 5404.63,
+          "time": 75.26,
+          "speed": 280.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11225.0,
+          "drs": 8
+        },
+        {
+          "distance": 5426.56,
+          "time": 75.54,
+          "speed": 284.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11394.0,
+          "drs": 8
+        },
+        {
+          "distance": 5458.4,
+          "time": 75.94,
+          "speed": 289.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11570.0,
+          "drs": 8
+        },
+        {
+          "distance": 5471.24,
+          "time": 76.1,
+          "speed": 289.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11641.0,
+          "drs": 8
+        },
+        {
+          "distance": 5497.2,
+          "time": 76.42,
+          "speed": 295.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10877.0,
+          "drs": 8
+        },
+        {
+          "distance": 5513.67,
+          "time": 76.62,
+          "speed": 298.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10519.0,
+          "drs": 8
+        },
+        {
+          "distance": 5530.2,
+          "time": 76.819,
+          "speed": 300.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10651.0,
+          "drs": 8
+        },
+        {
+          "distance": 5550.26,
+          "time": 77.059,
+          "speed": 302.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10558.0,
+          "drs": 8
+        },
+        {
+          "distance": 5573.91,
+          "time": 77.339,
+          "speed": 306.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10784.0,
+          "drs": 8
+        },
+        {
+          "distance": 5590.93,
+          "time": 77.539,
+          "speed": 307.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10845.0,
+          "drs": 8
+        },
+        {
+          "distance": 5625.21,
+          "time": 77.939,
+          "speed": 310.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10988.0,
+          "drs": 8
+        },
+        {
+          "distance": 5638.99,
+          "time": 78.099,
+          "speed": 310.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11046.0,
+          "drs": 8
+        },
+        {
+          "distance": 5659.76,
+          "time": 78.339,
+          "speed": 313.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11024.0,
+          "drs": 8
+        },
+        {
+          "distance": 5673.67,
+          "time": 78.499,
+          "speed": 313.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11086.0,
+          "drs": 8
+        },
+        {
+          "distance": 5691.08,
+          "time": 78.699,
+          "speed": 314.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11079.0,
+          "drs": 8
+        },
+        {
+          "distance": 5719.13,
+          "time": 79.019,
+          "speed": 317.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11185.0,
+          "drs": 8
+        },
+        {
+          "distance": 5754.46,
+          "time": 79.419,
+          "speed": 319.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11289.0,
+          "drs": 8
+        },
+        {
+          "distance": 5768.66,
+          "time": 79.579,
+          "speed": 320.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11278.0,
+          "drs": 8
+        },
+        {
+          "distance": 5786.47,
+          "time": 79.779,
+          "speed": 321.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11321.0,
+          "drs": 8
+        }
+      ],
+      "quality_score": 0.9
+    },
+    {
+      "id": "2024-monza-q-pia-fastest",
+      "driver": "PIA",
+      "circuit": "Italian Grand Prix \u2014 Monza",
+      "lap_number": 15,
+      "lap_time": 79.436,
+      "compound": "UNKNOWN",
+      "tyre_life": 0,
+      "samples": [
+        {
+          "distance": 0.0,
+          "time": 0.156,
+          "speed": 320.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11274.0,
+          "drs": 14
+        },
+        {
+          "distance": 17.81,
+          "time": 0.356,
+          "speed": 321.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11353.0,
+          "drs": 12
+        },
+        {
+          "distance": 32.12,
+          "time": 0.516,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11417.0,
+          "drs": 12
+        },
+        {
+          "distance": 50.09,
+          "time": 0.716,
+          "speed": 324.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11472.0,
+          "drs": 12
+        },
+        {
+          "distance": 71.76,
+          "time": 0.956,
+          "speed": 326.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11514.0,
+          "drs": 12
+        },
+        {
+          "distance": 97.19,
+          "time": 1.236,
+          "speed": 328.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11579.0,
+          "drs": 12
+        },
+        {
+          "distance": 122.82,
+          "time": 1.516,
+          "speed": 331.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11633.0,
+          "drs": 12
+        },
+        {
+          "distance": 148.6,
+          "time": 1.796,
+          "speed": 332.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11667.0,
+          "drs": 12
+        },
+        {
+          "distance": 178.16,
+          "time": 2.116,
+          "speed": 333.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11753.0,
+          "drs": 12
+        },
+        {
+          "distance": 200.39,
+          "time": 2.356,
+          "speed": 334.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11783.0,
+          "drs": 12
+        },
+        {
+          "distance": 219.0,
+          "time": 2.556,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11792.0,
+          "drs": 12
+        },
+        {
+          "distance": 233.91,
+          "time": 2.716,
+          "speed": 335.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11812.0,
+          "drs": 12
+        },
+        {
+          "distance": 252.55,
+          "time": 2.916,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11856.0,
+          "drs": 12
+        },
+        {
+          "distance": 271.15,
+          "time": 3.115,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11849.0,
+          "drs": 12
+        },
+        {
+          "distance": 286.13,
+          "time": 3.275,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11894.0,
+          "drs": 12
+        },
+        {
+          "distance": 316.17,
+          "time": 3.595,
+          "speed": 339.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11894.0,
+          "drs": 12
+        },
+        {
+          "distance": 335.01,
+          "time": 3.795,
+          "speed": 339.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11927.0,
+          "drs": 12
+        },
+        {
+          "distance": 357.64,
+          "time": 4.035,
+          "speed": 340.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11927.0,
+          "drs": 12
+        },
+        {
+          "distance": 372.75,
+          "time": 4.195,
+          "speed": 340.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11927.0,
+          "drs": 12
+        },
+        {
+          "distance": 399.2,
+          "time": 4.475,
+          "speed": 340.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11995.0,
+          "drs": 12
+        },
+        {
+          "distance": 425.68,
+          "time": 4.755,
+          "speed": 341.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12006.0,
+          "drs": 12
+        },
+        {
+          "distance": 444.62,
+          "time": 4.955,
+          "speed": 341.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12034.0,
+          "drs": 12
+        },
+        {
+          "distance": 463.6,
+          "time": 5.155,
+          "speed": 342.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12056.0,
+          "drs": 12
+        },
+        {
+          "distance": 482.6,
+          "time": 5.355,
+          "speed": 342.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12060.0,
+          "drs": 12
+        },
+        {
+          "distance": 505.43,
+          "time": 5.595,
+          "speed": 343.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12075.0,
+          "drs": 12
+        },
+        {
+          "distance": 535.96,
+          "time": 5.915,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12109.0,
+          "drs": 12
+        },
+        {
+          "distance": 551.25,
+          "time": 6.075,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12081.0,
+          "drs": 12
+        },
+        {
+          "distance": 566.54,
+          "time": 6.235,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12091.0,
+          "drs": 12
+        },
+        {
+          "distance": 589.47,
+          "time": 6.475,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12106.0,
+          "drs": 12
+        },
+        {
+          "distance": 616.36,
+          "time": 6.756,
+          "speed": 345.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12151.0,
+          "drs": 12
+        },
+        {
+          "distance": 654.75,
+          "time": 7.156,
+          "speed": 346.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12179.0,
+          "drs": 12
+        },
+        {
+          "distance": 673.97,
+          "time": 7.356,
+          "speed": 346.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12110.0,
+          "drs": 12
+        },
+        {
+          "distance": 689.33,
+          "time": 7.516,
+          "speed": 345.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12119.0,
+          "drs": 12
+        },
+        {
+          "distance": 716.12,
+          "time": 7.796,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12085.0,
+          "drs": 12
+        },
+        {
+          "distance": 735.24,
+          "time": 7.996,
+          "speed": 344.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 12053.0,
+          "drs": 12
+        },
+        {
+          "distance": 758.14,
+          "time": 8.236,
+          "speed": 343.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 12094.0,
+          "drs": 12
+        },
+        {
+          "distance": 783.45,
+          "time": 8.516,
+          "speed": 308.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10555.0,
+          "drs": 8
+        },
+        {
+          "distance": 802.79,
+          "time": 8.756,
+          "speed": 272.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9488.0,
+          "drs": 8
+        },
+        {
+          "distance": 817.01,
+          "time": 8.956,
+          "speed": 240.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9742.0,
+          "drs": 8
+        },
+        {
+          "distance": 833.96,
+          "time": 9.236,
+          "speed": 196.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9819.0,
+          "drs": 8
+        },
+        {
+          "distance": 844.24,
+          "time": 9.436,
+          "speed": 174.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9919.0,
+          "drs": 8
+        },
+        {
+          "distance": 856.65,
+          "time": 9.716,
+          "speed": 145.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10485.0,
+          "drs": 8
+        },
+        {
+          "distance": 868.25,
+          "time": 10.035,
+          "speed": 117.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 4,
+          "rpm": 10242.0,
+          "drs": 8
+        },
+        {
+          "distance": 873.37,
+          "time": 10.195,
+          "speed": 113.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 3,
+          "rpm": 9708.0,
+          "drs": 8
+        },
+        {
+          "distance": 881.8,
+          "time": 10.475,
+          "speed": 104.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 2,
+          "rpm": 8553.0,
+          "drs": 8
+        },
+        {
+          "distance": 889.66,
+          "time": 10.755,
+          "speed": 98.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 8200.0,
+          "drs": 8
+        },
+        {
+          "distance": 895.99,
+          "time": 10.995,
+          "speed": 92.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 8030.0,
+          "drs": 8
+        },
+        {
+          "distance": 905.77,
+          "time": 11.395,
+          "speed": 84.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7269.0,
+          "drs": 8
+        },
+        {
+          "distance": 915.92,
+          "time": 11.835,
+          "speed": 82.0,
+          "throttle": 23.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7577.0,
+          "drs": 8
+        },
+        {
+          "distance": 919.67,
+          "time": 11.995,
+          "speed": 87.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 6922.0,
+          "drs": 8
+        },
+        {
+          "distance": 924.42,
+          "time": 12.195,
+          "speed": 84.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7313.0,
+          "drs": 8
+        },
+        {
+          "distance": 929.0,
+          "time": 12.395,
+          "speed": 81.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7161.0,
+          "drs": 8
+        },
+        {
+          "distance": 932.6,
+          "time": 12.555,
+          "speed": 81.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7024.0,
+          "drs": 8
+        },
+        {
+          "distance": 937.87,
+          "time": 12.795,
+          "speed": 77.0,
+          "throttle": 7.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 6568.0,
+          "drs": 8
+        },
+        {
+          "distance": 942.09,
+          "time": 12.995,
+          "speed": 75.0,
+          "throttle": 18.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 6926.0,
+          "drs": 8
+        },
+        {
+          "distance": 948.91,
+          "time": 13.316,
+          "speed": 78.0,
+          "throttle": 34.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 7451.0,
+          "drs": 8
+        },
+        {
+          "distance": 957.06,
+          "time": 13.676,
+          "speed": 85.0,
+          "throttle": 52.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 8510.0,
+          "drs": 8
+        },
+        {
+          "distance": 960.98,
+          "time": 13.836,
+          "speed": 91.0,
+          "throttle": 62.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 8988.0,
+          "drs": 8
+        },
+        {
+          "distance": 967.28,
+          "time": 14.076,
+          "speed": 98.0,
+          "throttle": 71.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 9859.0,
+          "drs": 8
+        },
+        {
+          "distance": 979.28,
+          "time": 14.476,
+          "speed": 118.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 11954.0,
+          "drs": 8
+        },
+        {
+          "distance": 984.76,
+          "time": 14.636,
+          "speed": 129.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 2,
+          "rpm": 11114.0,
+          "drs": 8
+        },
+        {
+          "distance": 993.76,
+          "time": 14.876,
+          "speed": 141.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 11198.0,
+          "drs": 8
+        },
+        {
+          "distance": 1000.25,
+          "time": 15.036,
+          "speed": 151.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 11478.0,
+          "drs": 8
+        },
+        {
+          "distance": 1012.62,
+          "time": 15.316,
+          "speed": 167.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 10597.0,
+          "drs": 8
+        },
+        {
+          "distance": 1020.15,
+          "time": 15.476,
+          "speed": 172.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10761.0,
+          "drs": 8
+        },
+        {
+          "distance": 1029.99,
+          "time": 15.676,
+          "speed": 182.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10709.0,
+          "drs": 8
+        },
+        {
+          "distance": 1048.99,
+          "time": 16.036,
+          "speed": 198.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10724.0,
+          "drs": 8
+        },
+        {
+          "distance": 1058.03,
+          "time": 16.196,
+          "speed": 209.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10915.0,
+          "drs": 8
+        },
+        {
+          "distance": 1086.51,
+          "time": 16.675,
+          "speed": 219.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11032.0,
+          "drs": 8
+        },
+        {
+          "distance": 1106.51,
+          "time": 16.995,
+          "speed": 231.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10669.0,
+          "drs": 8
+        },
+        {
+          "distance": 1124.67,
+          "time": 17.275,
+          "speed": 236.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10937.0,
+          "drs": 8
+        },
+        {
+          "distance": 1137.94,
+          "time": 17.475,
+          "speed": 242.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11173.0,
+          "drs": 8
+        },
+        {
+          "distance": 1165.28,
+          "time": 17.875,
+          "speed": 250.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11587.0,
+          "drs": 8
+        },
+        {
+          "distance": 1196.51,
+          "time": 18.315,
+          "speed": 261.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10573.0,
+          "drs": 8
+        },
+        {
+          "distance": 1214.04,
+          "time": 18.555,
+          "speed": 265.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10709.0,
+          "drs": 8
+        },
+        {
+          "distance": 1228.87,
+          "time": 18.755,
+          "speed": 269.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10852.0,
+          "drs": 8
+        },
+        {
+          "distance": 1243.9,
+          "time": 18.955,
+          "speed": 272.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10961.0,
+          "drs": 8
+        },
+        {
+          "distance": 1265.29,
+          "time": 19.235,
+          "speed": 278.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11165.0,
+          "drs": 8
+        },
+        {
+          "distance": 1287.07,
+          "time": 19.515,
+          "speed": 282.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11363.0,
+          "drs": 8
+        },
+        {
+          "distance": 1299.62,
+          "time": 19.675,
+          "speed": 283.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11404.0,
+          "drs": 8
+        },
+        {
+          "distance": 1315.48,
+          "time": 19.876,
+          "speed": 285.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11518.0,
+          "drs": 8
+        },
+        {
+          "distance": 1344.23,
+          "time": 20.236,
+          "speed": 290.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11535.0,
+          "drs": 8
+        },
+        {
+          "distance": 1360.4,
+          "time": 20.436,
+          "speed": 292.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11432.0,
+          "drs": 8
+        },
+        {
+          "distance": 1376.67,
+          "time": 20.636,
+          "speed": 294.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10312.0,
+          "drs": 8
+        },
+        {
+          "distance": 1396.27,
+          "time": 20.876,
+          "speed": 294.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10516.0,
+          "drs": 8
+        },
+        {
+          "distance": 1412.72,
+          "time": 21.076,
+          "speed": 298.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10531.0,
+          "drs": 8
+        },
+        {
+          "distance": 1445.94,
+          "time": 21.476,
+          "speed": 300.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10570.0,
+          "drs": 8
+        },
+        {
+          "distance": 1459.32,
+          "time": 21.636,
+          "speed": 302.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10741.0,
+          "drs": 8
+        },
+        {
+          "distance": 1472.78,
+          "time": 21.796,
+          "speed": 304.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10751.0,
+          "drs": 8
+        },
+        {
+          "distance": 1503.28,
+          "time": 22.156,
+          "speed": 306.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10847.0,
+          "drs": 8
+        },
+        {
+          "distance": 1523.75,
+          "time": 22.396,
+          "speed": 308.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10874.0,
+          "drs": 8
+        },
+        {
+          "distance": 1540.89,
+          "time": 22.596,
+          "speed": 309.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10918.0,
+          "drs": 8
+        },
+        {
+          "distance": 1575.33,
+          "time": 22.996,
+          "speed": 311.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10986.0,
+          "drs": 8
+        },
+        {
+          "distance": 1592.58,
+          "time": 23.195,
+          "speed": 313.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11056.0,
+          "drs": 8
+        },
+        {
+          "distance": 1620.45,
+          "time": 23.515,
+          "speed": 314.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11068.0,
+          "drs": 8
+        },
+        {
+          "distance": 1644.91,
+          "time": 23.795,
+          "speed": 315.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11122.0,
+          "drs": 8
+        },
+        {
+          "distance": 1669.45,
+          "time": 24.075,
+          "speed": 316.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11180.0,
+          "drs": 8
+        },
+        {
+          "distance": 1694.06,
+          "time": 24.355,
+          "speed": 317.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11222.0,
+          "drs": 8
+        },
+        {
+          "distance": 1718.76,
+          "time": 24.635,
+          "speed": 318.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11258.0,
+          "drs": 8
+        },
+        {
+          "distance": 1747.07,
+          "time": 24.955,
+          "speed": 319.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11272.0,
+          "drs": 8
+        },
+        {
+          "distance": 1768.37,
+          "time": 25.195,
+          "speed": 320.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11304.0,
+          "drs": 8
+        },
+        {
+          "distance": 1789.74,
+          "time": 25.435,
+          "speed": 321.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11326.0,
+          "drs": 8
+        },
+        {
+          "distance": 1814.74,
+          "time": 25.715,
+          "speed": 322.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11387.0,
+          "drs": 8
+        },
+        {
+          "distance": 1854.16,
+          "time": 26.155,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11424.0,
+          "drs": 8
+        },
+        {
+          "distance": 1875.69,
+          "time": 26.395,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11397.0,
+          "drs": 8
+        },
+        {
+          "distance": 1908.03,
+          "time": 26.756,
+          "speed": 322.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11340.0,
+          "drs": 8
+        },
+        {
+          "distance": 1943.81,
+          "time": 27.156,
+          "speed": 322.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11334.0,
+          "drs": 8
+        },
+        {
+          "distance": 1965.24,
+          "time": 27.396,
+          "speed": 321.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11312.0,
+          "drs": 8
+        },
+        {
+          "distance": 1986.34,
+          "time": 27.636,
+          "speed": 312.0,
+          "throttle": 49.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 11267.0,
+          "drs": 8
+        },
+        {
+          "distance": 2006.01,
+          "time": 27.876,
+          "speed": 278.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10707.0,
+          "drs": 8
+        },
+        {
+          "distance": 2030.71,
+          "time": 28.236,
+          "speed": 216.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9357.0,
+          "drs": 8
+        },
+        {
+          "distance": 2042.04,
+          "time": 28.436,
+          "speed": 192.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 9357.0,
+          "drs": 8
+        },
+        {
+          "distance": 2057.78,
+          "time": 28.756,
+          "speed": 162.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10114.0,
+          "drs": 8
+        },
+        {
+          "distance": 2067.98,
+          "time": 28.996,
+          "speed": 144.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 7,
+          "rpm": 10091.0,
+          "drs": 8
+        },
+        {
+          "distance": 2074.38,
+          "time": 29.156,
+          "speed": 144.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 9671.0,
+          "drs": 8
+        },
+        {
+          "distance": 2083.44,
+          "time": 29.396,
+          "speed": 128.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 3,
+          "rpm": 8989.0,
+          "drs": 8
+        },
+        {
+          "distance": 2089.09,
+          "time": 29.556,
+          "speed": 126.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 3,
+          "rpm": 8644.0,
+          "drs": 8
+        },
+        {
+          "distance": 2098.65,
+          "time": 29.836,
+          "speed": 120.0,
+          "throttle": 8.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 8578.0,
+          "drs": 8
+        },
+        {
+          "distance": 2103.89,
+          "time": 29.995,
+          "speed": 117.0,
+          "throttle": 16.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 8712.0,
+          "drs": 8
+        },
+        {
+          "distance": 2113.03,
+          "time": 30.275,
+          "speed": 118.0,
+          "throttle": 42.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 9202.0,
+          "drs": 8
+        },
+        {
+          "distance": 2125.18,
+          "time": 30.635,
+          "speed": 125.0,
+          "throttle": 46.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 9640.0,
+          "drs": 8
+        },
+        {
+          "distance": 2132.26,
+          "time": 30.835,
+          "speed": 130.0,
+          "throttle": 30.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 9152.0,
+          "drs": 8
+        },
+        {
+          "distance": 2142.33,
+          "time": 31.115,
+          "speed": 129.0,
+          "throttle": 35.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 9388.0,
+          "drs": 8
+        },
+        {
+          "distance": 2152.44,
+          "time": 31.395,
+          "speed": 131.0,
+          "throttle": 54.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 9729.0,
+          "drs": 8
+        },
+        {
+          "distance": 2158.33,
+          "time": 31.555,
+          "speed": 134.0,
+          "throttle": 71.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 10325.0,
+          "drs": 8
+        },
+        {
+          "distance": 2167.5,
+          "time": 31.795,
+          "speed": 141.0,
+          "throttle": 89.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 11025.0,
+          "drs": 8
+        },
+        {
+          "distance": 2178.85,
+          "time": 32.075,
+          "speed": 151.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 3,
+          "rpm": 10782.0,
+          "drs": 8
+        },
+        {
+          "distance": 2185.79,
+          "time": 32.235,
+          "speed": 161.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10319.0,
+          "drs": 8
+        },
+        {
+          "distance": 2196.85,
+          "time": 32.475,
+          "speed": 171.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10803.0,
+          "drs": 8
+        },
+        {
+          "distance": 2208.65,
+          "time": 32.715,
+          "speed": 183.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 4,
+          "rpm": 10617.0,
+          "drs": 8
+        },
+        {
+          "distance": 2221.12,
+          "time": 32.955,
+          "speed": 191.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10225.0,
+          "drs": 8
+        },
+        {
+          "distance": 2243.23,
+          "time": 33.356,
+          "speed": 206.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11081.0,
+          "drs": 8
+        },
+        {
+          "distance": 2264.48,
+          "time": 33.716,
+          "speed": 219.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11526.0,
+          "drs": 8
+        },
+        {
+          "distance": 2279.28,
+          "time": 33.956,
+          "speed": 225.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10804.0,
+          "drs": 8
+        },
+        {
+          "distance": 2299.64,
+          "time": 34.276,
+          "speed": 233.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10831.0,
+          "drs": 8
+        },
+        {
+          "distance": 2318.07,
+          "time": 34.556,
+          "speed": 241.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11152.0,
+          "drs": 8
+        },
+        {
+          "distance": 2345.35,
+          "time": 34.956,
+          "speed": 250.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11543.0,
+          "drs": 8
+        },
+        {
+          "distance": 2370.7,
+          "time": 35.316,
+          "speed": 257.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11725.0,
+          "drs": 8
+        },
+        {
+          "distance": 2393.63,
+          "time": 35.636,
+          "speed": 259.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11940.0,
+          "drs": 8
+        },
+        {
+          "distance": 2411.0,
+          "time": 35.876,
+          "speed": 262.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11678.0,
+          "drs": 8
+        },
+        {
+          "distance": 2438.89,
+          "time": 36.276,
+          "speed": 240.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 12293.0,
+          "drs": 8
+        },
+        {
+          "distance": 2451.97,
+          "time": 36.476,
+          "speed": 231.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 11660.0,
+          "drs": 8
+        },
+        {
+          "distance": 2462.08,
+          "time": 36.636,
+          "speed": 224.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11396.0,
+          "drs": 8
+        },
+        {
+          "distance": 2476.75,
+          "time": 36.875,
+          "speed": 218.0,
+          "throttle": 5.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11083.0,
+          "drs": 8
+        },
+        {
+          "distance": 2512.5,
+          "time": 37.475,
+          "speed": 211.0,
+          "throttle": 81.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11279.0,
+          "drs": 8
+        },
+        {
+          "distance": 2533.85,
+          "time": 37.835,
+          "speed": 216.0,
+          "throttle": 98.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11646.0,
+          "drs": 8
+        },
+        {
+          "distance": 2553.36,
+          "time": 38.155,
+          "speed": 223.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11362.0,
+          "drs": 8
+        },
+        {
+          "distance": 2573.45,
+          "time": 38.475,
+          "speed": 229.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10683.0,
+          "drs": 8
+        },
+        {
+          "distance": 2586.26,
+          "time": 38.675,
+          "speed": 232.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10879.0,
+          "drs": 8
+        },
+        {
+          "distance": 2607.37,
+          "time": 38.995,
+          "speed": 243.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11200.0,
+          "drs": 8
+        },
+        {
+          "distance": 2620.93,
+          "time": 39.195,
+          "speed": 245.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11290.0,
+          "drs": 8
+        },
+        {
+          "distance": 2637.39,
+          "time": 39.435,
+          "speed": 249.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11553.0,
+          "drs": 8
+        },
+        {
+          "distance": 2657.06,
+          "time": 39.716,
+          "speed": 255.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11721.0,
+          "drs": 8
+        },
+        {
+          "distance": 2680.0,
+          "time": 40.036,
+          "speed": 261.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10574.0,
+          "drs": 8
+        },
+        {
+          "distance": 2694.61,
+          "time": 40.236,
+          "speed": 265.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10620.0,
+          "drs": 8
+        },
+        {
+          "distance": 2727.24,
+          "time": 40.676,
+          "speed": 269.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10787.0,
+          "drs": 8
+        },
+        {
+          "distance": 2745.14,
+          "time": 40.916,
+          "speed": 268.0,
+          "throttle": 83.0,
+          "brake": 100.0,
+          "gear": 7,
+          "rpm": 10671.0,
+          "drs": 8
+        },
+        {
+          "distance": 2759.42,
+          "time": 41.116,
+          "speed": 246.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 7,
+          "rpm": 10730.0,
+          "drs": 8
+        },
+        {
+          "distance": 2770.15,
+          "time": 41.276,
+          "speed": 237.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 7,
+          "rpm": 11081.0,
+          "drs": 8
+        },
+        {
+          "distance": 2782.87,
+          "time": 41.476,
+          "speed": 221.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 10881.0,
+          "drs": 8
+        },
+        {
+          "distance": 2792.54,
+          "time": 41.636,
+          "speed": 214.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 10546.0,
+          "drs": 8
+        },
+        {
+          "distance": 2801.83,
+          "time": 41.796,
+          "speed": 204.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 5,
+          "rpm": 10546.0,
+          "drs": 8
+        },
+        {
+          "distance": 2821.83,
+          "time": 42.156,
+          "speed": 196.0,
+          "throttle": 11.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 9991.0,
+          "drs": 8
+        },
+        {
+          "distance": 2843.27,
+          "time": 42.556,
+          "speed": 190.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10304.0,
+          "drs": 8
+        },
+        {
+          "distance": 2856.21,
+          "time": 42.796,
+          "speed": 198.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10800.0,
+          "drs": 8
+        },
+        {
+          "distance": 2876.46,
+          "time": 43.156,
+          "speed": 207.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10792.0,
+          "drs": 8
+        },
+        {
+          "distance": 2895.2,
+          "time": 43.475,
+          "speed": 216.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10236.0,
+          "drs": 8
+        },
+        {
+          "distance": 2909.86,
+          "time": 43.715,
+          "speed": 224.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10444.0,
+          "drs": 8
+        },
+        {
+          "distance": 2925.0,
+          "time": 43.955,
+          "speed": 230.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10782.0,
+          "drs": 8
+        },
+        {
+          "distance": 2940.63,
+          "time": 44.195,
+          "speed": 239.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10988.0,
+          "drs": 8
+        },
+        {
+          "distance": 2954.05,
+          "time": 44.395,
+          "speed": 244.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11196.0,
+          "drs": 8
+        },
+        {
+          "distance": 2970.48,
+          "time": 44.635,
+          "speed": 249.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11486.0,
+          "drs": 8
+        },
+        {
+          "distance": 2995.83,
+          "time": 44.995,
+          "speed": 258.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11685.0,
+          "drs": 8
+        },
+        {
+          "distance": 3010.25,
+          "time": 45.195,
+          "speed": 261.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10499.0,
+          "drs": 8
+        },
+        {
+          "distance": 3021.89,
+          "time": 45.355,
+          "speed": 263.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10627.0,
+          "drs": 14
+        },
+        {
+          "distance": 3048.64,
+          "time": 45.715,
+          "speed": 272.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10996.0,
+          "drs": 12
+        },
+        {
+          "distance": 3066.88,
+          "time": 45.955,
+          "speed": 275.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11153.0,
+          "drs": 12
+        },
+        {
+          "distance": 3088.58,
+          "time": 46.236,
+          "speed": 281.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11254.0,
+          "drs": 12
+        },
+        {
+          "distance": 3123.29,
+          "time": 46.676,
+          "speed": 287.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11555.0,
+          "drs": 12
+        },
+        {
+          "distance": 3142.62,
+          "time": 46.916,
+          "speed": 293.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10845.0,
+          "drs": 12
+        },
+        {
+          "distance": 3172.02,
+          "time": 47.276,
+          "speed": 295.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10506.0,
+          "drs": 12
+        },
+        {
+          "distance": 3185.22,
+          "time": 47.436,
+          "speed": 299.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10506.0,
+          "drs": 12
+        },
+        {
+          "distance": 3198.58,
+          "time": 47.596,
+          "speed": 302.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10676.0,
+          "drs": 12
+        },
+        {
+          "distance": 3218.78,
+          "time": 47.836,
+          "speed": 304.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10795.0,
+          "drs": 12
+        },
+        {
+          "distance": 3235.72,
+          "time": 48.036,
+          "speed": 306.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10881.0,
+          "drs": 12
+        },
+        {
+          "distance": 3276.85,
+          "time": 48.516,
+          "speed": 311.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11062.0,
+          "drs": 12
+        },
+        {
+          "distance": 3294.21,
+          "time": 48.716,
+          "speed": 314.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11105.0,
+          "drs": 12
+        },
+        {
+          "distance": 3329.16,
+          "time": 49.116,
+          "speed": 315.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11262.0,
+          "drs": 12
+        },
+        {
+          "distance": 3350.33,
+          "time": 49.356,
+          "speed": 320.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11324.0,
+          "drs": 12
+        },
+        {
+          "distance": 3368.13,
+          "time": 49.556,
+          "speed": 321.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11397.0,
+          "drs": 12
+        },
+        {
+          "distance": 3386.02,
+          "time": 49.756,
+          "speed": 323.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11418.0,
+          "drs": 12
+        },
+        {
+          "distance": 3403.99,
+          "time": 49.956,
+          "speed": 324.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11482.0,
+          "drs": 12
+        },
+        {
+          "distance": 3418.35,
+          "time": 50.115,
+          "speed": 326.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11563.0,
+          "drs": 12
+        },
+        {
+          "distance": 3451.0,
+          "time": 50.475,
+          "speed": 327.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11582.0,
+          "drs": 12
+        },
+        {
+          "distance": 3472.9,
+          "time": 50.715,
+          "speed": 330.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11649.0,
+          "drs": 12
+        },
+        {
+          "distance": 3487.56,
+          "time": 50.875,
+          "speed": 330.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11663.0,
+          "drs": 12
+        },
+        {
+          "distance": 3505.92,
+          "time": 51.075,
+          "speed": 331.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11708.0,
+          "drs": 12
+        },
+        {
+          "distance": 3520.66,
+          "time": 51.235,
+          "speed": 332.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11747.0,
+          "drs": 12
+        },
+        {
+          "distance": 3550.26,
+          "time": 51.555,
+          "speed": 334.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11752.0,
+          "drs": 12
+        },
+        {
+          "distance": 3572.56,
+          "time": 51.795,
+          "speed": 335.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11803.0,
+          "drs": 12
+        },
+        {
+          "distance": 3591.2,
+          "time": 51.995,
+          "speed": 336.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11841.0,
+          "drs": 12
+        },
+        {
+          "distance": 3609.86,
+          "time": 52.195,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11832.0,
+          "drs": 12
+        },
+        {
+          "distance": 3647.25,
+          "time": 52.595,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11872.0,
+          "drs": 12
+        },
+        {
+          "distance": 3684.79,
+          "time": 52.996,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11837.0,
+          "drs": 12
+        },
+        {
+          "distance": 3703.51,
+          "time": 53.196,
+          "speed": 337.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11844.0,
+          "drs": 12
+        },
+        {
+          "distance": 3729.68,
+          "time": 53.476,
+          "speed": 336.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11836.0,
+          "drs": 12
+        },
+        {
+          "distance": 3770.69,
+          "time": 53.916,
+          "speed": 335.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11777.0,
+          "drs": 12
+        },
+        {
+          "distance": 3802.89,
+          "time": 54.276,
+          "speed": 309.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10822.0,
+          "drs": 8
+        },
+        {
+          "distance": 3837.11,
+          "time": 54.716,
+          "speed": 251.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10904.0,
+          "drs": 8
+        },
+        {
+          "distance": 3861.21,
+          "time": 55.076,
+          "speed": 231.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 11124.0,
+          "drs": 8
+        },
+        {
+          "distance": 3873.49,
+          "time": 55.276,
+          "speed": 211.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 10813.0,
+          "drs": 8
+        },
+        {
+          "distance": 3898.36,
+          "time": 55.716,
+          "speed": 196.0,
+          "throttle": 21.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10323.0,
+          "drs": 8
+        },
+        {
+          "distance": 3909.11,
+          "time": 55.916,
+          "speed": 191.0,
+          "throttle": 56.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10325.0,
+          "drs": 8
+        },
+        {
+          "distance": 3972.83,
+          "time": 57.035,
+          "speed": 219.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10370.0,
+          "drs": 8
+        },
+        {
+          "distance": 3982.66,
+          "time": 57.195,
+          "speed": 223.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10505.0,
+          "drs": 8
+        },
+        {
+          "distance": 3997.69,
+          "time": 57.435,
+          "speed": 228.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10684.0,
+          "drs": 8
+        },
+        {
+          "distance": 4018.27,
+          "time": 57.755,
+          "speed": 235.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11201.0,
+          "drs": 8
+        },
+        {
+          "distance": 4034.03,
+          "time": 57.995,
+          "speed": 238.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11239.0,
+          "drs": 8
+        },
+        {
+          "distance": 4055.59,
+          "time": 58.315,
+          "speed": 247.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11443.0,
+          "drs": 8
+        },
+        {
+          "distance": 4074.99,
+          "time": 58.595,
+          "speed": 252.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11768.0,
+          "drs": 8
+        },
+        {
+          "distance": 4097.62,
+          "time": 58.915,
+          "speed": 257.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10364.0,
+          "drs": 8
+        },
+        {
+          "distance": 4123.52,
+          "time": 59.275,
+          "speed": 261.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10578.0,
+          "drs": 8
+        },
+        {
+          "distance": 4141.16,
+          "time": 59.516,
+          "speed": 266.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10760.0,
+          "drs": 8
+        },
+        {
+          "distance": 4162.0,
+          "time": 59.796,
+          "speed": 270.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10898.0,
+          "drs": 8
+        },
+        {
+          "distance": 4174.02,
+          "time": 59.956,
+          "speed": 271.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10973.0,
+          "drs": 8
+        },
+        {
+          "distance": 4198.38,
+          "time": 60.276,
+          "speed": 277.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11162.0,
+          "drs": 8
+        },
+        {
+          "distance": 4210.73,
+          "time": 60.436,
+          "speed": 279.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11247.0,
+          "drs": 8
+        },
+        {
+          "distance": 4232.59,
+          "time": 60.716,
+          "speed": 283.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11453.0,
+          "drs": 8
+        },
+        {
+          "distance": 4257.92,
+          "time": 61.036,
+          "speed": 287.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11546.0,
+          "drs": 8
+        },
+        {
+          "distance": 4277.16,
+          "time": 61.276,
+          "speed": 290.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11604.0,
+          "drs": 8
+        },
+        {
+          "distance": 4296.62,
+          "time": 61.516,
+          "speed": 294.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10407.0,
+          "drs": 8
+        },
+        {
+          "distance": 4313.01,
+          "time": 61.716,
+          "speed": 296.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10527.0,
+          "drs": 8
+        },
+        {
+          "distance": 4329.51,
+          "time": 61.916,
+          "speed": 298.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10622.0,
+          "drs": 8
+        },
+        {
+          "distance": 4359.46,
+          "time": 62.276,
+          "speed": 301.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10678.0,
+          "drs": 8
+        },
+        {
+          "distance": 4393.07,
+          "time": 62.676,
+          "speed": 304.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10810.0,
+          "drs": 8
+        },
+        {
+          "distance": 4410.02,
+          "time": 62.876,
+          "speed": 306.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10850.0,
+          "drs": 8
+        },
+        {
+          "distance": 4447.66,
+          "time": 63.316,
+          "speed": 310.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10985.0,
+          "drs": 8
+        },
+        {
+          "distance": 4471.8,
+          "time": 63.595,
+          "speed": 313.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11036.0,
+          "drs": 8
+        },
+        {
+          "distance": 4485.71,
+          "time": 63.755,
+          "speed": 313.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11064.0,
+          "drs": 8
+        },
+        {
+          "distance": 4510.14,
+          "time": 64.035,
+          "speed": 315.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11156.0,
+          "drs": 8
+        },
+        {
+          "distance": 4524.16,
+          "time": 64.195,
+          "speed": 316.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11163.0,
+          "drs": 8
+        },
+        {
+          "distance": 4538.23,
+          "time": 64.355,
+          "speed": 317.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11197.0,
+          "drs": 8
+        },
+        {
+          "distance": 4570.03,
+          "time": 64.715,
+          "speed": 319.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11256.0,
+          "drs": 8
+        },
+        {
+          "distance": 4584.2,
+          "time": 64.875,
+          "speed": 319.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11311.0,
+          "drs": 8
+        },
+        {
+          "distance": 4605.5,
+          "time": 65.115,
+          "speed": 320.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11336.0,
+          "drs": 8
+        },
+        {
+          "distance": 4619.73,
+          "time": 65.275,
+          "speed": 320.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11336.0,
+          "drs": 8
+        },
+        {
+          "distance": 4644.61,
+          "time": 65.555,
+          "speed": 320.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11349.0,
+          "drs": 8
+        },
+        {
+          "distance": 4676.9,
+          "time": 65.916,
+          "speed": 324.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11427.0,
+          "drs": 8
+        },
+        {
+          "distance": 4716.56,
+          "time": 66.356,
+          "speed": 325.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11478.0,
+          "drs": 8
+        },
+        {
+          "distance": 4745.5,
+          "time": 66.676,
+          "speed": 326.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11507.0,
+          "drs": 8
+        },
+        {
+          "distance": 4774.52,
+          "time": 66.996,
+          "speed": 327.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11513.0,
+          "drs": 8
+        },
+        {
+          "distance": 4789.05,
+          "time": 67.156,
+          "speed": 327.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11544.0,
+          "drs": 8
+        },
+        {
+          "distance": 4803.61,
+          "time": 67.316,
+          "speed": 328.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11570.0,
+          "drs": 8
+        },
+        {
+          "distance": 4818.19,
+          "time": 67.476,
+          "speed": 328.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11570.0,
+          "drs": 8
+        },
+        {
+          "distance": 4840.05,
+          "time": 67.716,
+          "speed": 328.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11578.0,
+          "drs": 8
+        },
+        {
+          "distance": 4861.95,
+          "time": 67.956,
+          "speed": 329.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11596.0,
+          "drs": 8
+        },
+        {
+          "distance": 4883.89,
+          "time": 68.196,
+          "speed": 329.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11641.0,
+          "drs": 8
+        },
+        {
+          "distance": 4902.14,
+          "time": 68.396,
+          "speed": 328.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11559.0,
+          "drs": 8
+        },
+        {
+          "distance": 4927.65,
+          "time": 68.676,
+          "speed": 328.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11494.0,
+          "drs": 8
+        },
+        {
+          "distance": 4967.61,
+          "time": 69.116,
+          "speed": 326.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11460.0,
+          "drs": 8
+        },
+        {
+          "distance": 4989.18,
+          "time": 69.356,
+          "speed": 321.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 11199.0,
+          "drs": 8
+        },
+        {
+          "distance": 5016.11,
+          "time": 69.676,
+          "speed": 285.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 8,
+          "rpm": 10849.0,
+          "drs": 8
+        },
+        {
+          "distance": 5048.93,
+          "time": 70.116,
+          "speed": 252.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 11147.0,
+          "drs": 8
+        },
+        {
+          "distance": 5067.72,
+          "time": 70.395,
+          "speed": 233.0,
+          "throttle": 0.0,
+          "brake": 100.0,
+          "gear": 6,
+          "rpm": 11947.0,
+          "drs": 8
+        },
+        {
+          "distance": 5083.06,
+          "time": 70.635,
+          "speed": 227.0,
+          "throttle": 0.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11615.0,
+          "drs": 8
+        },
+        {
+          "distance": 5098.12,
+          "time": 70.875,
+          "speed": 225.0,
+          "throttle": 26.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11227.0,
+          "drs": 8
+        },
+        {
+          "distance": 5112.79,
+          "time": 71.115,
+          "speed": 215.0,
+          "throttle": 51.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11368.0,
+          "drs": 8
+        },
+        {
+          "distance": 5134.34,
+          "time": 71.475,
+          "speed": 216.0,
+          "throttle": 87.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11537.0,
+          "drs": 8
+        },
+        {
+          "distance": 5153.81,
+          "time": 71.795,
+          "speed": 222.0,
+          "throttle": 98.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 11828.0,
+          "drs": 8
+        },
+        {
+          "distance": 5173.85,
+          "time": 72.115,
+          "speed": 229.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 5,
+          "rpm": 10697.0,
+          "drs": 8
+        },
+        {
+          "distance": 5191.82,
+          "time": 72.395,
+          "speed": 233.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 10904.0,
+          "drs": 8
+        },
+        {
+          "distance": 5207.55,
+          "time": 72.636,
+          "speed": 237.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11115.0,
+          "drs": 8
+        },
+        {
+          "distance": 5234.27,
+          "time": 73.036,
+          "speed": 244.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11370.0,
+          "drs": 8
+        },
+        {
+          "distance": 5245.18,
+          "time": 73.196,
+          "speed": 247.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11476.0,
+          "drs": 8
+        },
+        {
+          "distance": 5258.93,
+          "time": 73.396,
+          "speed": 248.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11711.0,
+          "drs": 8
+        },
+        {
+          "distance": 5269.96,
+          "time": 73.556,
+          "speed": 248.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 6,
+          "rpm": 11168.0,
+          "drs": 8
+        },
+        {
+          "distance": 5292.31,
+          "time": 73.876,
+          "speed": 255.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10398.0,
+          "drs": 8
+        },
+        {
+          "distance": 5318.16,
+          "time": 74.236,
+          "speed": 262.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10618.0,
+          "drs": 8
+        },
+        {
+          "distance": 5338.66,
+          "time": 74.516,
+          "speed": 265.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10734.0,
+          "drs": 8
+        },
+        {
+          "distance": 5356.42,
+          "time": 74.756,
+          "speed": 268.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10819.0,
+          "drs": 8
+        },
+        {
+          "distance": 5377.5,
+          "time": 75.036,
+          "speed": 274.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11077.0,
+          "drs": 8
+        },
+        {
+          "distance": 5392.78,
+          "time": 75.236,
+          "speed": 276.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11130.0,
+          "drs": 8
+        },
+        {
+          "distance": 5411.28,
+          "time": 75.476,
+          "speed": 279.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11229.0,
+          "drs": 8
+        },
+        {
+          "distance": 5423.72,
+          "time": 75.636,
+          "speed": 281.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11369.0,
+          "drs": 8
+        },
+        {
+          "distance": 5445.77,
+          "time": 75.916,
+          "speed": 286.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11450.0,
+          "drs": 8
+        },
+        {
+          "distance": 5477.83,
+          "time": 76.316,
+          "speed": 291.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 11491.0,
+          "drs": 8
+        },
+        {
+          "distance": 5490.78,
+          "time": 76.476,
+          "speed": 292.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 7,
+          "rpm": 10371.0,
+          "drs": 8
+        },
+        {
+          "distance": 5513.65,
+          "time": 76.756,
+          "speed": 296.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10519.0,
+          "drs": 8
+        },
+        {
+          "distance": 5539.97,
+          "time": 77.075,
+          "speed": 298.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10662.0,
+          "drs": 8
+        },
+        {
+          "distance": 5556.64,
+          "time": 77.275,
+          "speed": 302.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10818.0,
+          "drs": 8
+        },
+        {
+          "distance": 5580.2,
+          "time": 77.555,
+          "speed": 304.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10784.0,
+          "drs": 8
+        },
+        {
+          "distance": 5593.76,
+          "time": 77.715,
+          "speed": 306.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10809.0,
+          "drs": 8
+        },
+        {
+          "distance": 5621.05,
+          "time": 78.035,
+          "speed": 308.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 10954.0,
+          "drs": 8
+        },
+        {
+          "distance": 5655.49,
+          "time": 78.435,
+          "speed": 312.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11040.0,
+          "drs": 8
+        },
+        {
+          "distance": 5679.84,
+          "time": 78.715,
+          "speed": 314.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11058.0,
+          "drs": 8
+        },
+        {
+          "distance": 5707.88,
+          "time": 79.036,
+          "speed": 315.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11153.0,
+          "drs": 8
+        },
+        {
+          "distance": 5721.9,
+          "time": 79.196,
+          "speed": 316.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11145.0,
+          "drs": 8
+        },
+        {
+          "distance": 5743.0,
+          "time": 79.436,
+          "speed": 317.0,
+          "throttle": 100.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11189.0,
+          "drs": 8
+        },
+        {
+          "distance": 5778.28,
+          "time": 79.836,
+          "speed": 318.0,
+          "throttle": 99.0,
+          "brake": 0.0,
+          "gear": 8,
+          "rpm": 11294.0,
+          "drs": 8
+        }
+      ],
+      "quality_score": 0.9
+    }
+  ]
+}
