@@ -1,10 +1,11 @@
-import math
 
 import pytest
-
 from f1_intelligence_lab.research.stats import (
-    expected_calibration_error, interval_score, paired_race_bootstrap,
-    reliability_bins, wilson,
+    expected_calibration_error,
+    interval_score,
+    paired_race_bootstrap,
+    reliability_bins,
+    wilson,
 )
 
 

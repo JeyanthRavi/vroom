@@ -1,9 +1,8 @@
 from __future__ import annotations
 
 import pytest
-from fastapi.testclient import TestClient
-
 import stewardlens.api as api
+from fastapi.testclient import TestClient
 from stewardlens.contracts import (
     AgentFinding,
     EvidenceItem,

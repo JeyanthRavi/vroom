@@ -39,7 +39,7 @@ def reliability_bins(
 ) -> List[Dict[str, float]]:
     y = np.asarray(labels, dtype=int)
     p = np.asarray(probabilities, dtype=float)
-    if y.shape != p.shape or not np.isin(y, [0, 1]).all() or not ((0 <= p) & (p <= 1)).all():
+    if y.shape != p.shape or not np.isin(y, [0, 1]).all() or not ((p >= 0) & (p <= 1)).all():
         raise ValueError('binary labels and aligned probabilities in [0,1] required')
     result = []
     edges = np.linspace(0, 1, bins + 1)

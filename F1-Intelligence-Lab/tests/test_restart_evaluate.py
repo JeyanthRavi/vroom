@@ -1,8 +1,10 @@
 import json
+
 import pytest
+
 pytest.importorskip('torch')
-from f1_intelligence_lab.restart_evaluate import masks, sliced_score, verify, resumption_events
 from f1_intelligence_lab.ml_prep import digest
+from f1_intelligence_lab.restart_evaluate import masks, resumption_events, sliced_score, verify
 
 
 def sample():

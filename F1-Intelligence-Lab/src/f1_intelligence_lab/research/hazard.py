@@ -6,16 +6,17 @@ import csv
 from pathlib import Path
 from typing import Any, Dict, List
 
-import numpy as np
 import matplotlib
+import numpy as np
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import torch
 from sklearn.ensemble import HistGradientBoostingClassifier, HistGradientBoostingRegressor
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import average_precision_score, brier_score_loss, log_loss, roc_auc_score
 from sklearn.pipeline import make_pipeline
-import torch
 
 from .artifacts import finish, prepare, require_protocol_before_labels, write_json
 from .evaluate import assert_no_leakage, fixture_rows, regression_scores, write_predictions

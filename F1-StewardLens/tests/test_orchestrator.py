@@ -1,7 +1,5 @@
 from dataclasses import dataclass
 
-import pytest
-
 from stewardlens.agents import HeuristicDecisionAdapter, StewardAgent
 from stewardlens.contracts import EvidenceItem, EvidencePacket, Incident, RegulationClause
 from stewardlens.orchestrator import (

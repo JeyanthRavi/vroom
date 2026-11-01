@@ -8,7 +8,6 @@ from typing import Callable, Optional, Union
 from .agents import StewardAgent, anonymize_packet, run_specialists, validate_verdict_citations
 from .contracts import EvidencePacket, Verdict
 
-
 PacketLoader = Callable[[str], EvidencePacket]
 PacketEnricher = Callable[[EvidencePacket], EvidencePacket]
 

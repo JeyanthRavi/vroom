@@ -4,6 +4,13 @@ on:
   push:
   pull_request:
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   lint-type:
     runs-on: ubuntu-latest
@@ -16,6 +23,7 @@ jobs:
       - run: python -m pip install -e '.[dev]' -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[ml,audit,research,dev]'
       - run: make lint
       - run: make type
+      - run: make docs
 
   test-no-torch:
     runs-on: ubuntu-latest
@@ -53,11 +61,21 @@ jobs:
           cache: pip
       - run: python -m pip install -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[dl,audit,research,dev]'
       - run: make demo
+      - run: make public-demo
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aggregate-demo-preview
+          path: .build/public-demo
+          retention-days: 7
 
   docker:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: docker build -f F1-Intelligence-Lab/Dockerfile -t vroom-portal .
-      - run: docker build -f F1-Intelligence-Lab/Dockerfile.demo -t vroom-demo F1-Intelligence-Lab
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: make public-demo
+      - run: docker build -f F1-Intelligence-Lab/Dockerfile.demo -t vroom-demo .
 

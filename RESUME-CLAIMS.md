@@ -7,7 +7,7 @@ support engineering claims, not model-performance claims.
 
 **Bullet:** Built a leakage-controlled Formula 1 next-lap forecasting pipeline with whole-race chronological splits, rolling baselines, gradient boosting, GRU models, immutable manifests, and race-level evaluation.
 
-**Evidence:** `research/PROTOCOL.md`; `F1-Intelligence-Lab/MODEL-CARD.md`; `F1-Intelligence-Lab/demo-export-final/data.json`.
+**Evidence:** `research/PROTOCOL.md`; `F1-Intelligence-Lab/MODEL-CARD.md`; `F1-Intelligence-Lab/public-results/aggregate-results.json`.
 
 **Numbers:** Use only the generated table in `F1-Intelligence-Lab/MODEL-CARD.md`.
 
@@ -17,7 +17,7 @@ support engineering claims, not model-performance claims.
 
 **Bullet:** Diagnosed cross-season degradation and kept a rolling-median baseline beside learned models, reporting the previously examined 2026 cohort as a non-independent regression check.
 
-**Evidence:** `README.md#results-summary`; `research/runs/rq3-fixture/results.json`; `F1-Intelligence-Lab/CROSS-SEASON-2026.md`.
+**Evidence:** `README.md#results-summary`; `research/RESULTS.md`; `F1-Intelligence-Lab/CROSS-SEASON-2026.md`.
 
 **Numbers:** Generated in `README.md`; the RQ3 values are fixture-only.
 
@@ -27,7 +27,7 @@ support engineering claims, not model-performance claims.
 
 **Bullet:** Implemented split conformal and conformalized quantile-regression evaluation with disjoint calibration races, Wilson coverage intervals, interval scores, and additive API bounds.
 
-**Evidence:** `research/PROTOCOL.md#rq2`; `research/runs/rq2-fixture/manifest.json`; `F1-Intelligence-Lab/tests/test_research_conformal.py`.
+**Evidence:** `research/PROTOCOL.md#rq2`; `F1-Intelligence-Lab/public-results/research-fixture-summary.json`; `F1-Intelligence-Lab/tests/test_research_conformal.py`.
 
 **Numbers:** **NOT YET SUPPORTED** on real data; fixture table is generated in `research/RESULTS.md`.
 
@@ -37,7 +37,7 @@ support engineering claims, not model-performance claims.
 
 **Bullet:** Built a two-stage pace and race-neutralisation research pipeline comparing base-rate, logistic, boosted-tree, and compact TCN hazard models with calibration and per-race/per-circuit diagnostics.
 
-**Evidence:** `research/runs/rq1-fixture/manifest.json`; `F1-Intelligence-Lab/src/f1_intelligence_lab/research/hazard.py`.
+**Evidence:** `F1-Intelligence-Lab/public-results/research-fixture-summary.json`; `F1-Intelligence-Lab/src/f1_intelligence_lab/research/hazard.py`.
 
 **Numbers:** **NOT YET SUPPORTED** on real data.
 
@@ -47,7 +47,7 @@ support engineering claims, not model-performance claims.
 
 **Bullet:** Implemented CPU-reproducible GRU, TCN, MLP, and sequence-boosting ablations across history length, race-state, tyre context, and three fixed seeds.
 
-**Evidence:** `research/runs/rq4-fixture/manifest.json`; `research/RESULTS.md#rq4--sequence-fairness`.
+**Evidence:** `research/RESULTS.md#rq4--sequence-fairness`; `F1-Intelligence-Lab/tests/test_research_tcn.py`.
 
 **Numbers:** Fixture-only parameter and MAE table is generated; no superiority claim is supported.
 
@@ -57,7 +57,7 @@ support engineering claims, not model-performance claims.
 
 **Bullet:** Extended a deterministic steward simulator with offline TF-IDF retrieval, stratified logistic-regression feasibility evaluation, strict citation integrity, Wilson-scored identity swaps, and an optional model-agent boundary.
 
-**Evidence:** `research/runs/stewardlens-feasibility/results.json`; `F1-StewardLens/tests/test_evaluation.py`; `F1-StewardLens/tests/test_model_agent.py`.
+**Evidence:** `research/RESULTS.md#stewardlens-feasibility`; `F1-StewardLens/tests/test_evaluation.py`; `F1-StewardLens/tests/test_model_agent.py`.
 
 **Numbers:** Generated in `research/RESULTS.md`; small mixed metadata/synthetic set only.
 
@@ -67,7 +67,7 @@ support engineering claims, not model-performance claims.
 
 **Bullet:** Shipped a checksum-verified aggregate replay with authenticated write paths, CSP/security headers, rights-safe defaults, generated methodology views, and a sub-megabyte static package.
 
-**Evidence:** `F1-Intelligence-Lab/demo-export-final/manifest.json`; `NOTICE.md`; `F1-Intelligence-Lab/tests/test_demo_api.py`.
+**Evidence:** `.github/workflows/pages.yml`; `NOTICE.md`; `F1-Intelligence-Lab/tests/test_site_export.py`.
 
 **Numbers:** Final package size and release tests are recorded in `FINAL-REPORT.md`.
 

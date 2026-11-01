@@ -1,12 +1,14 @@
 from copy import deepcopy
+
 import pytest
+
 pytest.importorskip('torch')
-from f1_intelligence_lab.robust_train import transform,neural_view,interrupted,only_2025
 from f1_intelligence_lab.ml_prep import FEATURES
+from f1_intelligence_lab.robust_train import interrupted, neural_view, only_2025, transform
 
 
 def data():
-    x={k:1. for k in FEATURES}
+    x=dict.fromkeys(FEATURES, 1.0)
     x.update(circuit='TEST',lag_1_s=90.,lag_2_s=90.,lag_3_s=90.,previous_compound='MEDIUM',control_state_at_cutoff='GREEN')
     seq=[{'pace_delta_s':0.,'lap_number':i+1,'compound':'MEDIUM','tyre_age':i+1,'stint_lap':i+1,'pit_out':0,'control_state':'GREEN'} for i in range(10)]
     return {'x':[x],'sequences':[seq],'y':[91.],'meta':[{'session_id':'test'}]}
@@ -57,9 +59,10 @@ def test_only_2025_training_rows_survive():
 
 def test_saved_model_integrity_checked_before_loading(tmp_path,monkeypatch):
     import json
+
     import joblib
-    from f1_intelligence_lab.robust_train import predict_saved
     from f1_intelligence_lab.ml_prep import digest
+    from f1_intelligence_lab.robust_train import predict_saved
     selection=json.dumps({'tree_candidate':'tree','ratio':2.}).encode()
     (tmp_path/'selection.json').write_bytes(selection)
     (tmp_path/'tree.joblib').write_bytes(b'corrupt')

@@ -1,1 +1,0 @@
-Bar chart of fixture-only PSI values for six cutoff-safe features; taller bars indicate larger synthetic shift.

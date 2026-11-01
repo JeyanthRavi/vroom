@@ -1,14 +1,13 @@
-import json
 from collections import ChainMap
-from datetime import datetime, timezone
+
 import pytest
+from f1_intelligence_lab.app import app
+from f1_intelligence_lab.historical import track_flag
+from f1_intelligence_lab.library import LapMap, Library, SessionMap
+from f1_intelligence_lab.openf1_provider import Client, date, status_for_lap
 from fastapi.testclient import TestClient
 from telemetry_pit_crew.sample_data import demo_laps
 from telemetry_pit_crew.service import TelemetryService
-from f1_intelligence_lab.app import app
-from f1_intelligence_lab.library import Library, SessionMap, LapMap
-from f1_intelligence_lab.openf1_provider import status_for_lap, date, Client
-from f1_intelligence_lab.historical import track_flag
 
 
 @pytest.mark.parametrize('compound', ['HARD', None])
@@ -16,12 +15,12 @@ from f1_intelligence_lab.historical import track_flag
 def test_openf1_null_stint_bounds_are_skipped(tmp_path, monkeypatch, compound, include_telemetry):
     from f1_intelligence_lab.openf1_provider import import_openf1
     responses = {
-        'sessions': [dict(session_key=1, circuit_short_name='Melbourne', date_end='2025-03-16T10:00:00Z')],
-        'drivers': [dict(driver_number=1, name_acronym='VER')],
-        'laps': [dict(driver_number=1, lap_number=n, lap_duration=90, date_start='2025-03-16T04:00:00Z') for n in [1, 2]],
-        'stints': [dict(driver_number=1, lap_start=None, lap_end=1),
-                   dict(driver_number=1, lap_start=1, lap_end=None),
-                   dict(driver_number=1, lap_start=2, lap_end=2, compound=compound, stint_number=2)],
+        'sessions': [{'session_key': 1, 'circuit_short_name': 'Melbourne', 'date_end': '2025-03-16T10:00:00Z'}],
+        'drivers': [{'driver_number': 1, 'name_acronym': 'VER'}],
+        'laps': [{'driver_number': 1, 'lap_number': n, 'lap_duration': 90, 'date_start': '2025-03-16T04:00:00Z'} for n in [1, 2]],
+        'stints': [{'driver_number': 1, 'lap_start': None, 'lap_end': 1},
+                   {'driver_number': 1, 'lap_start': 1, 'lap_end': None},
+                   {'driver_number': 1, 'lap_start': 2, 'lap_end': 2, 'compound': compound, 'stint_number': 2}],
     }
     def get(self, endpoint, **params):
         if not include_telemetry:
@@ -74,7 +73,7 @@ def test_reimport_is_atomic_and_replaces_only_target(tmp_path):
 
 
 def test_shared_service_summaries_do_not_read_telemetry(tmp_path,monkeypatch):
-    lib=Library(tmp_path);laps=fixture_session(lib)
+    lib=Library(tmp_path);fixture_session(lib)
     service=TelemetryService()
     service.sessions=ChainMap(service.sessions,SessionMap(lib))
     service.laps=ChainMap(service.laps,LapMap(lib))
@@ -133,6 +132,7 @@ def test_cross_session_comparison_rejected(tmp_path):
 
 def test_worker_timeout_reports_failure(tmp_path,monkeypatch):
     import subprocess
+
     import f1_intelligence_lab.library_api as api
     lib=Library(tmp_path);monkeypatch.setattr(api,'library',lib)
     with lib.connect() as db:

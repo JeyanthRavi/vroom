@@ -11,8 +11,9 @@ from urllib.request import Request, urlopen
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import HTMLResponse, Response
+
 from .library_api import library
-from .openf1_provider import Client, BASE
+from .openf1_provider import BASE, Client
 from .security import require_admin
 
 router = APIRouter()
@@ -100,12 +101,12 @@ def detail(sid: str):
         try: out['pace'] = library.race(sid)
         except KeyError: out['pace'] = None
         return out
-    except KeyError: raise HTTPException(404,'Session not in library')
+    except KeyError: raise HTTPException(404,'Session not in library') from None
 
 @router.post('/api/race-details/{sid}/load',status_code=202)
 def refresh(sid: str, _admin: None = Depends(require_admin)):
     try: library.session(sid)
-    except KeyError: raise HTTPException(404,'Session not in library')
+    except KeyError: raise HTTPException(404,'Session not in library') from None
     if not re.fullmatch(r'openf1-\d+',sid): raise HTTPException(422,'OpenF1 session required')
     if not LOCK.acquire(blocking=False): raise HTTPException(409,'A detail import is running; try again shortly.')
     LOADS[sid] = {'state':'loading'}

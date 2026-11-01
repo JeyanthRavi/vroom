@@ -1,8 +1,9 @@
-from f1_intelligence_lab.race_state import state_at
 from f1_intelligence_lab.ml_prep import dt
+from f1_intelligence_lab.race_state import state_at
+
 
 def event(n,message='',flag=None,scope=None,sector=None):
-    return dict(date=f'2025-01-01T00:00:{n:02d}Z',message=message,flag=flag,scope=scope,sector=sector)
+    return {'date': f'2025-01-01T00:00:{n:02d}Z','message': message,'flag': flag,'scope': scope,'sector': sector}
 
 def test_local_flags_do_not_end_neutralisation():
     events=[event(1,'SAFETY CAR DEPLOYED'),event(2,flag='YELLOW',scope='Sector',sector=2),event(3,flag='CLEAR',scope='Sector',sector=2)]

@@ -21,31 +21,18 @@ def _digest(path: Path) -> str:
 
 
 def research_payload(root: Path) -> Dict[str, Any]:
-    rq1 = _json(root / "research/runs/rq1-fixture/results.json")
-    rq2 = _json(root / "research/runs/rq2-fixture/results.json")
-    rq3 = _json(root / "research/runs/rq3-fixture/results.json")
-    return {
-        "evidence_status": "fixture-only: not evidence",
-        "evaluated_on": {
-            "development": "deterministic synthetic fixture",
-            "examined_2026": "not used in these fixture views",
-            "forward_holdout": "pending",
-        },
-        "hazard": {
-            horizon: {
-                "model": "boosting",
-                "reliability": rq1["hazard"][horizon]["boosting"]["reliability"],
-                "brier": rq1["hazard"][horizon]["boosting"]["brier"],
-                "baseline_brier": rq1["hazard"][horizon]["base_rate"]["brier"],
-            }
-            for horizon in ("1", "3")
-        },
-        "intervals": rq2["methods"],
-        "drift": {
-            "rolling_origin": rq3["rolling_origin"],
-            "feature_shift": rq3["feature_shift"],
-        },
-    }
+    """Load the deliberately versioned, aggregate fixture summary.
+
+    Full generated research run directories are local build artifacts and are
+    intentionally excluded from the public repository.
+    """
+
+    payload = _json(
+        root / "F1-Intelligence-Lab/public-results/research-fixture-summary.json"
+    )
+    if payload.get("evidence_status") != "fixture-only: not evidence":
+        raise ValueError("public research summary must remain explicitly fixture-only")
+    return payload
 
 
 def methodology_html(root: Path) -> str:
@@ -55,19 +42,30 @@ def methodology_html(root: Path) -> str:
 
 
 def _verified_source(source: Path) -> Dict[str, Any]:
-    manifest = _json(source / "manifest.json")
-    files = manifest.get("files", manifest)
-    for name, expected in files.items():
-        if not (source / name).is_file() or _digest(source / name) != expected:
-            raise ValueError("source export checksum mismatch: " + name)
-    return manifest
+    payload = _json(source)
+    if payload.get("schema") != 2 or payload.get("export_mode") != "aggregate":
+        raise ValueError("public demo source must use aggregate schema 2")
+    forbidden = {"actual", "driver", "prediction_at", "lap_number", "duration"}
+
+    def keys(value: Any) -> set[str]:
+        if isinstance(value, dict):
+            return {str(key).lower() for key in value} | set().union(
+                *(keys(item) for item in value.values())
+            )
+        if isinstance(value, list):
+            return set().union(*(keys(item) for item in value)) if value else set()
+        return set()
+
+    if forbidden.intersection(keys(payload)):
+        raise ValueError("public demo source contains a forbidden lap-level key")
+    return payload
 
 
 def build(source: Path, output: Path, root: Path) -> Path:
-    source_manifest = _verified_source(source)
+    source_payload = _verified_source(source)
     output.mkdir(parents=True, exist_ok=False)
     static = root / "F1-Intelligence-Lab/src/f1_intelligence_lab/static"
-    shutil.copyfile(source / "data.json", output / "data.json")
+    shutil.copyfile(source, output / "data.json")
     shutil.copyfile(static / "model-demo.html", output / "index.html")
     shutil.copyfile(static / "model-demo.js", output / "demo.js")
     (output / "research.json").write_text(
@@ -78,7 +76,15 @@ def build(source: Path, output: Path, root: Path) -> Path:
         commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
     except (OSError, subprocess.CalledProcessError):
         commit = "unknown"
-    data = _json(output / "data.json")
+    metadata = {
+        "manifest_schema": 2,
+        "export_mode": "aggregate",
+        "version": source_payload.get("model_version", "unknown"),
+        "git_commit": commit,
+    }
+    (output / "export-metadata.json").write_text(
+        json.dumps(metadata, indent=2, sort_keys=True) + "\n"
+    )
     files = {
         path.name: _digest(path)
         for path in sorted(output.iterdir())
@@ -86,8 +92,8 @@ def build(source: Path, output: Path, root: Path) -> Path:
     }
     manifest = {
         "schema": 2,
-        "export_mode": source_manifest.get("export_mode", data.get("export_mode", "legacy_full")),
-        "version": data.get("model_version", "unknown"),
+        "export_mode": "aggregate",
+        "version": source_payload.get("model_version", "unknown"),
         "git_commit": commit,
         "files": files,
     }
@@ -100,7 +106,14 @@ def main() -> None:
     parser.add_argument("--source", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--root", type=Path, default=Path.cwd())
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="Replace an existing generated output directory.",
+    )
     arguments = parser.parse_args()
+    if arguments.replace and arguments.output.exists():
+        shutil.rmtree(arguments.output)
     build(arguments.source, arguments.output, arguments.root)
 
 

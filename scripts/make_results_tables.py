@@ -43,7 +43,7 @@ def core_table(data: Dict) -> str:
     lines.append("")
     lines.append(
         "The rolling median remains the pooled-RMSE/R² reference; learned models "
-        "do not improve every metric. Source: `F1-Intelligence-Lab/demo-export-final/data.json`."
+        "do not improve every metric. Source: `F1-Intelligence-Lab/public-results/aggregate-results.json`."
     )
     return "\n".join(lines)
 
@@ -60,7 +60,7 @@ def model_card(data: Dict) -> str:
             f"| Examined 2026 regression | Restart boosting | {number(regression['restart_boosting']['race_macro_mae_s'])} | {number(regression['rolling_median']['race_macro_mae_s'])} | {number(regression['restart_boosting']['rmse_s'])} | {number(regression['restart_boosting']['r2'])} | {regression['restart_boosting']['rows']} |",
             f"| Examined 2026 regression | Restart GRU | {number(regression['restart_gru']['race_macro_mae_s'])} | {number(regression['rolling_median']['race_macro_mae_s'])} | {number(regression['restart_gru']['rmse_s'])} | {number(regression['restart_gru']['r2'])} | {regression['restart_gru']['rows']} |",
             "",
-            "Source: `demo-export-final/data.json`; 2026 is previously examined and non-independent.",
+            "Source: `public-results/aggregate-results.json`; 2026 is previously examined and non-independent.",
         ]
     )
 
@@ -134,15 +134,10 @@ def replace(path: Path, name: str, body: str, check: bool) -> bool:
 
 
 def sections() -> Dict[Tuple[str, str], str]:
-    data = load("F1-Intelligence-Lab/demo-export-final/data.json")
+    data = load("F1-Intelligence-Lab/public-results/aggregate-results.json")
     return {
         ("README.md", "core-results"): core_table(data),
         ("F1-Intelligence-Lab/MODEL-CARD.md", "model-card-metrics"): model_card(data),
-        ("research/RESULTS.md", "rq1-results"): rq1(load("research/runs/rq1-fixture/results.json")),
-        ("research/RESULTS.md", "rq2-results"): rq2(load("research/runs/rq2-fixture/results.json")),
-        ("research/RESULTS.md", "rq3-results"): rq3(load("research/runs/rq3-fixture/results.json")),
-        ("research/RESULTS.md", "rq4-results"): rq4(load("research/runs/rq4-fixture/results.json")),
-        ("research/RESULTS.md", "steward-results"): steward(load("research/runs/stewardlens-feasibility/results.json")),
     }
 
 

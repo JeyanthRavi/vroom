@@ -1,7 +1,6 @@
 import json
 
 import pytest
-
 from stewardlens.repository import (
     JsonRepository,
     RecordNotFoundError,

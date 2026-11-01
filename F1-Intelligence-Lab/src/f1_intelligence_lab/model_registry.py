@@ -6,7 +6,6 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
-
 ALLOWED_STATUS = {"staging", "rejected", "archived"}
 
 

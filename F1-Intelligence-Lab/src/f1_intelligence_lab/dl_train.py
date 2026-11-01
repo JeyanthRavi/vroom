@@ -24,7 +24,8 @@ from torch import nn
 
 from .ml_prep import digest
 from .ml_sequences import WINDOW, ablate, build_split, flattened
-from .ml_train import CONFIG as TREE_CONFIG, baseline, evaluate, expanding_folds, save_json
+from .ml_train import CONFIG as TREE_CONFIG
+from .ml_train import baseline, evaluate, expanding_folds, save_json
 
 PROTOCOL = {
     'version':1,'window':WINDOW,'seeds':[11,29,47],'variants':['full','no_tyre','no_control'],

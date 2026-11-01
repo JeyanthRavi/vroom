@@ -39,7 +39,7 @@ model metric is shown with the rolling-median baseline from the same rows.
 | Examined 2026 regression | Restart boosting | 5.171 | 6.046 | 74.497 | 0.032 | 7195 |
 | Examined 2026 regression | Restart GRU | 5.187 | 6.046 | 74.685 | 0.027 | 7195 |
 
-Source: `demo-export-final/data.json`; 2026 is previously examined and non-independent.
+Source: `public-results/aggregate-results.json`; 2026 is previously examined and non-independent.
 <!-- END GENERATED: model-card-metrics -->
 
 ## Limitations

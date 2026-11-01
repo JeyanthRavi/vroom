@@ -1,8 +1,9 @@
 import pytest
+
 pytest.importorskip('torch')
+import joblib
 import numpy as np
 import torch
-import joblib
 from f1_intelligence_lab import dl_train as dl
 from f1_intelligence_lab.ml_prep import FEATURES
 from f1_intelligence_lab.ml_train import save_json
@@ -10,8 +11,8 @@ from f1_intelligence_lab.ml_train import save_json
 
 def fixture_data():
     x=[]; sequences=[]
-    for i in range(12):
-        row={k:1. for k in FEATURES}
+    for _i in range(12):
+        row=dict.fromkeys(FEATURES, 1.0)
         row.update(circuit='TRAIN_ONLY',previous_compound='MEDIUM',control_state_at_cutoff='GREEN',lag_1_s=90.)
         x.append(row)
         sequences.append([{'pace_delta_s':0.,'lap_number':n,'compound':'MEDIUM','tyre_age':n,'stint_lap':n,'pit_out':0,'control_state':'GREEN'} for n in range(1,11)])

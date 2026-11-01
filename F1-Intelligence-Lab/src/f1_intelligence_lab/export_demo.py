@@ -6,15 +6,18 @@ while redistribution permission for lap-level source data remains unresolved.
 import argparse
 import json
 from pathlib import Path
+
 import joblib
 import numpy as np
 import torch
 from threadpoolctl import threadpool_limits
-from .ml_sequences import build_split,flattened
-from .ml_train import baseline,save_json
+
 from .ml_prep import digest
-from .robust_train import only_2025,predict_saved
+from .ml_sequences import build_split, flattened
+from .ml_train import baseline, save_json
 from .restart_evaluate import verify
+from .robust_train import only_2025, predict_saved
+
 
 def _score_rows(rows, models):
     scores = {}
@@ -104,15 +107,15 @@ def run(dataset,source,training,evaluation,output,mode='aggregate'):
             rows=[]
             for i in ix:
                 x=d['x'][i];m=d['meta'][i]
-                rows.append(dict(driver=m['driver_number'],lap=x['lap_number'],actual=d['y'][i],
-                    state=x['control_state_at_cutoff'],prediction_at=m['prediction_at'],
-                    predictions={n:float(p[i]) for n,p in values.items()}))
-            sessions.append(dict(id=sid,circuit=d['x'][first]['circuit'],date=d['meta'][first]['race_start'],split=split,rows=rows))
+                rows.append({'driver': m['driver_number'],'lap': x['lap_number'],'actual': d['y'][i],
+                    'state': x['control_state_at_cutoff'],'prediction_at': m['prediction_at'],
+                    'predictions': {n:float(p[i]) for n,p in values.items()}})
+            sessions.append({'id': sid,'circuit': d['x'][first]['circuit'],'date': d['meta'][first]['race_start'],'split': split,'rows': rows})
     out.mkdir(parents=True,exist_ok=False)
-    payload=dict(schema=1,export_mode='full',model_version=digest((train/'artifact_hashes.json').read_bytes())[:12],
-        selected_on_2025=choice,models=list(values),control_version=version,sessions=sessions,
-        validation=result['scores']['validation'],regression=regression['scores'],
-        limitations='Historical predictions, not live inference. In-sample training and reused validation/test races are labelled. Evaluated on previously examined 2026 races; not an independent holdout. Long laps remain included. No causal strategy advice.')
+    payload={'schema': 1,'export_mode': 'full','model_version': digest((train/'artifact_hashes.json').read_bytes())[:12],
+        'selected_on_2025': choice,'models': list(values),'control_version': version,'sessions': sessions,
+        'validation': result['scores']['validation'],'regression': regression['scores'],
+        'limitations': 'Historical predictions, not live inference. In-sample training and reused validation/test races are labelled. Evaluated on previously examined 2026 races; not an independent holdout. Long laps remain included. No causal strategy advice.'}
     save_json(out/'data.json',aggregate_payload(payload) if mode=='aggregate' else payload)
     assets=Path(__file__).parent/'static'
     for dest,src in [('index.html','model-demo.html'),('demo.js','model-demo.js')]:

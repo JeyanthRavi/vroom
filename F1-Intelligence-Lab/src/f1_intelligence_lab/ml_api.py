@@ -4,7 +4,9 @@ import logging
 import os
 from pathlib import Path
 from threading import Lock
+
 from fastapi import APIRouter, HTTPException
+
 from .ml_prep import FEATURES, digest
 
 router = APIRouter(tags=['historical ML'])
@@ -35,7 +37,7 @@ def restart_research():
         return dict(status='ready',**{k:r[k] for k in ['winner','tree_candidate','ratio','scores','coverage','stress','limitations']})
     except Exception:
         LOG.exception('Restart research unavailable')
-        raise HTTPException(503,'Restart experiment unavailable or integrity check failed.')
+        raise HTTPException(503,'Restart experiment unavailable or integrity check failed.') from None
 
 
 @router.get('/api/ml/cross-season')
@@ -55,7 +57,7 @@ def cross_season_results():
                         'selected_before_2026','paired_vs_last_lap','holdout_status','limitations']})
     except Exception:
         LOG.exception('Cross-season evaluation unavailable')
-        raise HTTPException(503,'Cross-season report unavailable or integrity check failed.')
+        raise HTTPException(503,'Cross-season report unavailable or integrity check failed.') from None
 
 
 @router.get('/api/ml/experiment')
@@ -80,7 +82,7 @@ def experiment():
                           for name in names]}
     except Exception:
         LOG.exception('Sequence experiment unavailable')
-        raise HTTPException(503,'Experiment unavailable or integrity check failed.')
+        raise HTTPException(503,'Experiment unavailable or integrity check failed.') from None
 
 
 class HistoricalPredictor:
@@ -124,9 +126,10 @@ class HistoricalPredictor:
             return dict(base,status='reserved',message='This three-lap model view does not serve 2026 predictions. See the separate frozen cross-season evaluation below when configured.')
         if not report or not report['verified_for_prep']:
             return dict(base,status='unavailable',message='This race is outside the verified training dataset. No synthetic prediction is substituted.')
-        from .ml_dataset import load_split
-        from .ml_train import predict, baseline
         from threadpoolctl import threadpool_limits
+
+        from .ml_dataset import load_split
+        from .ml_train import baseline, predict
         split = report['split']
         if split not in self.cache:
             self.cache[split] = load_split(self.dataset,split)
@@ -165,4 +168,4 @@ def predictions(sid: str):
             return SERVICE.session(sid)
     except Exception:
         LOG.exception('Historical ML inference unavailable')
-        raise HTTPException(503,'Model unavailable or integrity check failed. Ask the local operator to check configuration.')
+        raise HTTPException(503,'Model unavailable or integrity check failed. Ask the local operator to check configuration.') from None

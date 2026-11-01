@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 STATIC = Path(__file__).parents[1] / "src" / "f1_intelligence_lab" / "static"
 
 

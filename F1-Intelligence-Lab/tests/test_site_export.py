@@ -3,9 +3,7 @@ import json
 from pathlib import Path
 
 import pytest
-
 from f1_intelligence_lab.site_export import build, research_payload
-
 
 ROOT = Path(__file__).parents[2]
 
@@ -18,7 +16,7 @@ def test_research_payload_is_explicitly_fixture_only():
 
 
 def test_site_build_is_immutable_small_and_verified(tmp_path):
-    source = ROOT / "F1-Intelligence-Lab" / "demo-export-aggregate"
+    source = ROOT / "F1-Intelligence-Lab/public-results/aggregate-results.json"
     output = build(source, tmp_path / "site", ROOT)
     with pytest.raises(FileExistsError):
         build(source, output, ROOT)
@@ -28,4 +26,6 @@ def test_site_build_is_immutable_small_and_verified(tmp_path):
     assert sum(path.stat().st_size for path in output.iterdir()) < 1_000_000
     research = json.loads((output / "research.json").read_text())
     assert research["evidence_status"] == "fixture-only: not evidence"
+    metadata = json.loads((output / "export-metadata.json").read_text())
+    assert metadata["export_mode"] == "aggregate"
     assert "Pre-registered protocol" in (output / "methodology.html").read_text()

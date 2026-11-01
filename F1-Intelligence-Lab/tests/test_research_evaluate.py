@@ -1,5 +1,4 @@
 import pytest
-
 from f1_intelligence_lab.research.evaluate import assert_no_leakage, fixture_rows
 
 

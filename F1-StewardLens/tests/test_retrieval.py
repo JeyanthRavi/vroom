@@ -1,5 +1,4 @@
 import pytest
-
 from stewardlens.contracts import Incident, RegulationClause
 from stewardlens.retrieval import retrieve_precedents, retrieve_regulations, score_text, tokenize
 

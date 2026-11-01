@@ -1,10 +1,10 @@
 FROM python:3.11-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PORT=8000 F1_DEMO_EXPORT=/app/replay
 WORKDIR /app
-COPY pyproject.toml README.md ./
-COPY src ./src
+COPY F1-Intelligence-Lab/pyproject.toml F1-Intelligence-Lab/README.md ./
+COPY F1-Intelligence-Lab/src ./src
 RUN python -m pip install --no-cache-dir . && useradd --uid 10001 --create-home replay
-COPY demo-export-final/ /app/replay/
+COPY .build/public-demo/ /app/replay/
 USER replay
 EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s CMD python -c "import os,urllib.request; urllib.request.urlopen('http://127.0.0.1:'+os.environ['PORT']+'/health',timeout=3)"

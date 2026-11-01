@@ -1,7 +1,5 @@
 from fastapi.testclient import TestClient
-
 from telemetry_pit_crew.api import app
-
 
 client = TestClient(app)
 

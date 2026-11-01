@@ -3,11 +3,11 @@ import json
 import pytest
 
 pytest.importorskip('sklearn')
-import numpy as np
 import joblib
-from threadpoolctl import threadpool_limits
+import numpy as np
 from f1_intelligence_lab import ml_train as ml
 from f1_intelligence_lab.ml_prep import FEATURES
+from threadpoolctl import threadpool_limits
 
 
 def row(i=0):
@@ -73,7 +73,7 @@ def test_test_loaded_only_after_selection_and_no_future(monkeypatch,tmp_path):
         meta=[{'session_id':split+str(i//4),'race_start':f'2025-01-0{i//4+1}','row_id':str(i)} for i in range(16)]
         return rows,[r['lag_1_s']+.5 for r in rows],meta
     monkeypatch.setattr(ml,'load_split',load)
-    (tmp_path/'manifest.json').write_text(json.dumps({n:'test-hash' for n in ['audit.json','feature_contract.json','train.csv','validation.csv','test.csv']}))
+    (tmp_path/'manifest.json').write_text(json.dumps(dict.fromkeys(['audit.json', 'feature_contract.json', 'train.csv', 'validation.csv', 'test.csv'], 'test-hash')))
     with threadpool_limits(limits=1):
         result=ml.run(tmp_path,tmp_path/'run')
     assert calls==['train','validation','test']

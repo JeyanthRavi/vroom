@@ -4,9 +4,9 @@ from __future__ import annotations
 import argparse
 import csv
 from pathlib import Path
-from typing import Any, Dict, List
 
 import matplotlib
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,8 +14,8 @@ from scipy.stats import ks_2samp
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import GroupKFold, cross_val_predict
-from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
 from .artifacts import finish, prepare, require_protocol_before_labels, write_json
 from .evaluate import assert_no_leakage, fixture_rows

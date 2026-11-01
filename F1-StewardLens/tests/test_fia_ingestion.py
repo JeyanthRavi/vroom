@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 
 import pytest
-
 from stewardlens.fia_ingestion import (
     FIAIngestionError,
     ingest_manifest,
@@ -11,7 +10,6 @@ from stewardlens.fia_ingestion import (
     validate_official_fia_url,
 )
 from stewardlens.repository import JsonRepository
-
 
 SAMPLE_DECISION = """
 2024 ITALIAN GRAND PRIX

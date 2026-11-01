@@ -4,6 +4,7 @@ import json
 import logging
 import os
 from pathlib import Path
+
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import Response
 
@@ -38,7 +39,7 @@ def serve(asset):
         return Response(raw,media_type=TYPES[asset],headers=SECURITY_HEADERS)
     except Exception:
         logging.getLogger(__name__).exception('Replay package unavailable')
-        raise HTTPException(503,'Replay unavailable or integrity check failed')
+        raise HTTPException(503,'Replay unavailable or integrity check failed') from None
 
 @router.get('/model-demo/',include_in_schema=False)
 def page():return serve('index.html')
@@ -55,7 +56,7 @@ def metadata():
         return Response(body,media_type='application/json',headers=SECURITY_HEADERS)
     except Exception:
         logging.getLogger(__name__).exception('Replay metadata unavailable')
-        raise HTTPException(503,'Replay unavailable or integrity check failed')
+        raise HTTPException(503,'Replay unavailable or integrity check failed') from None
 
 @router.get('/model-demo/{asset}',include_in_schema=False)
 def asset(asset:str):return serve(asset)

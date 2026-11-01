@@ -1,7 +1,0 @@
-race_id,model,mae_s
-fixture-06,rolling_median_5,3.639302967562749
-fixture-07,rolling_median_5,2.3705741659724207
-fixture-06,single_stage_boosting,3.703331085262506
-fixture-07,single_stage_boosting,2.681251050788544
-fixture-06,two_stage,9.493636563878734
-fixture-07,two_stage,8.037936300744038

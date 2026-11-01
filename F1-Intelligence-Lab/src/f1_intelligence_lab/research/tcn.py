@@ -7,8 +7,9 @@ import random
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Tuple
 
-import numpy as np
 import matplotlib
+import numpy as np
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import torch

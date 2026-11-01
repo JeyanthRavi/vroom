@@ -9,7 +9,6 @@ from typing import Any, Callable, Iterable, List, Optional, Sequence, TypeVar
 
 from stewardlens.contracts import Incident, RegulationClause
 
-
 _TOKEN_RE = re.compile(r"[a-z0-9]+")
 _STOP_WORDS = {
     "a",

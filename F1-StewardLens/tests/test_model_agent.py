@@ -1,7 +1,6 @@
 import json
 
 import pytest
-
 from stewardlens.agents import CitationValidationError
 from stewardlens.contracts import AgentFinding
 from stewardlens.model_agent import EnvironmentModelAgent, MockModelAgent

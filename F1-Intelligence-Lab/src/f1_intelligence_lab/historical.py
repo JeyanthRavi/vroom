@@ -90,14 +90,14 @@ def import_session(library, year, event, code, progress=lambda message: None):
                 converted = None
         if converted: laps.append(converted)
         else: unavailable.append(driver)
-    metadata = dict(id=session_id, name=f'{year} {event_name} — {code}', year=year,
-                    event=event_name, session_code=code, source_type='fastf1_historical',
-                    source_url='https://docs.fastf1.dev/', source_urls=['https://docs.fastf1.dev/'],
-                    retrieved_at=datetime.now(timezone.utc).isoformat(),
-                    provider_version=fastf1.__version__, drivers_total=len(drivers),
-                    telemetry_drivers=len(laps), unavailable_drivers=unavailable,
-                    race_records=race['records'] if race else 0,
-                    notes='Historical FastF1 session. Race Lab uses full available lap timing. Other tools use one fastest usable accurate, non-deleted telemetry lap per available driver (up to 3 candidates tried). Not live; not a full-race telemetry replay.')
+    metadata = {'id': session_id, 'name': f'{year} {event_name} — {code}', 'year': year,
+                    'event': event_name, 'session_code': code, 'source_type': 'fastf1_historical',
+                    'source_url': 'https://docs.fastf1.dev/', 'source_urls': ['https://docs.fastf1.dev/'],
+                    'retrieved_at': datetime.now(timezone.utc).isoformat(),
+                    'provider_version': fastf1.__version__, 'drivers_total': len(drivers),
+                    'telemetry_drivers': len(laps), 'unavailable_drivers': unavailable,
+                    'race_records': race['records'] if race else 0,
+                    'notes': 'Historical FastF1 session. Race Lab uses full available lap timing. Other tools use one fastest usable accurate, non-deleted telemetry lap per available driver (up to 3 candidates tried). Not live; not a full-race telemetry replay.'}
     progress('Validating and committing the session atomically.')
     library.store(metadata, laps, race)
     return session_id

@@ -1,7 +1,7 @@
 import pytest
-from fastapi.testclient import TestClient
 from f1_intelligence_lab.app import app
-from f1_intelligence_lab.race_analysis import analyze, parse_csv, demo_csv
+from f1_intelligence_lab.race_analysis import analyze, demo_csv, parse_csv
+from fastapi.testclient import TestClient
 
 client = TestClient(app)
 HEADER = "driver,lap,lap_time,compound,stint,pit,flag\n"

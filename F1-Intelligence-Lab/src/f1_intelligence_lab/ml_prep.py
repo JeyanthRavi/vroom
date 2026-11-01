@@ -17,7 +17,7 @@ import unicodedata
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlencode, urlparse, unquote, quote, urlunparse
+from urllib.parse import quote, unquote, urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 VERSION = '1.0.0'
@@ -127,7 +127,8 @@ def reconcile(meta, session, sections, raw_laps, text, header=None):
         if not ref: continue
         name=driver_map.get(car,{}).get('full_name','')
         # Name words can be arranged differently by the two sources; exact word-set match.
-        words=lambda s: sorted(normalize(w) for w in s.split() if normalize(w))
+        def words(s):
+            return sorted(normalize(w) for w in s.split() if normalize(w))
         aliases={'andreakimiantonelli':'kimiantonelli'}
         if words(name)!=words(ref['name']) and aliases.get(normalize(ref['name']),normalize(ref['name']))!=aliases.get(normalize(name),normalize(name)):
             failures.append(f'Car {car}: FIA/provider identity mismatch')
@@ -298,7 +299,7 @@ def run(root, output, fetch=False, evidence_dir=None):
             by_car=defaultdict(list)
             for row in valid: by_car[row['driver_number']].append(row)
             overlaps=[]
-            for car,rows in by_car.items():
+            for _car,rows in by_car.items():
                 rows.sort(key=lambda r:r['lap_number'])
                 overlaps.extend(round((a['_end']-b['_start']).total_seconds(),6) for a,b in zip(rows,rows[1:]) if a['_end']>b['_start'])
             report['timestamp_overlap_observations']={'count':len(overlaps),'max_seconds':max(overlaps,default=0),

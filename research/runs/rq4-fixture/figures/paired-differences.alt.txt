@@ -1,1 +1,0 @@
-Fixture-only dot plot of per-race TCN ensemble minus rolling-median MAE in seconds; negative values favour TCN.

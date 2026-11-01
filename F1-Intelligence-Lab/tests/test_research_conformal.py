@@ -1,8 +1,7 @@
 import json
-import numpy as np
-import pytest
 
-from f1_intelligence_lab.research.conformal import conformal_quantile,run_fixture
+import numpy as np
+from f1_intelligence_lab.research.conformal import conformal_quantile, run_fixture
 
 
 def test_conformal_quantile_uses_higher_finite_sample_rule():

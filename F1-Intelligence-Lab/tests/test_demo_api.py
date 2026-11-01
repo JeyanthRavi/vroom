@@ -1,7 +1,9 @@
-import json
 import hashlib
-from fastapi.testclient import TestClient
+import json
+
 from f1_intelligence_lab.demo_app import app
+from fastapi.testclient import TestClient
+
 
 def package(tmp_path,monkeypatch,legacy=False,mode='aggregate'):
     content={
@@ -21,7 +23,7 @@ def test_replay_and_health(tmp_path,monkeypatch):
     assert client.get('/model-demo/data.json').json()=={}
     assert client.get('/model-demo/research.json').json()=={}
     assert client.get('/model-demo/methodology.html').status_code==200
-    assert 'nosniff'==client.get('/model-demo/demo.js').headers['x-content-type-options']
+    assert client.get('/model-demo/demo.js').headers['x-content-type-options'] == 'nosniff'
     assert client.get('/api/library/import').status_code==404
     assert client.get('/model-demo/manifest.json').status_code==404
     metadata=client.get('/model-demo/export-metadata.json').json()

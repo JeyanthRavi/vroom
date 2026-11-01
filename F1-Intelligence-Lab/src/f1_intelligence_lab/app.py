@@ -6,19 +6,17 @@ from typing import Dict
 
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
-
 from stewardlens.api import app as stewardlens_app
 from telemetry_pit_crew.api import app as telemetry_app
 
-from .web import HOME_HTML
+from .demo_api import router as demo_router
 from .ecosystem import router as ecosystem_router
 from .ecosystem_web import ecosystem_page
-from .race_api import router as race_router, page as race_page
 from .library_api import router as library_router
-from .race_detail import router as detail_router
 from .ml_api import router as ml_router
-from .demo_api import router as demo_router
-
+from .race_api import page as race_page
+from .race_api import router as race_router
+from .race_detail import router as detail_router
 
 app = FastAPI(
     title="F1 Intelligence Lab",

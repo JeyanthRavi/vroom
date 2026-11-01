@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from statistics import mean
-from typing import Dict, Iterable, Mapping, Optional, Protocol, Sequence
+from typing import Dict, Iterable, Literal, Mapping, Optional, Protocol, Sequence
 
 from .contracts import AgentFinding, Decision, EvidencePacket, PenaltyCategory, Verdict
 
@@ -70,7 +70,9 @@ def validate_verdict_citations(verdict: Verdict, packet: EvidencePacket) -> None
 class SpecialistAgent(Protocol):
     """Boundary implemented by deterministic and future LLM specialists."""
 
-    name: str
+    @property
+    def name(self) -> str:
+        """Stable key used to collect the specialist output."""
 
     def analyze(self, packet: EvidencePacket) -> AgentFinding:
         """Return one schema-validated, grounded finding."""
@@ -260,15 +262,22 @@ class HeuristicDecisionAdapter:
             + [item.summary for item in evidence]
             + [clause.text for clause in packet.regulations]
         ).lower()
-        scores = {
+        DecisionCandidate = Literal["penalty", "racing_incident", "no_further_action"]
+        scores: Dict[DecisionCandidate, int] = {
             "penalty": sum(corpus.count(term) for term in self.penalty_terms),
             "racing_incident": sum(corpus.count(term) for term in self.racing_terms),
             "no_further_action": sum(corpus.count(term) for term in self.no_action_terms),
         }
         # Longer phrases can contain a generic "breach"; explicit no-action
         # language is therefore given priority on tied scores.
-        priority = {"no_further_action": 2, "racing_incident": 1, "penalty": 0}
-        decision = max(scores, key=lambda key: (scores[key], priority[key]))
+        priority: Dict[DecisionCandidate, int] = {
+            "no_further_action": 2,
+            "racing_incident": 1,
+            "penalty": 0,
+        }
+        decision: DecisionCandidate = max(
+            scores, key=lambda key: (scores[key], priority[key])
+        )
         if scores[decision] == 0:
             decision = "racing_incident"
         penalty: PenaltyCategory = "time_penalty" if decision == "penalty" else "none"

@@ -1,6 +1,7 @@
 import pytest
-from f1_intelligence_lab.library import Library
 from f1_intelligence_lab import race_detail as detail
+from f1_intelligence_lab.library import Library
+
 
 def test_fia_parser_rejects_wrong_year_event_and_host():
     parser=detail.Documents('2025 italian grand prix')
@@ -37,8 +38,8 @@ def test_accented_fia_event_matches_ascii_filename():
     assert len(parser.rows)==1
 
 def test_routes_are_read_only_until_explicit_load(tmp_path,monkeypatch):
-    from fastapi.testclient import TestClient
     from f1_intelligence_lab.app import app
+    from fastapi.testclient import TestClient
     lib=Library(tmp_path)
     lib.store({'id':'openf1-1','event':'Monza','year':2025},[],{'records':12})
     monkeypatch.setattr(detail,'library',lib)
@@ -54,8 +55,8 @@ def test_routes_are_read_only_until_explicit_load(tmp_path,monkeypatch):
     finally: detail.LOCK.release()
 
 def test_detail_load_is_disabled_without_admin_configuration(tmp_path,monkeypatch):
-    from fastapi.testclient import TestClient
     from f1_intelligence_lab.app import app
+    from fastapi.testclient import TestClient
     lib=Library(tmp_path);lib.store({'id':'openf1-1','event':'Monza','year':2025},[],{})
     monkeypatch.setattr(detail,'library',lib)
     monkeypatch.delenv('F1_ADMIN_TOKEN',raising=False)

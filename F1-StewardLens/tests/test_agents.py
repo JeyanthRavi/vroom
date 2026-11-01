@@ -1,5 +1,4 @@
 import pytest
-
 from stewardlens.agents import (
     AdvocateAgent,
     CitationValidationError,

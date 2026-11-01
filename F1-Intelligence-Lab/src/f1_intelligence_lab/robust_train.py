@@ -14,10 +14,11 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.pipeline import make_pipeline
 from threadpoolctl import threadpool_limits
-from .dl_train import train_gru, infer_gru, encode, predict_bundle, race_weights, subset
+
+from .dl_train import encode, infer_gru, predict_bundle, race_weights, subset, train_gru
+from .ml_prep import digest
 from .ml_sequences import build_split, flattened
 from .ml_train import baseline, evaluate, expanding_folds, save_json
-from .ml_prep import digest
 
 PLAN={'version':1,'years':[2025],'ratios':[1.5,2.0,3.0],'leaves':[7,15],
       'primary':'race_macro_mae_s','seeds':[11,29,47],

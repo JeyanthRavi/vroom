@@ -7,7 +7,6 @@ from typing import Dict, List
 
 from .contracts import Lap, Segment, TelemetrySample
 
-
 SEGMENTS = [
     Segment(id="S1", name="Main straight", kind="straight", start_distance=0, end_distance=650),
     Segment(id="T1", name="Turn 1", kind="corner", start_distance=650, end_distance=1050),

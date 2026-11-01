@@ -1,1 +1,0 @@
-Line chart of rolling-median mean absolute error in seconds across eight synthetic races.

@@ -1,8 +1,7 @@
-from starlette.requests import Request
-from fastapi import HTTPException
 import pytest
-
 from f1_intelligence_lab.security import require_admin
+from fastapi import HTTPException
+from starlette.requests import Request
 
 
 def request(host='127.0.0.1', headers=None):

@@ -1,8 +1,8 @@
 import json
+
 import numpy as np
 import pytest
-
-from f1_intelligence_lab.research.drift import psi,run_fixture
+from f1_intelligence_lab.research.drift import psi, run_fixture
 
 
 def test_psi_zero_for_identical_and_positive_for_shift():

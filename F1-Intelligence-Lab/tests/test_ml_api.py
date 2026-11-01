@@ -1,7 +1,7 @@
 import pytest
-from fastapi.testclient import TestClient
-from f1_intelligence_lab.app import app
 from f1_intelligence_lab import ml_api
+from f1_intelligence_lab.app import app
+from fastapi.testclient import TestClient
 
 
 def test_disabled_without_optional_config(monkeypatch):
@@ -11,6 +11,7 @@ def test_disabled_without_optional_config(monkeypatch):
 
 def test_experiment_configuration_and_integrity(monkeypatch,tmp_path):
     import json
+
     from f1_intelligence_lab.ml_prep import digest
     client=TestClient(app)
     monkeypatch.delenv('F1_DL_RUN',raising=False)
@@ -33,6 +34,7 @@ def test_experiment_configuration_and_integrity(monkeypatch,tmp_path):
 
 def test_cross_season_summary_and_integrity(monkeypatch,tmp_path):
     import json
+
     from f1_intelligence_lab.ml_prep import digest
     client=TestClient(app)
     monkeypatch.delenv('F1_CROSS_SEASON_RUN',raising=False)
@@ -52,6 +54,7 @@ def test_cross_season_summary_and_integrity(monkeypatch,tmp_path):
 
 def test_restart_summary_and_integrity(monkeypatch,tmp_path):
     import json
+
     from f1_intelligence_lab.ml_prep import digest
     client=TestClient(app)
     monkeypatch.delenv('F1_ROBUST_RUN',raising=False)

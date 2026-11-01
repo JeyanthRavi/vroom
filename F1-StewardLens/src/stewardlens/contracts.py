@@ -10,7 +10,6 @@ from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 
-
 Decision = Literal[
     "penalty", "no_further_action", "racing_incident", "insufficient_evidence"
 ]

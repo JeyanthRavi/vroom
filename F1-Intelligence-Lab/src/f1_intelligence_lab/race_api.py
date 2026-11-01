@@ -1,8 +1,10 @@
 """HTTP adapter for ephemeral race analysis."""
 from pathlib import Path
+
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import HTMLResponse, PlainTextResponse, Response
 from pydantic import BaseModel, Field
+
 from .race_analysis import analyze, demo_csv
 
 router = APIRouter()

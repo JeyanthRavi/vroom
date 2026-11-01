@@ -7,11 +7,11 @@ import math
 import re
 import time
 from datetime import datetime, timedelta, timezone
+from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
-from urllib.error import HTTPError
 
-from .race_analysis import analyze, FIELDS
+from .race_analysis import FIELDS, analyze
 
 BASE = 'https://api.openf1.org/v1/'
 NAMES = {'R':'Race','Q':'Qualifying','S':'Sprint','SQ':'Sprint Qualifying','FP1':'Practice 1','FP2':'Practice 2','FP3':'Practice 3'}
@@ -123,7 +123,7 @@ def import_openf1(library, year, event, code, progress=lambda message:None, *, i
         start=date(r['date_start']);end=start+timedelta(seconds=duration)
         flag=status_for_lap(start,end,control)
         if r.get('is_pit_out_lap') or (number,lap) in deleted: flag='UNKNOWN'
-        usable.append(dict(raw=r,driver=driver_codes[number],stint=stint,flag=flag))
+        usable.append({'raw': r,'driver': driver_codes[number],'stint': stint,'flag': flag})
     if not usable: raise ValueError('No usable lap records returned for this session.')
     race=None
     if code in {'R','S'}:
@@ -158,10 +158,10 @@ def import_openf1(library, year, event, code, progress=lambda message:None, *, i
                 break
         if converted: telemetry.append(converted)
         else: unavailable.append(driver)
-    metadata=dict(id=sid,name=f"{year} {session['circuit_short_name']} — {code}",year=year,event=session['circuit_short_name'],session_code=code,
-                  source_type='openf1_historical',source_url=BASE+'laps?session_key='+str(key),source_urls=client.urls,
-                  retrieved_at=datetime.now(timezone.utc).isoformat(),provider_version='OpenF1 v1',drivers_total=len(driver_codes),telemetry_drivers=len(telemetry),unavailable_drivers=unavailable,race_records=race['records'] if race else 0,
-                  notes='OpenF1 historical data. Full available race lap timing; one fastest usable non-deleted/non-pit telemetry lap per driver (up to three candidates tried). Sampled speed is integrated for approximate distance. Race flags are inferred conservatively from messages. Lap-relative replay, not race positions. Not live timing.')
+    metadata={'id': sid,'name': f"{year} {session['circuit_short_name']} — {code}",'year': year,'event': session['circuit_short_name'],'session_code': code,
+                  'source_type': 'openf1_historical','source_url': BASE+'laps?session_key='+str(key),'source_urls': client.urls,
+                  'retrieved_at': datetime.now(timezone.utc).isoformat(),'provider_version': 'OpenF1 v1','drivers_total': len(driver_codes),'telemetry_drivers': len(telemetry),'unavailable_drivers': unavailable,'race_records': race['records'] if race else 0,
+                  'notes': 'OpenF1 historical data. Full available race lap timing; one fastest usable non-deleted/non-pit telemetry lap per driver (up to three candidates tried). Sampled speed is integrated for approximate distance. Race flags are inferred conservatively from messages. Lap-relative replay, not race positions. Not live timing.'}
     metadata['telemetry_status'] = 'requested' if include_telemetry else 'not_requested'
     if not include_telemetry:
         metadata['notes'] = 'Timing-only import. Car telemetry was not requested; its availability is unknown. Race Lab uses available lap timing, stints and pit events. Race flags are inferred conservatively. Reimport with telemetry enabled to check driver telemetry.'

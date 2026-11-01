@@ -1,13 +1,23 @@
-from copy import deepcopy
-from datetime import datetime, timedelta, timezone
 import json
 import sqlite3
+from copy import deepcopy
+from datetime import datetime, timedelta, timezone
+from urllib.parse import urlencode
+
 import pytest
 from f1_intelligence_lab.ml_prep import (
-    FEATURES, LABEL, META, dt, validate_laps, make_features, parse_classification,
-    split_for, reconcile, run, digest, BASE,
+    BASE,
+    FEATURES,
+    LABEL,
+    META,
+    digest,
+    make_features,
+    parse_classification,
+    reconcile,
+    run,
+    split_for,
+    validate_laps,
 )
-from urllib.parse import urlencode
 
 START=datetime(2025,9,7,13,tzinfo=timezone.utc)
 SESSION={'session_key':1,'meeting_key':2,'year':2025,'circuit_short_name':'Monza',
@@ -131,8 +141,8 @@ def test_offline_run_excludes_unverified_and_preserves_source(tmp_path):
     with pytest.raises(FileExistsError): run(root,tmp_path/'output')
 
 def test_verified_loader_allowlist_and_tamper_detection(tmp_path):
-    from f1_intelligence_lab.ml_prep import write_csv
     from f1_intelligence_lab.ml_dataset import load_split
+    from f1_intelligence_lab.ml_prep import write_csv
     rows,_=make_features(valid(raw_laps()),SESSION,STINTS,[])
     for row in rows:
         row.update(row_id=f'openf1-1:44:{row["lap_number"]}',session_id='openf1-1',split='validation',session_verified=1)

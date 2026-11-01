@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 
 import pytest
-
 from stewardlens.evaluation import (
     bias_audit_report,
     citation_integrity,
@@ -14,7 +13,6 @@ from stewardlens.evaluation import (
     run,
     wilson_interval,
 )
-
 
 CASES = Path(__file__).parents[1] / "data" / "eval" / "cases.jsonl"
 

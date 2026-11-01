@@ -1,7 +1,8 @@
 from copy import deepcopy
-from datetime import datetime,timedelta,timezone
+from datetime import datetime, timedelta, timezone
+
 import pytest
-from f1_intelligence_lab.ml_sequences import history_for,build_split,ablate
+from f1_intelligence_lab.ml_sequences import ablate, build_split, history_for
 
 START=datetime(2025,1,1,tzinfo=timezone.utc)
 

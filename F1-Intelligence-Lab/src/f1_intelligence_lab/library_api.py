@@ -12,7 +12,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
 from telemetry_pit_crew.api import service
-from .library import Library, SessionMap, LapMap
+
+from .library import LapMap, Library, SessionMap
 from .security import require_admin
 
 library = Library()
@@ -57,7 +58,7 @@ def sessions():
 @router.get('/api/library/races/{session_id}', tags=['library'])
 def race(session_id: str):
     try: return library.race(session_id)
-    except KeyError: raise HTTPException(404,'No saved race timing for this session. Choose an imported race or sprint.')
+    except KeyError: raise HTTPException(404,'No saved race timing for this session. Choose an imported race or sprint.') from None
 
 
 @router.get('/api/library/jobs', tags=['library'])

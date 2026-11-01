@@ -1,5 +1,7 @@
 import json
+
 import pytest
+
 pytest.importorskip('torch')
 from f1_intelligence_lab import cross_season as cs
 from f1_intelligence_lab.ml_dataset import load_split

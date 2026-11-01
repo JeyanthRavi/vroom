@@ -7,8 +7,9 @@ import math
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
-import numpy as np
 import matplotlib
+import numpy as np
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.ensemble import HistGradientBoostingRegressor

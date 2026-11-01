@@ -17,3 +17,7 @@ __pycache__/
 coverage.xml
 .coverage
 htmlcov/
+.build/
+F1-Intelligence-Lab/demo-export*/
+research/runs/
+HANDOFF-CONTEXT.md

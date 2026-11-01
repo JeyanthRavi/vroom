@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-from fastapi.testclient import TestClient
-
 from f1_intelligence_lab.app import app
-
+from fastapi.testclient import TestClient
 
 client = TestClient(app)
 

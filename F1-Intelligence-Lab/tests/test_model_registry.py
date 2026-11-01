@@ -1,7 +1,6 @@
 import json
 
 import pytest
-
 from f1_intelligence_lab.model_registry import register
 
 

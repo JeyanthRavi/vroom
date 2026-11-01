@@ -1,6 +1,6 @@
 import pytest
-from fastapi.testclient import TestClient
 from f1_intelligence_lab.app import app
+from fastapi.testclient import TestClient
 
 client = TestClient(app)
 SESSION = "2024-monza-q"

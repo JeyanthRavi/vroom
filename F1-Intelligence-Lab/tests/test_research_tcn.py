@@ -4,7 +4,13 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from f1_intelligence_lab.research.tcn import GRU, MLP, TCN, parameter_count, run_fixture
+from f1_intelligence_lab.research.tcn import (  # noqa: E402, I001
+    GRU,
+    MLP,
+    TCN,
+    parameter_count,
+    run_fixture,
+)
 
 
 def test_sequence_model_shapes_and_parameter_budgets():

@@ -1,10 +1,14 @@
 """Shared browser shell for the F1 ecosystem; no external browser dependencies."""
 import re
+
 from .web import HOME_HTML
 
 
 def ecosystem_page(mode: str) -> str:
-    css = re.search(r"<style>([\s\S]*?)</style>", HOME_HTML).group(1)
+    style = re.search(r"<style>([\s\S]*?)</style>", HOME_HTML)
+    if style is None:
+        raise RuntimeError("portal stylesheet is missing")
+    css = style.group(1)
     html = TEMPLATE.replace("__CSS__", css).replace("__MODE__", mode)
     return html.replace('<a href="/telemetry/">Telemetry</a>', '<a href="/library/">Session library</a><a href="/race-lab/">Race Lab</a><a href="/telemetry/">Telemetry</a>', 1)
 

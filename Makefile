@@ -3,7 +3,7 @@ LAB := F1-Intelligence-Lab
 PYTHONPATH := $(LAB)/src:F1-StewardLens/src:F1-Telemetry-Pit-Crew/src
 TESTS := $(LAB)/tests F1-StewardLens/tests F1-Telemetry-Pit-Crew/tests
 
-.PHONY: setup test test-fast test-torch lint type demo docs
+.PHONY: setup test test-fast test-torch lint type public-demo demo docs
 
 setup:
 	bash $(LAB)/scripts/setup.sh
@@ -25,9 +25,11 @@ lint:
 type:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m mypy F1-Intelligence-Lab/src F1-StewardLens/src F1-Telemetry-Pit-Crew/src
 
+public-demo:
+	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m f1_intelligence_lab.site_export --source $(LAB)/public-results/aggregate-results.json --output .build/public-demo --root . --replace
+
 demo:
-	F1_DEMO_EXPORT="$(CURDIR)/$(LAB)/demo-export-final" PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m pytest -q $(LAB)/tests/test_demo_api.py $(LAB)/tests/test_export_demo.py $(LAB)/tests/test_site_export.py --import-mode=importlib
-	F1_DEMO_EXPORT="$(CURDIR)/$(LAB)/demo-export-final" PYTHONPATH=$(PYTHONPATH) $(PYTHON) -c 'from fastapi.testclient import TestClient; from f1_intelligence_lab.demo_app import app; c=TestClient(app); assert c.get("/health").status_code==200; assert c.get("/model-demo/export-metadata.json").json()["export_mode"]=="aggregate"; assert c.get("/model-demo/research.json").status_code==200'
+	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m pytest -q $(LAB)/tests/test_export_demo.py $(LAB)/tests/test_site_export.py --import-mode=importlib
 
 docs:
 	$(PYTHON) scripts/check_internal_links.py

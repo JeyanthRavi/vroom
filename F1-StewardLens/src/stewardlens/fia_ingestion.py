@@ -13,7 +13,7 @@ import json
 import re
 import unicodedata
 from pathlib import Path
-from typing import Any, Callable, Dict, List, Mapping, Optional
+from typing import Any, Callable, Dict, List, Optional
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
