@@ -21,7 +21,7 @@ packages = []
 [tool.ruff]
 target-version = "py39"
 line-length = 100
-extend-exclude = ["F1-Intelligence-Lab/demo-export", "F1-Intelligence-Lab/demo-export-aggregate"]
+extend-exclude = ["F1-Intelligence-Lab/demo-export", "F1-Intelligence-Lab/demo-export-aggregate", "F1-Intelligence-Lab/demo-export-final"]
 
 [tool.ruff.lint]
 select = ["E9", "F63", "F7", "F82"]
@@ -33,7 +33,7 @@ check_untyped_defs = true
 no_implicit_optional = false
 warn_unused_ignores = true
 ignore_errors = true
-exclude = "(^|/)(tests|demo-export|demo-export-aggregate)/"
+exclude = "(^|/)(tests|demo-export|demo-export-aggregate|demo-export-final)/"
 
 [[tool.mypy.overrides]]
 module = ["f1_intelligence_lab.security"]

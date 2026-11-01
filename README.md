@@ -17,7 +17,7 @@ uvicorn f1_intelligence_lab.app:app --host 127.0.0.1 --port 8765
 Open <http://127.0.0.1:8765/>. Provider import/write endpoints are disabled unless you configure the controls in [CONFIGURATION.md](CONFIGURATION.md). To run the offline aggregate replay instead:
 
 ```bash
-F1_DEMO_EXPORT="$PWD/F1-Intelligence-Lab/demo-export-aggregate" \
+F1_DEMO_EXPORT="$PWD/F1-Intelligence-Lab/demo-export-final" \
   uvicorn f1_intelligence_lab.demo_app:app --host 127.0.0.1 --port 8765
 ```
 
@@ -45,6 +45,7 @@ flowchart LR
 | [`F1-Telemetry-Pit-Crew/`](F1-Telemetry-Pit-Crew/README.md) | Deterministic lap-trace comparison and rule-based specialist agents | Bundled compact fixture; optional local FastF1 adapter |
 | `research/` | Pre-registered questions, experiment outputs and reports | Protocol is committed before experiment code |
 | [`F1-Intelligence-Lab/demo-export-aggregate/`](F1-Intelligence-Lab/demo-export-aggregate/manifest.json) | Checksum-verified summary replay | No driver-lap tables or observed lap durations |
+| [`F1-Intelligence-Lab/demo-export-final/`](F1-Intelligence-Lab/demo-export-final/manifest.json) | Final aggregate site | Summary replay plus fixture-only research and generated methodology views |
 
 ## Results summary
 

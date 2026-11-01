@@ -200,3 +200,32 @@ Claims changed in docs:
 
 - Added an explicit no-result statement; no telemetry representation claim is made.
 
+## Phase 7 — Website and demo finalisation   (2026-11-02)
+
+Done:
+
+- Added generated fixture-only neutralisation-hazard reliability, conformal interval coverage, and drift-timeline views to the static model demo. Every view places its baseline or nominal target beside the model output and carries a visible scope/limitation box.
+- Added a static methodology page generated at export time from `research/PROTOCOL.md` and `research/RESULTS.md`; no runtime network or Markdown renderer is required.
+- Added checksum-protected `research.json` and `methodology.html` assets, plus export mode, version, and Git commit metadata in the footer.
+- Added keyboard focus treatment, semantic status/chart labels, adjacent chart text alternatives, responsive layout down to 360 px, reduced-motion handling, and `MOBILE-QA.md`.
+- Added `site_export.py`, immutable build tests, accessibility source checks, and the final aggregate package at `F1-Intelligence-Lab/demo-export-final/`.
+- Updated the default demo Make target and demo Docker image to use the final aggregate package.
+
+Verified:
+
+- Final aggregate site size: 132 KB on disk, below the 1 MB transfer budget before compression.
+- `data.json` contains no `actual`, `driver`, `prediction_at`, `lap_number`, or `duration` keys.
+- JavaScript syntax: `node --check` passed.
+- Demo gate: `8 passed in 9.28s`; health, aggregate metadata, and research-asset smoke checks passed.
+- Ruff, mypy (58 source files), and internal Markdown links passed.
+
+Not done / blocked:
+
+- Automated axe/Playwright tooling is not installed. The manual browser and assistive-technology release checklist is in `MOBILE-QA.md` and remains an owner pre-publication task.
+- The research views contain fixture outputs only; real 2025 research evaluation and the forward holdout remain pending.
+
+Claims changed in docs:
+
+- The demo calls the new views pipeline demonstrations, not model-performance evidence.
+- The footer exposes the loaded aggregate mode and build identity and repeats the unofficial/data-rights limitation.
+

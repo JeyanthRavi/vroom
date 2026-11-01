@@ -8,7 +8,10 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import Response
 
 router=APIRouter()
-TYPES={'index.html':'text/html','demo.js':'text/javascript','data.json':'application/json'}
+TYPES={
+    'index.html':'text/html','methodology.html':'text/html',
+    'demo.js':'text/javascript','data.json':'application/json','research.json':'application/json',
+}
 SECURITY_HEADERS={
     'Cache-Control':'no-cache',
     'X-Content-Type-Options':'nosniff',
@@ -46,7 +49,9 @@ def metadata():
     if not directory:raise HTTPException(503,'Historical replay is not configured')
     try:
         manifest,_files,mode=_manifest(Path(directory))
-        body=json.dumps({'manifest_schema':manifest.get('schema',1),'export_mode':mode}).encode()
+        body=json.dumps({'manifest_schema':manifest.get('schema',1),'export_mode':mode,
+                         'version':manifest.get('version','legacy'),
+                         'git_commit':manifest.get('git_commit','unknown')}).encode()
         return Response(body,media_type='application/json',headers=SECURITY_HEADERS)
     except Exception:
         logging.getLogger(__name__).exception('Replay metadata unavailable')
