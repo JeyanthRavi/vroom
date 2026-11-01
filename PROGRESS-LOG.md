@@ -182,3 +182,21 @@ Claims changed in docs:
 - StewardLens is described as a deterministic simulator with measured feasibility components, not an AI steward or official-decision predictor.
 - The identity-swap audit is explicitly limited to name sensitivity on the bundled synthetic cases and is not presented as a general fairness finding.
 
+## Phase 6 — Optional telemetry representation experiment   (2026-11-02)
+
+Done:
+
+- Audited the available bundled corpus and documented the decision in `research/TELEMETRY-NOTE.md`.
+
+Verified:
+
+- The bundled Monza fixture contains two laps, which is adequate for the existing comparison demonstration but not for a held-out embedding or nearest-neighbour evaluation.
+
+Not done / blocked:
+
+- The optional PCA/autoencoder experiment was not run. It is deferred until a rights-reviewed local corpus contains enough independent laps, drivers, and sessions.
+
+Claims changed in docs:
+
+- Added an explicit no-result statement; no telemetry representation claim is made.
+
