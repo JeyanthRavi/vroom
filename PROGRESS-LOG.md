@@ -284,3 +284,27 @@ Claims changed in docs:
 
 - Final test and coverage counts are recorded only from the literal release commands above.
 
+## Phase 10 — Final deliverables   (2026-11-02)
+
+Done:
+
+- Added `FINAL-REPORT.md`, `research/PAPER-DRAFT.md`, `RESUME-CLAIMS.md`, and `INTERVIEW-NOTES.md`.
+- Updated `OPEN-QUESTIONS.md` with the remaining licence, rights, aggregate-publication, accessibility, and forward-holdout decisions.
+- Each résumé bullet links to its evidence and includes prohibited overclaim wording; fixture-only model performance is marked unsupported.
+- Completed a fresh local clone verification: `make setup` succeeded, followed by `209 passed in 109.09s` from `make test` in that clean environment.
+
+Verified:
+
+- Final deliverables use generated tables or artifact links for experiment numbers.
+- Paper citations that have not been verified are explicitly left as `[CITATION NEEDED]`; no bibliographic source was invented.
+- `git diff --check`, generated-table verification, and internal-link verification are required once more before the final commit.
+
+Not done / blocked:
+
+- Owner decisions in `OPEN-QUESTIONS.md` remain intentionally unresolved.
+- Remote CI/Docker results and the owner accessibility pass remain pending.
+
+Claims changed in docs:
+
+- Added an evidence-backed résumé bank and interview answers that preserve the previously-examined 2026, fixture-only, rights, and non-live limitations.
+
