@@ -5,7 +5,7 @@ import argparse
 import csv
 import random
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Callable, Dict, List, Tuple
 
 import numpy as np
 import matplotlib
@@ -60,7 +60,9 @@ def sequences(rows: List[Dict[str,Any]],window: int,with_state: bool,with_tyre: 
 
 def train_neural(kind: str,x_train: np.ndarray,y_train: np.ndarray,x_test: np.ndarray,seed: int) -> Tuple[np.ndarray,int]:
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed);torch.set_num_threads(1)
-    constructors={'tcn':lambda:TCN(x_train.shape[2]),'gru':lambda:GRU(x_train.shape[2]),'mlp':lambda:MLP(x_train.shape[2],x_train.shape[1])}
+    constructors: Dict[str, Callable[[], nn.Module]] = {
+        'tcn':lambda:TCN(x_train.shape[2]),'gru':lambda:GRU(x_train.shape[2]),
+        'mlp':lambda:MLP(x_train.shape[2],x_train.shape[1])}
     model=constructors[kind]();mean=float(y_train.mean());scale=float(y_train.std() or 1)
     optimizer=torch.optim.Adam(model.parameters(),lr=0.02)
     x=torch.from_numpy(x_train);y=torch.from_numpy((y_train-mean)/scale)

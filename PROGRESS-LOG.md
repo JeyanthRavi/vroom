@@ -255,3 +255,32 @@ Claims changed in docs:
 - Experiment numbers in the three maintained summary documents now come from committed JSON artifacts through a checkable generator.
 - The model card no longer duplicates hand-maintained metrics and explicitly pairs learned-model results with the rolling-median baseline.
 
+## Phase 9 — Final QA   (2026-11-02)
+
+Done:
+
+- Ran the required lint, typing, no-Torch, Torch, demo, generated-table, and documentation gates.
+- Fixed a no-Torch mypy inference issue by typing the RQ4 neural constructor map as `Callable[[], nn.Module]`; runtime behaviour is unchanged.
+- Audited tracked file sizes, secret-pattern matches, aggregate-export sensitive fields, figure alternatives, and Markdown links.
+
+Verified:
+
+- `make lint`: `All checks passed!`.
+- `make type`: `Success: no issues found in 59 source files` in the no-Torch environment.
+- `make test` without PyTorch: `187 passed, 7 skipped in 15.61s`; every skip explicitly reports missing optional PyTorch.
+- `make test-torch` with PyTorch 2.8.0: `209 passed in 54.36s`.
+- `make demo`: `8 passed in 3.51s`; health, aggregate metadata, and research assets passed smoke checks.
+- `python scripts/make_results_tables.py --check`: generated sections current.
+- Coverage run: `209 passed`; 3,935 statements, 833 missed, **79% total**. Key requested modules: `race_state.py` 96%, `export_demo.py` 47%, `restart_evaluate.py` 38%, `repository.py` 88%.
+- No tracked file exceeds 10 MB. Final aggregate `data.json` has zero sensitive lap-observation keys. Every committed research PNG has a matching `.alt.txt` file. Internal Markdown links pass.
+- Secret-pattern review produced 55 documented/configuration/code-symbol/test-placeholder matches and no committed secret value, private key, `.env`, or credential file.
+
+Not done / blocked:
+
+- Docker and actionlint are unavailable locally. Both Docker builds remain required in CI, whose first remote run is pending.
+- The owner browser/assistive-technology pass remains pending as documented in `MOBILE-QA.md`.
+
+Claims changed in docs:
+
+- Final test and coverage counts are recorded only from the literal release commands above.
+
