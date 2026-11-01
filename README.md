@@ -10,6 +10,8 @@ comparison and evidence-linked stewarding with rolling baselines, tree models
 and a compact GRU. The key result is deliberately honest: learned models improve
 some error slices but do not beat the rolling-median baseline on every metric.
 
+[![Vroom aggregate demo showing historical F1 model evidence](docs/assets/vroom-demo.png)](https://jeyanthravi.github.io/vroom/)
+
 **[Open the public aggregate demo](https://jeyanthravi.github.io/vroom/)** ·
 [Read the model card](F1-Intelligence-Lab/MODEL-CARD.md)
 
