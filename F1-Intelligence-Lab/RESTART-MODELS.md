@@ -68,7 +68,7 @@ red-flag annotation. Missing control information is not treated as GREEN.
 
 ## Reproduce locally
 
-Verification: 151 tests pass across all three projects. A complete repeat run
+Verification: run `make test` from the repository root for the current suite. A complete repeat run
 reproduced every score, seed metric, forward-validation result, stress result,
 and benchmark prediction CSV exactly. The saved tree and GRU inference helper
 also reproduced all 1,452 benchmark predictions exactly after checksum checks.

@@ -24,3 +24,20 @@ def test_announced_end_keeps_vsc_until_explicit_green():
     events=[event(1,'VIRTUAL SAFETY CAR DEPLOYED'),event(2,'VIRTUAL SAFETY CAR ENDING'),event(3,'GREEN FLAG','GREEN','Track')]
     assert state_at(events,dt(events[1]['date']))['state']=='VSC'
     assert state_at(events,dt(events[2]['date']))['restart_count']==1
+
+def test_red_flag_then_session_started_is_restart():
+    events=[event(1,'RED FLAG - RACE SUSPENDED'),event(2,'SESSION STARTED')]
+    assert state_at(events,dt(events[1]['date']))['state']=='RESTART'
+
+def test_pit_exit_green_does_not_set_green():
+    events=[event(1,'RED FLAG - RACE SUSPENDED'),event(2,'GREEN LIGHT - PIT EXIT OPEN','GREEN','Track')]
+    assert state_at(events,dt(events[1]['date']))['state']=='RED'
+
+def test_safety_car_in_this_lap_does_not_end_neutralisation():
+    events=[event(1,'SAFETY CAR DEPLOYED'),event(2,'SAFETY CAR IN THIS LAP')]
+    assert state_at(events,dt(events[1]['date']))['state']=='SC'
+
+def test_unordered_events_are_sorted_and_future_cutoff_is_respected():
+    events=[event(3,'SAFETY CAR DEPLOYED'),event(1,'SESSION STARTED'),event(2,'GREEN FLAG','GREEN','Track')]
+    assert state_at(events,dt(event(2)['date']))['state']=='GREEN'
+    assert state_at(events,dt(event(3)['date']))['state']=='SC'

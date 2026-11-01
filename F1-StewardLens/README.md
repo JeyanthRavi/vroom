@@ -24,18 +24,7 @@ system reproducible.
 
 ## Setup
 
-StewardLens requires Python 3.9 or newer.
-
-```bash
-cd F1-StewardLens
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-```
-
-On Windows PowerShell, activate the environment with
-`.venv\Scripts\Activate.ps1` instead.
+Use the repository-level [60-second quickstart](../README.md#60-second-local-quickstart) to install StewardLens together with the portal and telemetry project.
 
 ## Run the application
 
@@ -70,9 +59,7 @@ be added behind the same API later.
 
 ## Run the tests
 
-```bash
-pytest
-```
+From the repository root, run `make test`.
 
 The API tests use FastAPI's HTTPX-backed test client and do not call external
 services.

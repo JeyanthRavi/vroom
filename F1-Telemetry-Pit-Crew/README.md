@@ -19,23 +19,13 @@ A web-based, evidence-linked multi-agent Formula 1 lap analysis project. It comp
 
 ## Run the website
 
-```bash
-cd F1-Telemetry-Pit-Crew
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e '.[dev]'
-uvicorn telemetry_pit_crew.main:app --reload --port 8001
-```
+Use the repository-level [60-second quickstart](../README.md#60-second-local-quickstart). For the component by itself after setup, run `uvicorn telemetry_pit_crew.main:app --reload --port 8001`.
 
 Open <http://127.0.0.1:8001>. The real cached Monza comparison is selected automatically. No API key or network connection is required.
 
 ## Load another real session
 
-Install the optional FastF1 dependency:
-
-```bash
-pip install -e '.[f1,dev]'
-```
+The root setup installs the optional FastF1 dependency.
 
 Expand **Load another session with FastF1** in the website and provide a year, event, session code and at least two three-letter driver abbreviations. The initial download can take several minutes and is cached in `.fastf1-cache`.
 

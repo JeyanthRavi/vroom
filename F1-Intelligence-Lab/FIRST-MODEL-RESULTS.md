@@ -34,7 +34,7 @@ The rejected ridge candidate emitted matrix-multiplication numeric warnings on
 this machine despite finite predictions. Independent einsum contraction checks
 matched prediction values within 2.2e-14; the warning is recorded, not suppressed.
 The selected tree model did not emit these warnings. An independent ridge
-coefficient calculation matched within 9.8e-13. All 126 tests passed; replay
+coefficient calculation matched within 9.8e-13. Run `make test` from the repository root for the current suite; replay
 metrics and test CSVs were identical, artifact hashes verified, and reloaded
 selected-model predictions matched exactly. Replay was a reproducibility check,
 not a second tuning experiment.

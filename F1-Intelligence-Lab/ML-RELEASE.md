@@ -96,7 +96,7 @@ and selected-model 2025 validation MAE no worse than median.
 
 ## Demo deployment and rollback
 
-Verification for this release: **164 automated tests pass**. The complete
+Verification for the current release is recorded by `make test` and `make test-torch`. The complete
 training replay matches scores, seed metrics, CV/stress results and predictions
 exactly. A second export matches all four package files byte-for-byte. Pipeline
 specification validation reports zero errors/warnings. Browser checks covered
@@ -145,5 +145,5 @@ data refresh needs a new coverage/error review, not automatic retraining.
 ## Résumé wording
 
 Résumé wording is generated from verified release artifacts in
-[`RESUME-CLAIMS.md`](RESUME-CLAIMS.md) during Phase 10. Do not copy metrics from
+[`RESUME-CLAIMS.md`](../RESUME-CLAIMS.md) during Phase 10. Do not copy metrics from
 this document into a résumé independently.

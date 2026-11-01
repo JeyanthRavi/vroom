@@ -81,26 +81,9 @@ projects folder/
 └── F1-Telemetry-Pit-Crew/
 ```
 
-## One-command setup
+## Setup and run
 
-From the workspace root:
-
-```bash
-bash F1-Intelligence-Lab/scripts/setup.sh
-```
-
-The script creates `F1-Intelligence-Lab/.venv` and installs the portal and both
-neighboring projects in editable mode, including the optional FastF1 adapter.
-
-## Run
-
-```bash
-cd F1-Intelligence-Lab
-source .venv/bin/activate
-uvicorn f1_intelligence_lab.app:app --reload
-```
-
-Then open <http://127.0.0.1:8000>.
+Use the repository-level [60-second quickstart](../README.md#60-second-local-quickstart). It installs all three projects in one environment. Then open <http://127.0.0.1:8765>.
 
 | URL | Purpose |
 | --- | --- |
@@ -124,11 +107,7 @@ canonical API available under its mounted prefix.
 
 ## Test
 
-```bash
-cd F1-Intelligence-Lab
-source .venv/bin/activate
-pytest
-```
+From the repository root, run `make test`.
 
 The integration tests verify the landing page, health contract, both mounted
 applications, their sample datasets, compatibility routes, and portal schema.

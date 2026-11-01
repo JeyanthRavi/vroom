@@ -15,7 +15,7 @@ Every provider-listed 2025 race is saved. Every past-dated 2026 entry was attemp
 
 2026 coverage is race timing only. The four earlier full imports returned no usable telemetry; the remaining 14 use explicit `include_telemetry=False`, so their telemetry availability has **not** been checked. This mode is race/sprint-only and refuses to replace saved telemetry. Metadata, Race Lab warnings and library cards distinguish not-requested telemetry from missing telemetry. Cards without telemetry expose Race Lab rather than empty telemetry tools. Reimport normally to request telemetry later.
 
-Verification: local Race Lab data and ScoutGrid APIs checked for all 42 sessions from 2025–2026; saved record counts and telemetry-row counts matched metadata. All 60 automated tests pass, including timing-only import, no car-data requests, and prevention of telemetry overwrite. No ongoing downloader or automatic future-race synchronization is configured.
+Verification: local Race Lab data and ScoutGrid APIs checked for all 42 sessions from 2025–2026; saved record counts and telemetry-row counts matched metadata. Run `make test` from the repository root for the current suite, including timing-only import, no car-data requests, and prevention of telemetry overwrite. No ongoing downloader or automatic future-race synchronization is configured.
 
 ## Use it
 
@@ -64,7 +64,7 @@ FastF1 is an optional adapter for the years exposed by the importer. During this
 | Austin 2026 | 1,163 | 0 / 22 |
 | Total: 20 races | 21,205 | 303 telemetry laps |
 
-Second expansion: eight 2025 races and four 2026 races are now saved, alongside the eight older races. All four 2026 imports returned usable race timing but no usable car telemetry: use Race Lab for those sessions, not telemetry comparisons or replay. All 12 sessions from 2025–2026 were checked against the local race and ScoutGrid APIs, including expected empty ScoutGrid rows for 2026. Missing provider compound values now map explicitly to UNKNOWN; a regression assertion verifies this. Combined tests: 58 passed. These are selected races, not complete seasons.
+Second expansion: eight 2025 races and four 2026 races are now saved, alongside the eight older races. All four 2026 imports returned usable race timing but no usable car telemetry: use Race Lab for those sessions, not telemetry comparisons or replay. All 12 sessions from 2025–2026 were checked against the local race and ScoutGrid APIs, including expected empty ScoutGrid rows for 2026. Missing provider compound values now map explicitly to UNKNOWN; a regression assertion verifies this. Run `make test` for current verification. These are selected races, not complete seasons.
 
 Expanded 26 October 2026 with nine additional races. Race and ScoutGrid endpoints returned HTTP 200 for all 12 sessions. Driver denominators reflect provider entries, not an independently verified starting grid. Melbourne exposed null stint boundaries; the importer now ignores unbounded stints and counts unmatched lap records as omitted rather than guessing boundaries. A failing-then-passing regression test covers this case; the combined suite passes 57 tests. The focused-fix scope was limited to the importer and its regression test; this document records the resulting data expansion.
 

@@ -22,7 +22,7 @@ Historical full-race ingestion, persistent session management, matched-condition
 
 ## Verification
 
-38 automated tests passed for the combined portal, including new CSV validation, synthetic provenance, eligible-lap exclusions, sparse trends, import isolation and routes. JavaScript syntax checked with Node. Browser checks confirmed loading, analyst mode, driver filtering and the no-selected-drivers empty state in the in-app browser. This is not a complete accessibility or multi-device certification.
+Run `make test` from the repository root for the current combined-portal verification, including CSV validation, synthetic provenance, eligible-lap exclusions, sparse trends, import isolation and routes. JavaScript syntax was checked with Node. Browser checks confirmed loading, analyst mode, driver filtering and the no-selected-drivers empty state in the in-app browser. This is not a complete accessibility or multi-device certification.
 
 ## Next bounded milestone
 

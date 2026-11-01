@@ -10,3 +10,10 @@ __pycache__/
 .env.*
 *.pem
 *.key
+*.pt
+*.joblib
+.mypy_cache/
+.ruff_cache/
+coverage.xml
+.coverage
+htmlcov/

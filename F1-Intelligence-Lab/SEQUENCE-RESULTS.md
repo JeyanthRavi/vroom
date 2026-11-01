@@ -12,7 +12,7 @@ set describe the original 27 October experiment, not its current status.
 Completed 27 October 2026, CPU-only with PyTorch 2.8.0. Fixed training run took
 26 seconds after dependencies were installed. No paid compute was used.
 
-Verification: 139 tests passed. A complete second training run reproduced every
+Verification: run `make test` from the repository root for the current suite. A complete second training run reproduced every
 aggregate metric, every seed metric and the benchmark prediction CSV exactly.
 The website comparison and existing inference endpoint were checked locally.
 

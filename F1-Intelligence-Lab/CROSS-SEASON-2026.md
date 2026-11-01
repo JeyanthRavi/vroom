@@ -57,7 +57,7 @@ Historical corrected timestamps are not proof of live data availability.
 
 ## Reproduction and artifacts
 
-Verification: 144 tests passed. A complete second evaluation reproduced all
+Verification: run `make test` from the repository root for the current suite. A complete second evaluation reproduced all
 aggregate and seed metrics, bootstrap intervals, and row-level predictions
 exactly. The report endpoint and dashboard were checked locally.
 

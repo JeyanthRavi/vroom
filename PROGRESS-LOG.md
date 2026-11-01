@@ -66,3 +66,34 @@ Claims changed in docs:
 | Blueprint chapters | Feature prose could be read as current capability | Every chapter now opens with **PROPOSED — NOT IMPLEMENTED** |
 | `ML-RELEASE.md` résumé section | Hand-maintained résumé metrics | Removed; points to artifact-generated `RESUME-CLAIMS.md` |
 
+## Phase 2 — Repository quality   (2026-11-02)
+
+Done:
+
+- Added root `pyproject.toml` and `Makefile` targets for setup, lint, permissive legacy typing, fast/full tests, PyTorch tests, demo verification, and documentation links.
+- Added pinned Ruff, mypy, pytest-cov and coverage dependencies to `requirements-lock.txt`. Ruff enforces release-blocking syntax/name errors; mypy is permissive for legacy modules and strict for the new security module. Research modules receive stricter overrides when added.
+- Added `.github/workflows/ci.yml` with Python 3.9/3.12 no-Torch tests, CPU-Torch tests, lint/type, demo verification, pip caching, and builds for both Dockerfiles.
+- Expanded `race_state.py` coverage for red-flag restart, pit-exit green, safety-car-ending announcements, local sectors, cutoff isolation, and unordered events.
+- Rewrote the top-level README as the single entry point with a 60-second quickstart, Mermaid architecture, project/data map, artifact-linked results summary, limitations, and rights notice. Subproject READMEs now link to the root setup.
+- Added `CONFIGURATION.md`, `CONTRIBUTING.md`, `CHANGELOG.md`, a local Markdown link checker, and repository hygiene exclusions for checkpoints and tool caches.
+- Removed stale hard-coded test counts from project documentation; literal historical/current outcomes remain only in this progress record and the final report.
+
+Verified:
+
+- `make lint`: Ruff reported `All checks passed!`.
+- `make type`: mypy reported `Success: no issues found in 46 source files` under the documented permissive-legacy policy.
+- `make docs`: `Internal Markdown links: ok`.
+- `make test` without PyTorch: `156 passed, 5 skipped in 5.06s`.
+- `make test-torch`: Torch 2.8.0; `175 passed in 9.81s`.
+- Coverage run: `175 passed`; 3,132 statements, 777 missed, **75% total**. Target modules: `race_state.py` 96%, `export_demo.py` 47%, `restart_evaluate.py` 38%, `repository.py` 88%.
+- CI workflow parsed successfully as YAML. `git diff --check`: clean.
+
+Not done / blocked:
+
+- `actionlint` and Docker are not installed on this machine. Workflow syntax was YAML-parsed locally; image builds are configured as a required CI job but await the first GitHub Actions run.
+
+Claims changed in docs:
+
+- Replaced obsolete hard-coded suite counts with the current `make test` verification command.
+- Replaced the stale “2026 holdout remains reserved” root README narrative with the measured, limitation-first summary and standard previously-examined wording.
+
