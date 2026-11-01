@@ -152,3 +152,33 @@ Claims changed in docs:
 - Research result summaries explicitly separate fixture engineering validation from empirical evidence.
 - Prediction intervals are optional additive fields and are not described as calibrated on real Formula 1 outcomes until the real-data protocol is executed.
 
+## Phase 5 — StewardLens measured NLP extension   (2026-11-02)
+
+Done:
+
+- Added `F1-StewardLens/data/eval/cases.jsonl`, built only from the two already checksum-verified decision metadata records and clearly labelled synthetic cases. Descriptions are original paraphrases; no PDF was scraped or copied.
+- Added a deterministic TF-IDF retriever and an optional injected sentence-embedding retriever with an explicit TF-IDF fallback that never downloads a model during default runs or tests.
+- Added stratified cross-validation for a TF-IDF/logistic-regression penalty classifier, with class counts, per-class precision/recall/F1, and a sample-count confusion matrix.
+- Added retrieval recall@k, MRR, per-clause misses, agent citation-integrity scoring, and actual identity-swap flip reporting with a Wilson interval and a narrow limitation statement.
+- Added `ModelAgent`, a deterministic mock, and an environment-gated provider adapter. Provider output remains subject to strict packet citation validation; successful prompts/outputs log only to git-ignored `runs/`.
+- Generated checksum-verifiable `research/runs/stewardlens-feasibility/`. Its `results.json` prominently labels the work a small mixed metadata/synthetic feasibility demonstration.
+- Rewrote the StewardLens README section to distinguish rule-based, learned, measured, and simulated components.
+
+Verified:
+
+- New evaluation/retrieval/model-agent tests: `12 passed in 1.96s`.
+- Full StewardLens suite without PyTorch: `49 passed in 2.49s`.
+- Ruff: `All checks passed!`.
+- mypy: `Success: no issues found in 57 source files`.
+- The generated outcome artifact reports 10 cases across three penalty labels and exposes the failed reprimand recall rather than treating the result as a performance claim.
+
+Not done / blocked:
+
+- Transformer fine-tuning was intentionally not attempted: the saved evaluation set is too small to justify it.
+- The sentence-embedding path requires an explicitly supplied local encoder or the optional `[nlp]` dependency; the default remains TF-IDF and offline.
+
+Claims changed in docs:
+
+- StewardLens is described as a deterministic simulator with measured feasibility components, not an AI steward or official-decision predictor.
+- The identity-swap audit is explicitly limited to name sensitivity on the bundled synthetic cases and is not presented as a general fairness finding.
+

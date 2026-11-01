@@ -1,0 +1,92 @@
+{
+  "agent_evaluation": {
+    "bias_audit": {
+      "flip_rate": 0.0,
+      "flips": 0,
+      "limitation": "Identity swaps probe name sensitivity in these cases only; they do not establish fairness across people or contexts.",
+      "swaps": 3,
+      "wilson_95": [
+        5.551115123125783e-17,
+        0.5614970317550454
+      ]
+    },
+    "citation_integrity": {
+      "claims": 37,
+      "fraction": 0.8378378378378378,
+      "passing": 31
+    }
+  },
+  "evidence_status": "mixed metadata and synthetic; feasibility demonstration",
+  "outcome_classifier": {
+    "class_counts": {
+      "none": 3,
+      "reprimand": 2,
+      "time_penalty": 5
+    },
+    "confusion_matrix": {
+      "counts": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          4
+        ]
+      ],
+      "labels": [
+        "none",
+        "reprimand",
+        "time_penalty"
+      ]
+    },
+    "folds": 2,
+    "per_class": {
+      "none": {
+        "f1-score": 0.5,
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "support": 3.0
+      },
+      "reprimand": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 2.0
+      },
+      "time_penalty": {
+        "f1-score": 0.8,
+        "precision": 0.8,
+        "recall": 0.8,
+        "support": 5.0
+      }
+    },
+    "sample_count": 10,
+    "status": "feasibility-only-small-n"
+  },
+  "retrieval": {
+    "k": 3,
+    "mrr": 0.7333333333333334,
+    "per_clause_errors": [
+      {
+        "case_id": "synthetic-northstar",
+        "expected": [
+          "sample-rule-2026-5.3"
+        ],
+        "found": [
+          "sample-rule-2026-4.1",
+          "sample-rule-2026-4.2",
+          "sample-rule-2026-7.1"
+        ]
+      }
+    ],
+    "recall_at_k": 0.9
+  }
+}

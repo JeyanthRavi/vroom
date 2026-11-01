@@ -22,6 +22,37 @@ system reproducible.
 - API tests covering case lookup, missing IDs, deliberation runs, bias audits,
   and evaluation summaries.
 
+## What is rule-based, learned, measured, and simulated
+
+- **Rule-based:** the default specialist agents, steward adapter, strict citation
+  validation, and identity-swap workflow are deterministic Python logic.
+- **Learned baseline:** the offline evaluation module measures TF-IDF retrieval
+  and logistic-regression penalty classification. Its exact case counts and
+  metrics are generated into a run directory, not copied into this README.
+- **Optional learned retrieval:** `SentenceEmbeddingRetriever` accepts an
+  injected encoder behind the `[nlp]` extra. Without one it identifies itself
+  as a deterministic TF-IDF fallback and downloads nothing.
+- **Measured:** retrieval recall/MRR, per-clause misses, stratified
+  cross-validation class reports and sample-count confusion matrices, citation
+  integrity, and identity-swap flip rate with a Wilson interval.
+- **Simulated:** the local incidents, evidence, regulations, and most evaluation
+  cases are synthetic. The small number of real cases use existing
+  checksum-verified decision metadata only. Results are a feasibility
+  demonstration, not a claim that StewardLens reproduces official decisions.
+
+The optional `ModelAgent` boundary uses the same `AgentFinding` contract. Tests
+use `MockModelAgent`; the environment-based adapter refuses to run without an
+explicit key, logs provider inputs/outputs only to git-ignored `runs/`, and
+still rejects citations absent from the input packet.
+
+Run the measured offline path from `F1-StewardLens/`:
+
+```bash
+python -m stewardlens.evaluation \
+  --cases data/eval/cases.jsonl \
+  --output runs/evaluation-$(date +%Y%m%d-%H%M%S)
+```
+
 ## Setup
 
 Use the repository-level [60-second quickstart](../README.md#60-second-local-quickstart) to install StewardLens together with the portal and telemetry project.

@@ -5,7 +5,7 @@ from __future__ import annotations
 import math
 import re
 from collections import Counter
-from typing import Callable, Iterable, List, Optional, Sequence, TypeVar
+from typing import Any, Callable, Iterable, List, Optional, Sequence, TypeVar
 
 from stewardlens.contracts import Incident, RegulationClause
 
@@ -105,4 +105,64 @@ def retrieve_precedents(
         return lexical + category_bonus + season_bonus
 
     return _rank(candidates, similarity, limit)
+
+
+class TfidfRetriever:
+    """Small deterministic retriever used by the measured offline path."""
+
+    def __init__(self, identifiers: Sequence[str], documents: Sequence[str]):
+        if len(identifiers) != len(documents) or not documents:
+            raise ValueError("identifiers and non-empty documents must align")
+        from sklearn.feature_extraction.text import TfidfVectorizer
+
+        self.identifiers = list(identifiers)
+        self.vectorizer = TfidfVectorizer(ngram_range=(1, 2), lowercase=True)
+        self.matrix = self.vectorizer.fit_transform(documents)
+
+    def search(self, query: str, limit: int = 5) -> List[str]:
+        if limit < 0:
+            raise ValueError("limit must be non-negative")
+        scores = (self.matrix @ self.vectorizer.transform([query]).T).toarray()[:, 0]
+        order = sorted(range(len(scores)), key=lambda index: (-scores[index], index))
+        return [self.identifiers[index] for index in order[:limit] if scores[index] > 0]
+
+
+class SentenceEmbeddingRetriever:
+    """Optional embedding retriever with an explicit deterministic fallback.
+
+    No model is downloaded unless the caller supplies an encoder or explicitly
+    asks for the optional provider. Default construction stays offline.
+    """
+
+    def __init__(
+        self,
+        identifiers: Sequence[str],
+        documents: Sequence[str],
+        encoder: Optional[Any] = None,
+    ):
+        self.fallback = TfidfRetriever(identifiers, documents)
+        self.identifiers = list(identifiers)
+        self.encoder = encoder
+        self.embeddings = None if encoder is None else encoder.encode(list(documents))
+
+    @property
+    def backend(self) -> str:
+        return "tfidf-fallback" if self.encoder is None else "sentence-embedding"
+
+    def search(self, query: str, limit: int = 5) -> List[str]:
+        if self.encoder is None:
+            return self.fallback.search(query, limit)
+        import numpy as np
+
+        query_vector = np.asarray(self.encoder.encode([query])[0], dtype=float)
+        documents = np.asarray(self.embeddings, dtype=float)
+        denominator = np.linalg.norm(documents, axis=1) * np.linalg.norm(query_vector)
+        scores = np.divide(
+            documents @ query_vector,
+            denominator,
+            out=np.zeros(len(documents), dtype=float),
+            where=denominator != 0,
+        )
+        order = sorted(range(len(scores)), key=lambda index: (-scores[index], index))
+        return [self.identifiers[index] for index in order[:limit] if scores[index] > 0]
 
