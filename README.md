@@ -50,7 +50,16 @@ flowchart LR
 ## Results summary
 
 <!-- BEGIN GENERATED: core-results -->
-The current frozen evidence shows that a simple rolling-median baseline remained stronger than the learned sequence models on the overall previously examined 2026 cohort. Restart-aware variants improved equal-race MAE in that regression check but did not improve every pooled metric, and very long interruption laps remain a severe failure slice. See the frozen [cross-season](F1-Intelligence-Lab/CROSS-SEASON-2026.md), [restart](F1-Intelligence-Lab/RESTART-2026-RESULTS.md), and [sequence](F1-Intelligence-Lab/SEQUENCE-RESULTS.md) reports for artifact-derived tables. Evaluated on previously examined 2026 races; not an independent holdout.
+Evaluated on previously examined 2026 races; not an independent holdout.
+The default was selected using 2025 validation only.
+
+| Model | Equal-race MAE (s) | Pooled RMSE (s) | R² | Rows |
+|---|---:|---:|---:|---:|
+| Rolling median | 6.046 | 74.354 | 0.036 | 7195 |
+| Restart-aware boosting | 5.171 | 74.497 | 0.032 | 7195 |
+| Restart-aware GRU | 5.187 | 74.685 | 0.027 | 7195 |
+
+The rolling median remains the pooled-RMSE/R² reference; learned models do not improve every metric. Source: `F1-Intelligence-Lab/demo-export-final/data.json`.
 <!-- END GENERATED: core-results -->
 
 New RQ1–RQ4 outputs will be reported in `research/RESULTS.md`. Fixture-only runs are explicitly labelled **not evidence**.

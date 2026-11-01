@@ -229,3 +229,29 @@ Claims changed in docs:
 - The demo calls the new views pipeline demonstrations, not model-performance evidence.
 - The footer exposes the loaded aggregate mode and build identity and repeats the unofficial/data-rights limitation.
 
+## Phase 8 — Reproducibility and tracking   (2026-11-02)
+
+Done:
+
+- Added `scripts/reproduce.sh`. With complete local paths it runs audit → state-v2 training → examined-2026 regression → aggregate export → final site into fresh directories. Without them it announces and runs the fixture-only RQ1–RQ4 and StewardLens pipelines, then prints SHA-256 checksums.
+- Added `scripts/make_results_tables.py` and marker-protected generated sections in the root README, model card, and consolidated research results. A test fails when committed sections are stale.
+- Reworked `MODEL-CARD.md` into intended use, out-of-scope use, data, generated metrics/baselines, limitations, ethics, and lifecycle sections.
+- Added `DATASHEET.md`, `HARDWARE.md`, and a staging-only registry API/policy. The API rejects `production` status rather than promoting automatically.
+- Kept dependency pins in `requirements-lock.txt`; generated runs retain environment and Git-commit records.
+
+Verified:
+
+- Fixture fallback reproduction completed in a fresh `/tmp/vroom-reproduce-phase8` directory and printed hashes for every output file.
+- Result generation followed immediately by `--check`: `Generated result sections: current`.
+- Generated-doc and registry tests: `2 passed in 0.09s`.
+- Ruff, mypy (59 source files), and internal Markdown links passed.
+
+Not done / blocked:
+
+- The real-data branch of `reproduce.sh` was not executed in this phase because the required frozen-run environment paths were not supplied to the script. Its fixture fallback is the verified default.
+
+Claims changed in docs:
+
+- Experiment numbers in the three maintained summary documents now come from committed JSON artifacts through a checkable generator.
+- The model card no longer duplicates hand-maintained metrics and explicitly pairs learned-model results with the rolling-median baseline.
+
