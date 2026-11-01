@@ -30,6 +30,7 @@ ignore = ["E701", "E702"]
 [tool.mypy]
 python_version = "3.9"
 ignore_missing_imports = true
+no_site_packages = true
 check_untyped_defs = true
 no_implicit_optional = false
 warn_unused_ignores = true
