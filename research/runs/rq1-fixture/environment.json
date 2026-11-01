@@ -1,0 +1,11 @@
+{
+  "cpu_only": true,
+  "git_commit": "a0bac1a9e6ea8b7e6b7fbfc778c1c59afeef2bea",
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "python": "3.9.6",
+  "seeds": [
+    11,
+    29,
+    47
+  ]
+}

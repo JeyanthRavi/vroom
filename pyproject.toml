@@ -40,4 +40,9 @@ module = ["f1_intelligence_lab.security"]
 ignore_errors = false
 disallow_untyped_defs = true
 
+[[tool.mypy.overrides]]
+module = ["f1_intelligence_lab.research.*"]
+ignore_errors = false
+check_untyped_defs = true
+
 

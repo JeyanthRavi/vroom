@@ -1,0 +1,680 @@
+{
+  "decision": "fixture-only; no research success/failure claim",
+  "evidence_status": "fixture-only: not evidence",
+  "fixture_only": true,
+  "hazard": {
+    "1": {
+      "base_rate": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.09111111111111113,
+              "positives": 4,
+              "pr_auc": 0.1,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.04777777777777778,
+              "positives": 2,
+              "pr_auc": 0.05,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.09111111111111113,
+              "positives": 4,
+              "pr_auc": 0.1,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.04777777777777778,
+              "positives": 2,
+              "pr_auc": 0.05,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.06944444444444445,
+        "ece_10": 0.008333333333333331,
+        "log_loss": 0.26692217120809586,
+        "positives": 6,
+        "pr_auc": 0.075,
+        "prevalence": 0.075,
+        "reliability": [
+          {
+            "count": 80,
+            "lower": 0.0,
+            "mean_probability": 0.06666666666666667,
+            "observed_rate": 0.075,
+            "upper": 0.1
+          }
+        ],
+        "roc_auc": 0.5,
+        "rows": 80
+      },
+      "boosting": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.2738902708784204,
+              "positives": 4,
+              "pr_auc": 0.08847727633878913,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.21152279452032935,
+              "positives": 2,
+              "pr_auc": 0.042444821731748725,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.2738902708784204,
+              "positives": 4,
+              "pr_auc": 0.08847727633878913,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.21152279452032935,
+              "positives": 2,
+              "pr_auc": 0.042444821731748725,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.24270653269937487,
+        "ece_10": 0.2975726434675014,
+        "log_loss": 0.8120864018199658,
+        "positives": 6,
+        "pr_auc": 0.05678962334526204,
+        "prevalence": 0.075,
+        "reliability": [
+          {
+            "count": 46,
+            "lower": 0.0,
+            "mean_probability": 0.02855107371416934,
+            "observed_rate": 0.13043478260869565,
+            "upper": 0.1
+          },
+          {
+            "count": 7,
+            "lower": 0.1,
+            "mean_probability": 0.15411138829217816,
+            "observed_rate": 0.0,
+            "upper": 0.2
+          },
+          {
+            "count": 3,
+            "lower": 0.2,
+            "mean_probability": 0.25504849776516864,
+            "observed_rate": 0.0,
+            "upper": 0.30000000000000004
+          },
+          {
+            "count": 3,
+            "lower": 0.30000000000000004,
+            "mean_probability": 0.3680532983733636,
+            "observed_rate": 0.0,
+            "upper": 0.4
+          },
+          {
+            "count": 1,
+            "lower": 0.4,
+            "mean_probability": 0.46046147861434916,
+            "observed_rate": 0.0,
+            "upper": 0.5
+          },
+          {
+            "count": 1,
+            "lower": 0.5,
+            "mean_probability": 0.5317982501649886,
+            "observed_rate": 0.0,
+            "upper": 0.6000000000000001
+          },
+          {
+            "count": 5,
+            "lower": 0.6000000000000001,
+            "mean_probability": 0.639771608611715,
+            "observed_rate": 0.0,
+            "upper": 0.7000000000000001
+          },
+          {
+            "count": 3,
+            "lower": 0.7000000000000001,
+            "mean_probability": 0.764618280625703,
+            "observed_rate": 0.0,
+            "upper": 0.8
+          },
+          {
+            "count": 10,
+            "lower": 0.8,
+            "mean_probability": 0.8760248538202905,
+            "observed_rate": 0.0,
+            "upper": 0.9
+          },
+          {
+            "count": 1,
+            "lower": 0.9,
+            "mean_probability": 0.9258546098731282,
+            "observed_rate": 0.0,
+            "upper": 1.0
+          }
+        ],
+        "roc_auc": 0.26463963963963966,
+        "rows": 80
+      },
+      "logistic": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.002463230946970656,
+              "positives": 4,
+              "pr_auc": 1.0,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.002228528078120278,
+              "positives": 2,
+              "pr_auc": 1.0,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.002463230946970656,
+              "positives": 4,
+              "pr_auc": 1.0,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.002228528078120278,
+              "positives": 2,
+              "pr_auc": 1.0,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.0023458795125454674,
+        "ece_10": 0.04680957437748193,
+        "log_loss": 0.04802595472816551,
+        "positives": 6,
+        "pr_auc": 1.0,
+        "prevalence": 0.075,
+        "reliability": [
+          {
+            "count": 74,
+            "lower": 0.0,
+            "mean_probability": 0.0479684671176291,
+            "observed_rate": 0.0,
+            "upper": 0.1
+          },
+          {
+            "count": 6,
+            "lower": 0.9,
+            "mean_probability": 0.9674834360843332,
+            "observed_rate": 1.0,
+            "upper": 1.0
+          }
+        ],
+        "roc_auc": 1.0,
+        "rows": 80
+      },
+      "small_tcn": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.2503983589881365,
+              "positives": 4,
+              "pr_auc": 0.1,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.25044812290605944,
+              "positives": 2,
+              "pr_auc": 0.05,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.2503983589881365,
+              "positives": 4,
+              "pr_auc": 0.1,
+              "prevalence": 0.1,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.25044812290605944,
+              "positives": 2,
+              "pr_auc": 0.05,
+              "prevalence": 0.05,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.250423240947098,
+        "ece_10": 0.4254976391792297,
+        "log_loss": 0.6939936627337255,
+        "positives": 6,
+        "pr_auc": 0.075,
+        "prevalence": 0.075,
+        "reliability": [
+          {
+            "count": 80,
+            "lower": 0.5,
+            "mean_probability": 0.5004976391792297,
+            "observed_rate": 0.075,
+            "upper": 0.6000000000000001
+          }
+        ],
+        "roc_auc": 0.5,
+        "rows": 80
+      }
+    },
+    "3": {
+      "base_rate": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.14578125000000003,
+              "positives": 7,
+              "pr_auc": 0.175,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.09140625000000002,
+              "positives": 4,
+              "pr_auc": 0.1,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.14578125000000003,
+              "positives": 7,
+              "pr_auc": 0.175,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.09140625000000002,
+              "positives": 4,
+              "pr_auc": 0.1,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.11859375000000001,
+        "ece_10": 2.7755575615628914e-17,
+        "log_loss": 0.4003991744489695,
+        "positives": 11,
+        "pr_auc": 0.1375,
+        "prevalence": 0.1375,
+        "reliability": [
+          {
+            "count": 80,
+            "lower": 0.1,
+            "mean_probability": 0.13749999999999998,
+            "observed_rate": 0.1375,
+            "upper": 0.2
+          }
+        ],
+        "roc_auc": 0.5,
+        "rows": 80
+      },
+      "boosting": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.324737347831482,
+              "positives": 7,
+              "pr_auc": 0.1589481946624804,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.3438231891752597,
+              "positives": 4,
+              "pr_auc": 0.09320349761526232,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.324737347831482,
+              "positives": 7,
+              "pr_auc": 0.1589481946624804,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.3438231891752597,
+              "positives": 4,
+              "pr_auc": 0.09320349761526232,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.3342802685033709,
+        "ece_10": 0.38291945853324605,
+        "log_loss": 1.055508678116457,
+        "positives": 11,
+        "pr_auc": 0.10680703412059017,
+        "prevalence": 0.1375,
+        "reliability": [
+          {
+            "count": 37,
+            "lower": 0.0,
+            "mean_probability": 0.028070365060694463,
+            "observed_rate": 0.21621621621621623,
+            "upper": 0.1
+          },
+          {
+            "count": 5,
+            "lower": 0.1,
+            "mean_probability": 0.12591421592017044,
+            "observed_rate": 0.2,
+            "upper": 0.2
+          },
+          {
+            "count": 7,
+            "lower": 0.2,
+            "mean_probability": 0.2596358320861833,
+            "observed_rate": 0.0,
+            "upper": 0.30000000000000004
+          },
+          {
+            "count": 1,
+            "lower": 0.30000000000000004,
+            "mean_probability": 0.3977970672401636,
+            "observed_rate": 0.0,
+            "upper": 0.4
+          },
+          {
+            "count": 3,
+            "lower": 0.5,
+            "mean_probability": 0.5270332480041474,
+            "observed_rate": 0.3333333333333333,
+            "upper": 0.6000000000000001
+          },
+          {
+            "count": 3,
+            "lower": 0.6000000000000001,
+            "mean_probability": 0.6901729996794729,
+            "observed_rate": 0.0,
+            "upper": 0.7000000000000001
+          },
+          {
+            "count": 13,
+            "lower": 0.7000000000000001,
+            "mean_probability": 0.7629329090365181,
+            "observed_rate": 0.07692307692307693,
+            "upper": 0.8
+          },
+          {
+            "count": 10,
+            "lower": 0.8,
+            "mean_probability": 0.8600003264597765,
+            "observed_rate": 0.0,
+            "upper": 0.9
+          },
+          {
+            "count": 1,
+            "lower": 0.9,
+            "mean_probability": 0.9167335525394251,
+            "observed_rate": 0.0,
+            "upper": 1.0
+          }
+        ],
+        "roc_auc": 0.2938076416337286,
+        "rows": 80
+      },
+      "logistic": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.26834149851384625,
+              "positives": 7,
+              "pr_auc": 0.6674603174603174,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.31834759339164453,
+              "positives": 4,
+              "pr_auc": 0.55,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.26834149851384625,
+              "positives": 7,
+              "pr_auc": 0.6674603174603174,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.31834759339164453,
+              "positives": 4,
+              "pr_auc": 0.55,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.2933445459527454,
+        "ece_10": 0.44691342454266875,
+        "log_loss": 0.7789431316189201,
+        "positives": 11,
+        "pr_auc": 0.613134695529993,
+        "prevalence": 0.1375,
+        "reliability": [
+          {
+            "count": 2,
+            "lower": 0.1,
+            "mean_probability": 0.18259696961497962,
+            "observed_rate": 0.5,
+            "upper": 0.2
+          },
+          {
+            "count": 10,
+            "lower": 0.2,
+            "mean_probability": 0.25865554840257504,
+            "observed_rate": 0.0,
+            "upper": 0.30000000000000004
+          },
+          {
+            "count": 9,
+            "lower": 0.30000000000000004,
+            "mean_probability": 0.35347627427421824,
+            "observed_rate": 0.0,
+            "upper": 0.4
+          },
+          {
+            "count": 8,
+            "lower": 0.4,
+            "mean_probability": 0.45730249771826803,
+            "observed_rate": 0.5,
+            "upper": 0.5
+          },
+          {
+            "count": 17,
+            "lower": 0.5,
+            "mean_probability": 0.552356128551658,
+            "observed_rate": 0.0,
+            "upper": 0.6000000000000001
+          },
+          {
+            "count": 15,
+            "lower": 0.6000000000000001,
+            "mean_probability": 0.6446367630966761,
+            "observed_rate": 0.0,
+            "upper": 0.7000000000000001
+          },
+          {
+            "count": 13,
+            "lower": 0.7000000000000001,
+            "mean_probability": 0.7552972633349827,
+            "observed_rate": 0.0,
+            "upper": 0.8
+          },
+          {
+            "count": 6,
+            "lower": 0.9,
+            "mean_probability": 0.9782706872145358,
+            "observed_rate": 1.0,
+            "upper": 1.0
+          }
+        ],
+        "roc_auc": 0.6600790513833992,
+        "rows": 80
+      },
+      "small_tcn": {
+        "breakdowns": {
+          "circuit": {
+            "Fixture A": {
+              "brier": 0.24595518683420492,
+              "positives": 7,
+              "pr_auc": 0.20588235294117646,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "Fixture B": {
+              "brier": 0.24532105826346143,
+              "positives": 4,
+              "pr_auc": 0.12121212121212122,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          },
+          "race_id": {
+            "fixture-06": {
+              "brier": 0.24595518683420492,
+              "positives": 7,
+              "pr_auc": 0.20588235294117646,
+              "prevalence": 0.175,
+              "rows": 40
+            },
+            "fixture-07": {
+              "brier": 0.24532105826346143,
+              "positives": 4,
+              "pr_auc": 0.12121212121212122,
+              "prevalence": 0.1,
+              "rows": 40
+            }
+          }
+        },
+        "brier": 0.24563812254883316,
+        "ece_10": 0.3571605566889048,
+        "log_loss": 0.6844189402768153,
+        "positives": 11,
+        "pr_auc": 0.16417910447761194,
+        "prevalence": 0.1375,
+        "reliability": [
+          {
+            "count": 78,
+            "lower": 0.4,
+            "mean_probability": 0.49428200072202927,
+            "observed_rate": 0.14102564102564102,
+            "upper": 0.5
+          },
+          {
+            "count": 2,
+            "lower": 0.5,
+            "mean_probability": 0.509424239397049,
+            "observed_rate": 0.0,
+            "upper": 0.6000000000000001
+          }
+        ],
+        "roc_auc": 0.5797101449275361,
+        "rows": 80
+      }
+    }
+  },
+  "mixed_target": {
+    "rolling_median_5": {
+      "mae_s": 3.004938566767585,
+      "per_race": {
+        "fixture-06": {
+          "mae_s": 3.639302967562749,
+          "rows": 40
+        },
+        "fixture-07": {
+          "mae_s": 2.3705741659724207,
+          "rows": 40
+        }
+      },
+      "r2": -0.1346965177166961,
+      "race_macro_mae_s": 3.004938566767585,
+      "rmse_s": 7.946276967097952,
+      "rows": 80
+    },
+    "single_stage_boosting": {
+      "mae_s": 3.1922910680255248,
+      "per_race": {
+        "fixture-06": {
+          "mae_s": 3.703331085262506,
+          "rows": 40
+        },
+        "fixture-07": {
+          "mae_s": 2.681251050788544,
+          "rows": 40
+        }
+      },
+      "r2": -0.1708422057584762,
+      "race_macro_mae_s": 3.1922910680255248,
+      "rmse_s": 8.071848868257579,
+      "rows": 80
+    },
+    "two_stage": {
+      "mae_s": 8.765786432311387,
+      "per_race": {
+        "fixture-06": {
+          "mae_s": 9.493636563878734,
+          "rows": 40
+        },
+        "fixture-07": {
+          "mae_s": 8.037936300744038,
+          "rows": 40
+        }
+      },
+      "r2": -1.9244108048605137,
+      "race_macro_mae_s": 8.765786432311387,
+      "rmse_s": 12.756837611056557,
+      "rows": 80
+    }
+  },
+  "paired_vs_rolling_median_5": {
+    "ci95": [
+      5.667362134771617,
+      5.8543335963159855
+    ],
+    "mean_difference": 5.760847865543801,
+    "races": 2,
+    "resampling_unit": "race",
+    "wins": 0
+  }
+}

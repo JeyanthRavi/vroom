@@ -97,6 +97,14 @@ def test_asset_allowlist():
     assert client.get('/detail-assets/selected.joblib').status_code==404
 
 
+def test_conformal_fields_are_additive_and_validated():
+    assert ml_api.interval_fields(90,{'nominal_coverage':.8,'lower_offset_s':2,'upper_offset_s':3})=={
+        'lower':88.,'upper':93.,'nominal_coverage':.8}
+    assert ml_api.interval_fields(90,None)=={}
+    with pytest.raises(ValueError):
+        ml_api.interval_fields(90,{'nominal_coverage':1.2,'lower_offset_s':2,'upper_offset_s':3})
+
+
 def test_corrupt_model_rejected_before_deserialization(tmp_path,monkeypatch):
     import json
     pytest.importorskip('sklearn')

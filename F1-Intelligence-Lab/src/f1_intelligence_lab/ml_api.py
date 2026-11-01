@@ -13,6 +13,16 @@ SERVICE = None
 LOG = logging.getLogger(__name__)
 
 
+def interval_fields(prediction, configuration):
+    """Return optional additive conformal fields without changing legacy rows."""
+    if not configuration:return {}
+    nominal=float(configuration['nominal_coverage'])
+    lower=float(prediction)-float(configuration['lower_offset_s'])
+    upper=float(prediction)+float(configuration['upper_offset_s'])
+    if not 0<nominal<1 or lower>upper:raise ValueError('Invalid conformal interval configuration')
+    return {'lower':lower,'upper':upper,'nominal_coverage':nominal}
+
+
 @router.get('/api/ml/restart-research')
 def restart_research():
     directory=os.environ.get('F1_ROBUST_RUN')
@@ -96,6 +106,11 @@ class HistoricalPredictor:
         if self.bundle['features'] != FEATURES or self.bundle['name'] != self.results['selection']['winner']:
             raise ValueError('Model contract mismatch')
         self.version = hashes['selected.joblib'][:12]
+        self.interval = None
+        if (run/'conformal.json').is_file():
+            if hashes.get('conformal.json')!=digest((run/'conformal.json').read_bytes()):
+                raise ValueError('Conformal artifact checksum mismatch')
+            self.interval=json.loads((run/'conformal.json').read_text())
         self.cache = {}
 
     def sessions(self):
@@ -125,10 +140,11 @@ class HistoricalPredictor:
         reference = baseline(self.results['selection']['baseline'],x)
         rows = []
         for i,p,b in zip(ix,values,reference):
-            rows.append({'driver':meta[i]['driver_number'],'lap':int(features[i]['lap_number']),
+            row={'driver':meta[i]['driver_number'],'lap':int(features[i]['lap_number']),
                 'prediction_at':meta[i]['prediction_at'],'actual_s':labels[i],
                 'predicted_s':float(p),'baseline_s':float(b),'absolute_error_s':abs(float(p)-labels[i]),
-                'control_state':features[i]['control_state_at_cutoff']})
+                'control_state':features[i]['control_state_at_cutoff']}
+            row.update(interval_fields(p,self.interval));rows.append(row)
         return dict(base,status='ready',model=self.bundle['name'],version=self.version,split=split,
                     baseline=self.results['selection']['baseline'],rows=rows,
                     message={'train':'Training race: in-sample predictions, not an independent accuracy test.',

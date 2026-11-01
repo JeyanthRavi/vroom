@@ -1,0 +1,104 @@
+{
+  "decision": "fixture-only; no calibration claim",
+  "evidence_status": "fixture-only: not evidence",
+  "fixture_only": true,
+  "methods": {
+    "cqr_80": {
+      "coverage": 0.5625,
+      "interval_score": 27.811508312623154,
+      "mean_width_s": 7.932870025628643,
+      "nominal_coverage": 0.8,
+      "per_race": {
+        "fixture-06": {
+          "coverage": 0.6,
+          "mean_width_s": 7.932870025628643,
+          "rows": 40
+        },
+        "fixture-07": {
+          "coverage": 0.525,
+          "mean_width_s": 7.932870025628643,
+          "rows": 40
+        }
+      },
+      "rows": 80,
+      "wilson95": [
+        0.4534113429694972,
+        0.6658613908385618
+      ]
+    },
+    "cqr_90": {
+      "coverage": 0.925,
+      "interval_score": 61.26138676944072,
+      "mean_width_s": 60.46143609418461,
+      "nominal_coverage": 0.9,
+      "per_race": {
+        "fixture-06": {
+          "coverage": 0.9,
+          "mean_width_s": 60.46143609418461,
+          "rows": 40
+        },
+        "fixture-07": {
+          "coverage": 0.95,
+          "mean_width_s": 60.46143609418461,
+          "rows": 40
+        }
+      },
+      "rows": 80,
+      "wilson95": [
+        0.8458798391878072,
+        0.9651747507069949
+      ]
+    },
+    "split_80": {
+      "coverage": 0.375,
+      "interval_score": 30.51317856992542,
+      "mean_width_s": 1.641366680864195,
+      "nominal_coverage": 0.8,
+      "per_race": {
+        "fixture-06": {
+          "coverage": 0.55,
+          "mean_width_s": 1.641366680864195,
+          "rows": 40
+        },
+        "fixture-07": {
+          "coverage": 0.2,
+          "mean_width_s": 1.641366680864195,
+          "rows": 40
+        }
+      },
+      "rows": 80,
+      "wilson95": [
+        0.27694178701531175,
+        0.48451274536857
+      ]
+    },
+    "split_90": {
+      "coverage": 0.925,
+      "interval_score": 51.37266511431346,
+      "mean_width_s": 50.59100941287403,
+      "nominal_coverage": 0.9,
+      "per_race": {
+        "fixture-06": {
+          "coverage": 0.9,
+          "mean_width_s": 50.59100941287403,
+          "rows": 40
+        },
+        "fixture-07": {
+          "coverage": 0.95,
+          "mean_width_s": 50.59100941287403,
+          "rows": 40
+        }
+      },
+      "rows": 80,
+      "wilson95": [
+        0.8458798391878072,
+        0.9651747507069949
+      ]
+    }
+  },
+  "mondrian": {
+    "non_green_rows": 8,
+    "reason": "calibration group below 30 rows",
+    "status": "unsupported"
+  }
+}

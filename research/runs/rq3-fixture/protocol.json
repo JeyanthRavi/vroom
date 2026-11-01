@@ -1,0 +1,11 @@
+{
+  "experiment": "rq3-drift",
+  "fixture_only": true,
+  "forward_boundary": "2026-11-02",
+  "inputs": [
+    "deterministic synthetic races"
+  ],
+  "labels_opened_after_protocol": true,
+  "protocol_version": "2026-11-02-a0bac1a",
+  "seed": 20261102
+}

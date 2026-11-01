@@ -1,0 +1,13 @@
+{
+  "files": {
+    "REPORT.md": "b80154948e7fefca3cfcb879bea06f9efb9bdb5ff93802f25d30b08bd4451e1f",
+    "environment.json": "3a58303ebc3a1df4ede46eee94e4fb131d2ff12904b024b758aeb6779c7d203d",
+    "figures/coverage.alt.txt": "19881facbeec03048caebf445e7a1126a4867d03f026194aacb69aebdc57b42d",
+    "figures/coverage.png": "48c0550b0ccffecd77add38d5a5459b4973f421d14f089a32ffd11dd68ed8063",
+    "per_race.csv": "49b167754e071287735393af1a132f54402ef3820870d837e0d4e3c9cf347a86",
+    "predictions.csv": "a372452995dc34b72048210524e2472f1c647500115df8d4a4fb2a10a9a2dce5",
+    "protocol.json": "f188befd0e0c58a2c23bf89179017e44fd4963b179415d5877fcd22e7604a1c1",
+    "results.json": "b4234ca072af2ebab24ddb2e644b488a847ccdbcd542e9ba5d94f8afb63e7f28"
+  },
+  "schema": 1
+}

@@ -26,8 +26,8 @@ type:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m mypy F1-Intelligence-Lab/src F1-StewardLens/src F1-Telemetry-Pit-Crew/src
 
 demo:
-	F1_DEMO_EXPORT=$(CURDIR)/$(LAB)/demo-export-aggregate PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m pytest -q $(LAB)/tests/test_demo_api.py $(LAB)/tests/test_export_demo.py --import-mode=importlib
-	F1_DEMO_EXPORT=$(CURDIR)/$(LAB)/demo-export-aggregate PYTHONPATH=$(PYTHONPATH) $(PYTHON) -c 'from fastapi.testclient import TestClient; from f1_intelligence_lab.demo_app import app; c=TestClient(app); assert c.get("/health").status_code==200; assert c.get("/model-demo/export-metadata.json").json()["export_mode"]=="aggregate"'
+	F1_DEMO_EXPORT="$(CURDIR)/$(LAB)/demo-export-aggregate" PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m pytest -q $(LAB)/tests/test_demo_api.py $(LAB)/tests/test_export_demo.py --import-mode=importlib
+	F1_DEMO_EXPORT="$(CURDIR)/$(LAB)/demo-export-aggregate" PYTHONPATH=$(PYTHONPATH) $(PYTHON) -c 'from fastapi.testclient import TestClient; from f1_intelligence_lab.demo_app import app; c=TestClient(app); assert c.get("/health").status_code==200; assert c.get("/model-demo/export-metadata.json").json()["export_mode"]=="aggregate"'
 
 docs:
 	$(PYTHON) scripts/check_internal_links.py

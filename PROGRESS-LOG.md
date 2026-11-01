@@ -118,3 +118,37 @@ Claims changed in docs:
 
 - None; this phase pre-registers conditions under which future claims would be allowed.
 
+## Phase 4 — Reproducible research harness   (2026-11-02)
+
+Done:
+
+- Implemented the preregistered RQ1 pace/hazard pipeline with rolling-median, logistic, boosted-tree, single-stage, and compact TCN comparators. Hazard outputs include PR-AUC, ROC-AUC, Brier score, log loss, ECE, reliability bins, and per-race/per-circuit breakdowns.
+- Implemented RQ2 split conformal and conformalized quantile regression fixtures with calibration/test separation, coverage, width, interval score, rolling-origin results, and additive interval fields in the historical prediction API.
+- Implemented RQ3 drift diagnostics using PSI, KS, grouped adversarial validation, rolling race MAE, and preregistered trigger reporting.
+- Implemented RQ4 GRU, TCN, MLP, and sequence-aware boosting comparisons across 5/10/15-lap windows, state-history ablations, tyre-history ablations, and seeds 11/29/47.
+- Added shared leakage guards, deterministic synthetic data, paired 10,000-resample race bootstrap intervals, Wilson intervals, reliability/ECE utilities, immutable artifact manifests, environment records, plots, and text alternatives.
+- Added a forward-holdout opener that writes its protocol before reading labels and remains pending until three post-boundary races are available.
+- Generated four checksum-verifiable fixture runs under `research/runs/`. Every report and result labels itself **fixture-only: not evidence**; these outputs validate plumbing and reproducibility, not Formula 1 model quality.
+- Added explicit `research` dependencies and preserved functional no-Torch installation through test-level skips for the two PyTorch-specific suites.
+- Fixed the demo Make target so repository paths containing spaces are handled safely.
+
+Verified:
+
+- `make lint`: Ruff reported `All checks passed!`.
+- `make type`: mypy reported `Success: no issues found in 55 source files`.
+- Full repository suite with PyTorch 2.8.0: `191 passed in 48.70s`.
+- Full repository suite without PyTorch: `169 passed, 7 skipped in 12.12s`; all seven skips explicitly report the missing optional PyTorch dependency.
+- Research-only no-Torch suite: `12 passed, 2 skipped in 19.68s`.
+- Aggregate demo gate: `6 passed`; health and aggregate metadata smoke checks passed.
+- Internal Markdown links: `ok`.
+
+Not done / blocked:
+
+- Audited real-data RQ1–RQ4 results are not produced because a rights-reviewed, split-ready real-data adapter is not yet available. The repository includes the exact adapter contract and run procedure.
+- The independent forward holdout remains pending until at least three verified races start strictly after 2026-11-02.
+
+Claims changed in docs:
+
+- Research result summaries explicitly separate fixture engineering validation from empirical evidence.
+- Prediction intervals are optional additive fields and are not described as calibrated on real Formula 1 outcomes until the real-data protocol is executed.
+

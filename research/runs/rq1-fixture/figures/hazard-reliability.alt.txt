@@ -1,0 +1,1 @@
+Fixture-only reliability curve comparing predicted H=1 neutralisation probabilities with observed synthetic frequencies; diagonal denotes ideal calibration.

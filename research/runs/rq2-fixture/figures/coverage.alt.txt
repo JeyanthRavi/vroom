@@ -1,0 +1,1 @@
+Fixture-only scatter plot of observed versus nominal coverage for split conformal and CQR at 80 and 90 percent.

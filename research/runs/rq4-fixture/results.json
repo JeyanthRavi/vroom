@@ -1,0 +1,3576 @@
+{
+  "cells": [
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 3.324965476989746,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.3897666931152344,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 3.2601637840270996,
+                "rows": 35
+              }
+            },
+            "r2": -0.010079026222229004,
+            "race_macro_mae_s": 3.324965238571167,
+            "rmse_s": 7.044183525818315,
+            "rows": 70
+          },
+          "parameters": 281,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.38803768157959,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.4693169593811035,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.306759357452393,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.014142036437988281,
+                "race_macro_mae_s": 4.388038158416748,
+                "rmse_s": 7.058336499186065,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.8376948833465576,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.84442400932312,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.830965757369995,
+                    "rows": 35
+                  }
+                },
+                "r2": 0.0462380051612854,
+                "race_macro_mae_s": 3.8376948833465576,
+                "rmse_s": 6.844992607564118,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.4021811485290527,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.282238006591797,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5221245288848877,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.22759747505187988,
+                "race_macro_mae_s": 3.4021812677383423,
+                "rmse_s": 7.765706297911344,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.3136980533599854,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.2466962337493896,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 3.38070011138916,
+                "rows": 35
+              }
+            },
+            "r2": -0.07006418704986572,
+            "race_macro_mae_s": 3.313698172569275,
+            "rmse_s": 7.250332265672139,
+            "rows": 70
+          },
+          "parameters": 221,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.3657753467559814,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.475013494491577,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.256537914276123,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.03257155418395996,
+                "race_macro_mae_s": 3.36577570438385,
+                "rmse_s": 7.122181920681281,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.5169992446899414,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.3788914680480957,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.655106544494629,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.2051781415939331,
+                "race_macro_mae_s": 3.5169990062713623,
+                "rmse_s": 7.694468247628912,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.625607013702393,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.4668989181518555,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.7843146324157715,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.1648041009902954,
+                "race_macro_mae_s": 4.6256067752838135,
+                "rmse_s": 7.564486156089127,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 2.840720371715414,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.752264322102029,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 2.9291764213287994,
+                "rows": 35
+              }
+            },
+            "r2": -0.14773705959793815,
+            "race_macro_mae_s": 2.840720371715414,
+            "rmse_s": 7.508863099137762,
+            "rows": 70
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.6144256591796875,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.724365234375,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 3.504485845565796,
+                "rows": 35
+              }
+            },
+            "r2": -0.029729127883911133,
+            "race_macro_mae_s": 3.614425539970398,
+            "rmse_s": 7.112371932286291,
+            "rows": 70
+          },
+          "parameters": 261,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.4049811363220215,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.2778842449188232,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5320780277252197,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.2492302656173706,
+                "race_macro_mae_s": 3.4049811363220215,
+                "rmse_s": 7.833831473669913,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.7481300830841064,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.8934388160705566,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.6028213500976562,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.0319746732711792,
+                "race_macro_mae_s": 3.7481300830841064,
+                "rmse_s": 7.120122746041754,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 5.289722919464111,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.389908313751221,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.189537048339844,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.024196267127990723,
+                "race_macro_mae_s": 5.289722681045532,
+                "rmse_s": 7.093238576863236,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.6906086586602265,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.706734462141943,
+            "rows": 35
+          },
+          "fixture-07": {
+            "mae_s": 2.67448285517851,
+            "rows": 35
+          }
+        },
+        "r2": -0.10367749367077272,
+        "race_macro_mae_s": 2.6906086586602265,
+        "rmse_s": 7.363326822725055,
+        "rows": 70
+      },
+      "window": 5,
+      "with_state": false,
+      "with_tyre": false
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 2.873073101043701,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.9621500968933105,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 2.783996343612671,
+                "rows": 35
+              }
+            },
+            "r2": -0.08478856086730957,
+            "race_macro_mae_s": 2.8730732202529907,
+            "rmse_s": 7.300045002837793,
+            "rows": 70
+          },
+          "parameters": 302,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.2204647064208984,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.300642728805542,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.140287160873413,
+                    "rows": 35
+                  }
+                },
+                "r2": 0.006315469741821289,
+                "race_macro_mae_s": 3.2204649448394775,
+                "rmse_s": 6.98678267453005,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.230078935623169,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.240363121032715,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.2197940349578857,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.1380707025527954,
+                "race_macro_mae_s": 3.2300785779953003,
+                "rmse_s": 7.477175760180632,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.190570592880249,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.198958396911621,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.182183027267456,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.16731560230255127,
+                "race_macro_mae_s": 3.1905707120895386,
+                "rmse_s": 7.572636896043951,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.0056042671203613,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.0931663513183594,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 2.918041467666626,
+                "rows": 35
+              }
+            },
+            "r2": -0.10024547576904297,
+            "race_macro_mae_s": 3.0056039094924927,
+            "rmse_s": 7.351869420648838,
+            "rows": 70
+          },
+          "parameters": 271,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.245781660079956,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.377556085586548,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.114006757736206,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.15158593654632568,
+                "race_macro_mae_s": 3.245781421661377,
+                "rmse_s": 7.521442533073048,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.023024559020996,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.093271255493164,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 2.952777862548828,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.0854724645614624,
+                "race_macro_mae_s": 3.023024559020996,
+                "rmse_s": 7.302345463450639,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.207458972930908,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.239994525909424,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.1749231815338135,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.08864545822143555,
+                "race_macro_mae_s": 3.2074588537216187,
+                "rmse_s": 7.313010434325171,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 2.796269530111077,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.728204896134304,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 2.86433416408785,
+                "rows": 35
+              }
+            },
+            "r2": -0.13829744381873899,
+            "race_macro_mae_s": 2.796269530111077,
+            "rmse_s": 7.477920852836181,
+            "rows": 70
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 5.824211597442627,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 5.919908046722412,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 5.728514671325684,
+                "rows": 35
+              }
+            },
+            "r2": -0.06953322887420654,
+            "race_macro_mae_s": 5.824211359024048,
+            "rmse_s": 7.248532903149911,
+            "rows": 70
+          },
+          "parameters": 285,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 6.047221660614014,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 6.164639949798584,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.929803371429443,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.08949124813079834,
+                "race_macro_mae_s": 6.047221660614014,
+                "rmse_s": 7.315850949128425,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 4.382594585418701,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.462037086486816,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.303152084350586,
+                    "rows": 35
+                  }
+                },
+                "r2": 0.006016075611114502,
+                "race_macro_mae_s": 4.382594585418701,
+                "rmse_s": 6.987835259489847,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 7.042820930480957,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 7.133047103881836,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 6.952593803405762,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.25007057189941406,
+                "race_macro_mae_s": 7.042820453643799,
+                "rmse_s": 7.8364659261474445,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.6906086586602265,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.706734462141943,
+            "rows": 35
+          },
+          "fixture-07": {
+            "mae_s": 2.67448285517851,
+            "rows": 35
+          }
+        },
+        "r2": -0.10367749367077272,
+        "race_macro_mae_s": 2.6906086586602265,
+        "rmse_s": 7.363326822725055,
+        "rows": 70
+      },
+      "window": 5,
+      "with_state": false,
+      "with_tyre": true
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 3.8355276584625244,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.9336636066436768,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 3.7373909950256348,
+                "rows": 35
+              }
+            },
+            "r2": -0.02047133445739746,
+            "race_macro_mae_s": 3.8355273008346558,
+            "rmse_s": 7.080327851199318,
+            "rows": 70
+          },
+          "parameters": 323,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.4922475814819336,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.5166373252868652,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.46785831451416,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.017008066177368164,
+                "race_macro_mae_s": 3.4922478199005127,
+                "rmse_s": 7.068303517239226,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.0774343013763428,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.0903613567352295,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.064507484436035,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.1277371644973755,
+                "race_macro_mae_s": 3.0774344205856323,
+                "rmse_s": 7.443152835956299,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 5.452735900878906,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.661182403564453,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.244291305541992,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.08648216724395752,
+                "race_macro_mae_s": 5.452736854553223,
+                "rmse_s": 7.305741275929521,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.3430657386779785,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.2768678665161133,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 3.4092628955841064,
+                "rows": 35
+              }
+            },
+            "r2": -0.21595489978790283,
+            "race_macro_mae_s": 3.34306538105011,
+            "rmse_s": 7.7287935096617915,
+            "rows": 70
+          },
+          "parameters": 321,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.288353204727173,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.2374379634857178,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.3392679691314697,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.19739949703216553,
+                "race_macro_mae_s": 3.2883529663085938,
+                "rmse_s": 7.669596595948191,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 4.517268180847168,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.309129238128662,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.725405693054199,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.5388854742050171,
+                "race_macro_mae_s": 4.517267465591431,
+                "rmse_s": 8.694730754629944,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.856844663619995,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.03551721572876,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.6781721115112305,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.09593570232391357,
+                "race_macro_mae_s": 3.856844663619995,
+                "rmse_s": 7.33745600672568,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 2.840720371715414,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.752264322102029,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 2.9291764213287994,
+                "rows": 35
+              }
+            },
+            "r2": -0.14773705959793815,
+            "race_macro_mae_s": 2.840720371715414,
+            "rmse_s": 7.508863099137762,
+            "rows": 70
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.158517360687256,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.2498233318328857,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 3.067211866378784,
+                "rows": 35
+              }
+            },
+            "r2": -0.07022714614868164,
+            "race_macro_mae_s": 3.158517599105835,
+            "rmse_s": 7.250884166604082,
+            "rows": 70
+          },
+          "parameters": 309,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 5.10605525970459,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.1810503005981445,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.031060695648193,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.038308024406433105,
+                "race_macro_mae_s": 5.106055498123169,
+                "rmse_s": 7.1419382703213055,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.1240696907043457,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.058483362197876,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.1896555423736572,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.19549345970153809,
+                "race_macro_mae_s": 3.1240694522857666,
+                "rmse_s": 7.663489581828945,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 2.9890990257263184,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 2.9077799320220947,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.070418119430542,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.17992234230041504,
+                "race_macro_mae_s": 2.9890990257263184,
+                "rmse_s": 7.613418288193935,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.6906086586602265,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.706734462141943,
+            "rows": 35
+          },
+          "fixture-07": {
+            "mae_s": 2.67448285517851,
+            "rows": 35
+          }
+        },
+        "r2": -0.10367749367077272,
+        "race_macro_mae_s": 2.6906086586602265,
+        "rmse_s": 7.363326822725055,
+        "rows": 70
+      },
+      "window": 5,
+      "with_state": true,
+      "with_tyre": false
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 4.600124835968018,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 4.687370777130127,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 4.512880325317383,
+                "rows": 35
+              }
+            },
+            "r2": -0.0038671493530273438,
+            "race_macro_mae_s": 4.600125551223755,
+            "rmse_s": 7.022489659867732,
+            "rows": 70
+          },
+          "parameters": 344,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.2282874584198,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.1665589809417725,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.2900149822235107,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.1516789197921753,
+                "race_macro_mae_s": 3.2282869815826416,
+                "rmse_s": 7.521746579109256,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 6.505007266998291,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 6.513121604919434,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 6.496894836425781,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.2021634578704834,
+                "race_macro_mae_s": 6.505008220672607,
+                "rmse_s": 7.684838307155779,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 5.290916919708252,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.410402297973633,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.1714324951171875,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.06808650493621826,
+                "race_macro_mae_s": 5.29091739654541,
+                "rmse_s": 7.2436287607311165,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.762505292892456,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.7803266048431396,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 3.7446842193603516,
+                "rows": 35
+              }
+            },
+            "r2": -0.030951738357543945,
+            "race_macro_mae_s": 3.7625054121017456,
+            "rmse_s": 7.116593337146528,
+            "rows": 70
+          },
+          "parameters": 371,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.288150787353516,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.328859806060791,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.247442722320557,
+                    "rows": 35
+                  }
+                },
+                "r2": 0.02963811159133911,
+                "race_macro_mae_s": 4.288151264190674,
+                "rmse_s": 6.904302952614016,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 4.763058662414551,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.729621410369873,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.7964959144592285,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.19910335540771484,
+                "race_macro_mae_s": 4.763058662414551,
+                "rmse_s": 7.67505115405006,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.2657077312469482,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.2291383743286133,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.302276134490967,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.08710193634033203,
+                "race_macro_mae_s": 3.26570725440979,
+                "rmse_s": 7.307824620890766,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 2.796269530111077,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.728204896134304,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 2.86433416408785,
+                "rows": 35
+              }
+            },
+            "r2": -0.13829744381873899,
+            "race_macro_mae_s": 2.796269530111077,
+            "rmse_s": 7.477920852836181,
+            "rows": 70
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.067598581314087,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.1498491764068604,
+                "rows": 35
+              },
+              "fixture-07": {
+                "mae_s": 2.985348701477051,
+                "rows": 35
+              }
+            },
+            "r2": -0.06356966495513916,
+            "race_macro_mae_s": 3.0675989389419556,
+            "rmse_s": 7.228296350277941,
+            "rows": 70
+          },
+          "parameters": 333,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.5281224250793457,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.6284446716308594,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.427800178527832,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.016016721725463867,
+                "race_macro_mae_s": 3.5281224250793457,
+                "rmse_s": 7.0648575620338,
+                "rows": 70
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.845229148864746,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.9487287998199463,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.7417306900024414,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.04220914840698242,
+                "race_macro_mae_s": 3.845229744911194,
+                "rmse_s": 7.15534241097591,
+                "rows": 70
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.3667244911193848,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.2416625022888184,
+                    "rows": 35
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.4917867183685303,
+                    "rows": 35
+                  }
+                },
+                "r2": -0.2270369529724121,
+                "race_macro_mae_s": 3.3667246103286743,
+                "rmse_s": 7.763933515638443,
+                "rows": 70
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.6906086586602265,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.706734462141943,
+            "rows": 35
+          },
+          "fixture-07": {
+            "mae_s": 2.67448285517851,
+            "rows": 35
+          }
+        },
+        "r2": -0.10367749367077272,
+        "race_macro_mae_s": 2.6906086586602265,
+        "rmse_s": 7.363326822725055,
+        "rows": 70
+      },
+      "window": 5,
+      "with_state": true,
+      "with_tyre": true
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 3.7201051712036133,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.7717244625091553,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.6684865951538086,
+                "rows": 30
+              }
+            },
+            "r2": -0.03343391418457031,
+            "race_macro_mae_s": 3.720105528831482,
+            "rmse_s": 7.582067726358034,
+            "rows": 60
+          },
+          "parameters": 281,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.824363708496094,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.890153884887695,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.758574485778809,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.00904691219329834,
+                "race_macro_mae_s": 4.824364185333252,
+                "rmse_s": 7.492072938872574,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 4.271865367889404,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.249079704284668,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.294650554656982,
+                    "rows": 30
+                  }
+                },
+                "r2": 0.020699024200439453,
+                "race_macro_mae_s": 4.271865129470825,
+                "rmse_s": 7.380816219029033,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.009665012359619,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.8594307899475098,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.1598992347717285,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.29169511795043945,
+                "race_macro_mae_s": 4.009665012359619,
+                "rmse_s": 8.476690307216202,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.6689810752868652,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.8324663639068604,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.50549578666687,
+                "rows": 30
+              }
+            },
+            "r2": -0.08698713779449463,
+            "race_macro_mae_s": 3.6689810752868652,
+            "rmse_s": 7.776040412986196,
+            "rows": 60
+          },
+          "parameters": 421,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.770916223526001,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.6980719566345215,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.8437600135803223,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.21185457706451416,
+                "race_macro_mae_s": 3.770915985107422,
+                "rmse_s": 8.210537015982592,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 5.338563919067383,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.559598445892334,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.117530822753906,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.09788191318511963,
+                "race_macro_mae_s": 5.33856463432312,
+                "rmse_s": 7.814912713381605,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.9080231189727783,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.025676250457764,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.7903695106506348,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.12585270404815674,
+                "race_macro_mae_s": 3.908022880554199,
+                "rmse_s": 7.91383667272508,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.194692527918689,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.1290848889568843,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.2603001668804947,
+                "rows": 30
+              }
+            },
+            "r2": -0.16885392462685145,
+            "race_macro_mae_s": 3.1946925279186895,
+            "rmse_s": 8.063553076017836,
+            "rows": 60
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.9894297122955322,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 4.103054046630859,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.8758046627044678,
+                "rows": 30
+              }
+            },
+            "r2": -0.04103744029998779,
+            "race_macro_mae_s": 3.9894293546676636,
+            "rmse_s": 7.609909383507488,
+            "rows": 60
+          },
+          "parameters": 261,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.773202657699585,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.6399080753326416,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.9064972400665283,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.25960075855255127,
+                "race_macro_mae_s": 3.773202657699585,
+                "rmse_s": 8.370719157216085,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 4.1223931312561035,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.271121501922607,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.973665475845337,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.04510366916656494,
+                "race_macro_mae_s": 4.122393488883972,
+                "rmse_s": 7.624756605922615,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 5.602846145629883,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.6983962059021,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.507294178009033,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.011379003524780273,
+                "race_macro_mae_s": 5.602845191955566,
+                "rmse_s": 7.500725266039383,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 3.0768532560318684,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 3.0726837308151778,
+            "rows": 30
+          },
+          "fixture-07": {
+            "mae_s": 3.0810227812485595,
+            "rows": 30
+          }
+        },
+        "r2": -0.1365022895456276,
+        "race_macro_mae_s": 3.0768532560318684,
+        "rmse_s": 7.951178196780906,
+        "rows": 60
+      },
+      "window": 10,
+      "with_state": false,
+      "with_tyre": false
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 3.2761406898498535,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.3582417964935303,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.194040060043335,
+                "rows": 30
+              }
+            },
+            "r2": -0.1243976354598999,
+            "race_macro_mae_s": 3.2761409282684326,
+            "rmse_s": 7.908721175764533,
+            "rows": 60
+          },
+          "parameters": 302,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.54068660736084,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.6325833797454834,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.448788642883301,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.04144859313964844,
+                "race_macro_mae_s": 3.540686011314392,
+                "rmse_s": 7.611411822737142,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.5714731216430664,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.588496208190918,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5544497966766357,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.15135300159454346,
+                "race_macro_mae_s": 3.571473002433777,
+                "rmse_s": 8.002958227622234,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.705280065536499,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.7014286518096924,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.7091317176818848,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.21773958206176758,
+                "race_macro_mae_s": 3.7052801847457886,
+                "rmse_s": 8.230448820128931,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.9930450916290283,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 4.0463361740112305,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.9397544860839844,
+                "rows": 30
+              }
+            },
+            "r2": -0.18237292766571045,
+            "race_macro_mae_s": 3.9930453300476074,
+            "rmse_s": 8.110050474637744,
+            "rows": 60
+          },
+          "parameters": 521,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.5982513427734375,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.649360179901123,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.54714298248291,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.202886700630188,
+                "race_macro_mae_s": 4.598251581192017,
+                "rmse_s": 8.180100686495916,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.7181360721588135,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.6638214588165283,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.7724499702453613,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.17913949489593506,
+                "race_macro_mae_s": 3.718135714530945,
+                "rmse_s": 8.098953518554303,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.883815288543701,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.906618118286133,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.8610124588012695,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.29193782806396484,
+                "race_macro_mae_s": 4.883815288543701,
+                "rmse_s": 8.477486808764343,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.1995121433493408,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.132549159858983,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.2664751268397,
+                "rows": 30
+              }
+            },
+            "r2": -0.1714698103010026,
+            "race_macro_mae_s": 3.1995121433493416,
+            "rmse_s": 8.072571116698702,
+            "rows": 60
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 6.096110820770264,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 6.186162948608398,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 6.006058692932129,
+                "rows": 30
+              }
+            },
+            "r2": -0.04048895835876465,
+            "race_macro_mae_s": 6.096110820770264,
+            "rmse_s": 7.607904248987863,
+            "rows": 60
+          },
+          "parameters": 285,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 6.340060234069824,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 6.451174736022949,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 6.228945732116699,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.059433579444885254,
+                "race_macro_mae_s": 6.340060234069824,
+                "rmse_s": 7.676852163684436,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 4.720001697540283,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.798936367034912,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.6410675048828125,
+                    "rows": 30
+                  }
+                },
+                "r2": 0.004444897174835205,
+                "race_macro_mae_s": 4.720001935958862,
+                "rmse_s": 7.441816343686806,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 7.228271007537842,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 7.308377265930176,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 7.148163795471191,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.1768561601638794,
+                "race_macro_mae_s": 7.228270530700684,
+                "rmse_s": 8.091107854067472,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 3.0768532560318684,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 3.0726837308151778,
+            "rows": 30
+          },
+          "fixture-07": {
+            "mae_s": 3.0810227812485595,
+            "rows": 30
+          }
+        },
+        "r2": -0.1365022895456276,
+        "race_macro_mae_s": 3.0768532560318684,
+        "rmse_s": 7.951178196780906,
+        "rows": 60
+      },
+      "window": 10,
+      "with_state": false,
+      "with_tyre": true
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 4.070056915283203,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 4.16641902923584,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.9736948013305664,
+                "rows": 30
+              }
+            },
+            "r2": -0.025667905807495117,
+            "race_macro_mae_s": 4.070056915283203,
+            "rmse_s": 7.55352528102889,
+            "rows": 60
+          },
+          "parameters": 323,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.846891164779663,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.8550572395324707,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.8387250900268555,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.04276561737060547,
+                "race_macro_mae_s": 3.846891164779663,
+                "rmse_s": 7.616222895654319,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.463235378265381,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.4635169506073,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.46295428276062,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.16589832305908203,
+                "race_macro_mae_s": 3.46323561668396,
+                "rmse_s": 8.053351364536605,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 5.564009666442871,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.795103073120117,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.332916259765625,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.022162318229675293,
+                "race_macro_mae_s": 5.564009666442871,
+                "rmse_s": 7.540605614420274,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.3580520153045654,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.407456874847412,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.3086471557617188,
+                "rows": 30
+              }
+            },
+            "r2": -0.02406167984008789,
+            "race_macro_mae_s": 3.3580520153045654,
+            "rmse_s": 7.547608397173891,
+            "rows": 60
+          },
+          "parameters": 621,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.724247455596924,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.736881732940674,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.711613178253174,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.004932999610900879,
+                "race_macro_mae_s": 4.724247455596924,
+                "rmse_s": 7.476784187625725,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.433225393295288,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.4169626235961914,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.4494881629943848,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.12717974185943604,
+                "race_macro_mae_s": 3.433225393295288,
+                "rmse_s": 7.918499409866287,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.4278883934020996,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.345761775970459,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5100150108337402,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.09884524345397949,
+                "race_macro_mae_s": 3.4278883934020996,
+                "rmse_s": 7.818340590237863,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.194692527918689,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.1290848889568843,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.2603001668804947,
+                "rows": 30
+              }
+            },
+            "r2": -0.16885392462685145,
+            "race_macro_mae_s": 3.1946925279186895,
+            "rmse_s": 8.063553076017836,
+            "rows": 60
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.548426389694214,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.643237829208374,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.4536149501800537,
+                "rows": 30
+              }
+            },
+            "r2": -0.08151280879974365,
+            "race_macro_mae_s": 3.548426389694214,
+            "rmse_s": 7.756434814808731,
+            "rows": 60
+          },
+          "parameters": 309,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 5.421664237976074,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.492182731628418,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.3511457443237305,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.028583168983459473,
+                "race_macro_mae_s": 5.421664237976074,
+                "rmse_s": 7.564252413907063,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.4710922241210938,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.4045090675354004,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5376763343811035,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.1976332664489746,
+                "race_macro_mae_s": 3.471092700958252,
+                "rmse_s": 8.162218504370362,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.357938051223755,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.2860703468322754,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.4298062324523926,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.1962141990661621,
+                "race_macro_mae_s": 3.357938289642334,
+                "rmse_s": 8.157381761157536,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 3.0768532560318684,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 3.0726837308151778,
+            "rows": 30
+          },
+          "fixture-07": {
+            "mae_s": 3.0810227812485595,
+            "rows": 30
+          }
+        },
+        "r2": -0.1365022895456276,
+        "race_macro_mae_s": 3.0768532560318684,
+        "rmse_s": 7.951178196780906,
+        "rows": 60
+      },
+      "window": 10,
+      "with_state": true,
+      "with_tyre": false
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 4.95310640335083,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 5.033941745758057,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 4.8722686767578125,
+                "rows": 30
+              }
+            },
+            "r2": -0.00927424430847168,
+            "race_macro_mae_s": 4.953105211257935,
+            "rmse_s": 7.492916831436357,
+            "rows": 60
+          },
+          "parameters": 344,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.504551410675049,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.468839168548584,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5402636528015137,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.17089009284973145,
+                "race_macro_mae_s": 3.504551410675049,
+                "rmse_s": 8.070572943976343,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 6.787320137023926,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 6.810604572296143,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 6.764035224914551,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.1730109453201294,
+                "race_macro_mae_s": 6.787319898605347,
+                "rmse_s": 8.077878966725994,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 5.581240653991699,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.711777687072754,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.450704097747803,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.04673898220062256,
+                "race_macro_mae_s": 5.581240892410278,
+                "rmse_s": 7.630719900504222,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.496474266052246,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.3988778591156006,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.5940709114074707,
+                "rows": 30
+              }
+            },
+            "r2": -0.1159369945526123,
+            "race_macro_mae_s": 3.4964743852615356,
+            "rmse_s": 7.87891012332577,
+            "rows": 60
+          },
+          "parameters": 721,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 5.3553996086120605,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.033080101013184,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.6777191162109375,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.46934401988983154,
+                "race_macro_mae_s": 5.3553996086120605,
+                "rmse_s": 9.040825120522092,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.9428324699401855,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.989457845687866,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.8962061405181885,
+                    "rows": 30
+                  }
+                },
+                "r2": 0.0001036524772644043,
+                "race_macro_mae_s": 3.9428319931030273,
+                "rmse_s": 7.458024371974054,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.5499329566955566,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.5632293224334717,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5366361141204834,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.12315785884857178,
+                "race_macro_mae_s": 3.5499327182769775,
+                "rmse_s": 7.9043596141258545,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.1995121433493408,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.132549159858983,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.2664751268397,
+                "rows": 30
+              }
+            },
+            "r2": -0.1714698103010026,
+            "race_macro_mae_s": 3.1995121433493416,
+            "rmse_s": 8.072571116698702,
+            "rows": 60
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.4656143188476562,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.5564706325531006,
+                "rows": 30
+              },
+              "fixture-07": {
+                "mae_s": 3.3747572898864746,
+                "rows": 30
+              }
+            },
+            "r2": -0.07757747173309326,
+            "race_macro_mae_s": 3.4656139612197876,
+            "rmse_s": 7.742309938881113,
+            "rows": 60
+          },
+          "parameters": 333,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.944323778152466,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.03834342956543,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.85030460357666,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.02871406078338623,
+                "race_macro_mae_s": 3.944324016571045,
+                "rmse_s": 7.564733758591832,
+                "rows": 60
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 4.177846908569336,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.301115989685059,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.054577827453613,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.044293999671936035,
+                "race_macro_mae_s": 4.177846908569336,
+                "rmse_s": 7.6218027384367915,
+                "rows": 60
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.6858439445495605,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.555182695388794,
+                    "rows": 30
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.816504955291748,
+                    "rows": 30
+                  }
+                },
+                "r2": -0.24083268642425537,
+                "race_macro_mae_s": 3.685843825340271,
+                "rmse_s": 8.308123131799656,
+                "rows": 60
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 3.0768532560318684,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 3.0726837308151778,
+            "rows": 30
+          },
+          "fixture-07": {
+            "mae_s": 3.0810227812485595,
+            "rows": 30
+          }
+        },
+        "r2": -0.1365022895456276,
+        "race_macro_mae_s": 3.0768532560318684,
+        "rmse_s": 7.951178196780906,
+        "rows": 60
+      },
+      "window": 10,
+      "with_state": true,
+      "with_tyre": true
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 3.163914203643799,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.1971499919891357,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.130678176879883,
+                "rows": 25
+              }
+            },
+            "r2": -0.04847908020019531,
+            "race_macro_mae_s": 3.1639140844345093,
+            "rmse_s": 7.682663303157799,
+            "rows": 50
+          },
+          "parameters": 281,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.175283432006836,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.223040580749512,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.1275248527526855,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.005502462387084961,
+                "race_macro_mae_s": 4.175282716751099,
+                "rmse_s": 7.523561724214563,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.6143746376037598,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.5491833686828613,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.6795663833618164,
+                    "rows": 25
+                  }
+                },
+                "r2": 0.010688364505767822,
+                "race_macro_mae_s": 3.614374876022339,
+                "rmse_s": 7.462742644028139,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.018366813659668,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.89437198638916,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.142361164093018,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.2721736431121826,
+                "race_macro_mae_s": 4.018366575241089,
+                "rmse_s": 8.462625351038012,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.790032386779785,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.795090913772583,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.78497314453125,
+                "rows": 25
+              }
+            },
+            "r2": 0.030140459537506104,
+            "race_macro_mae_s": 3.7900320291519165,
+            "rmse_s": 7.389011327865204,
+            "rows": 50
+          },
+          "parameters": 621,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.642390251159668,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.707519054412842,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.577261447906494,
+                    "rows": 25
+                  }
+                },
+                "r2": 0.03279078006744385,
+                "race_macro_mae_s": 4.642390251159668,
+                "rmse_s": 7.378908576379332,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.656815767288208,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.6352615356445312,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.678370714187622,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.05504250526428223,
+                "race_macro_mae_s": 3.6568161249160767,
+                "rmse_s": 7.706672393286314,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.91212797164917,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.9321727752685547,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.892082929611206,
+                    "rows": 25
+                  }
+                },
+                "r2": 0.03031003475189209,
+                "race_macro_mae_s": 3.9121278524398804,
+                "rmse_s": 7.388365450541934,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.0740388949244606,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.9832816144365357,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.1647961754123837,
+                "rows": 25
+              }
+            },
+            "r2": -0.15512409363493562,
+            "race_macro_mae_s": 3.0740388949244597,
+            "rmse_s": 8.063920476963359,
+            "rows": 50
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.343920946121216,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.4474027156829834,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.2404391765594482,
+                "rows": 25
+              }
+            },
+            "r2": -0.0713338851928711,
+            "race_macro_mae_s": 3.343920946121216,
+            "rmse_s": 7.765945274456895,
+            "rows": 50
+          },
+          "parameters": 261,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.906644344329834,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.7533602714538574,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.0599284172058105,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.2780689001083374,
+                "race_macro_mae_s": 3.906644344329834,
+                "rmse_s": 8.482210729800698,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.445939302444458,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.5765438079833984,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.3153350353240967,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.0702131986618042,
+                "race_macro_mae_s": 3.4459394216537476,
+                "rmse_s": 7.761882655463024,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.726048469543457,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.812568664550781,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.639527797698975,
+                    "rows": 25
+                  }
+                },
+                "r2": 0.0036382675170898438,
+                "race_macro_mae_s": 4.726048231124878,
+                "rmse_s": 7.489286272703943,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.9429380708803468,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.9338021497581246,
+            "rows": 25
+          },
+          "fixture-07": {
+            "mae_s": 2.95207399200257,
+            "rows": 25
+          }
+        },
+        "r2": -0.11559903251254999,
+        "race_macro_mae_s": 2.942938070880347,
+        "rmse_s": 7.924757463110119,
+        "rows": 50
+      },
+      "window": 15,
+      "with_state": false,
+      "with_tyre": false
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 3.0904810428619385,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.0719656944274902,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.108996629714966,
+                "rows": 25
+              }
+            },
+            "r2": -0.14674293994903564,
+            "race_macro_mae_s": 3.090481162071228,
+            "rmse_s": 8.034613116670293,
+            "rows": 50
+          },
+          "parameters": 302,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.006871223449707,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.0852744579315186,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 2.9284682273864746,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.0667043924331665,
+                "race_macro_mae_s": 3.0068713426589966,
+                "rmse_s": 7.749148168202985,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.382302761077881,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.3267974853515625,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.4378092288970947,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.18181276321411133,
+                "race_macro_mae_s": 3.3823033571243286,
+                "rmse_s": 8.156545582527185,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.474790096282959,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.394580602645874,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.5549991130828857,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.21039104461669922,
+                "race_macro_mae_s": 3.47478985786438,
+                "rmse_s": 8.254575905306393,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.6054089069366455,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.6112282276153564,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.5995893478393555,
+                "rows": 25
+              }
+            },
+            "r2": -0.13656306266784668,
+            "race_macro_mae_s": 3.605408787727356,
+            "rmse_s": 7.998870769911838,
+            "rows": 50
+          },
+          "parameters": 771,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.6861300468444824,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.5599236488342285,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.8123364448547363,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.22945940494537354,
+                "race_macro_mae_s": 3.6861300468444824,
+                "rmse_s": 8.319342758188453,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.8677423000335693,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.851017951965332,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.8844659328460693,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.10261797904968262,
+                "race_macro_mae_s": 3.8677419424057007,
+                "rmse_s": 7.878516486857879,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.512205123901367,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.60097599029541,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.423433780670166,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.17521488666534424,
+                "race_macro_mae_s": 4.512204885482788,
+                "rmse_s": 8.133745387327963,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.07294841342671,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.983492792434879,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.1624040344185427,
+                "rows": 25
+              }
+            },
+            "r2": -0.15370618623826893,
+            "race_macro_mae_s": 3.072948413426711,
+            "rmse_s": 8.058969751986728,
+            "rows": 50
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 5.1864237785339355,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 5.274782657623291,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 5.098065376281738,
+                "rows": 25
+              }
+            },
+            "r2": -0.005229949951171875,
+            "race_macro_mae_s": 5.186424016952515,
+            "rmse_s": 7.5225422644450015,
+            "rows": 50
+          },
+          "parameters": 285,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 5.384171009063721,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.476776123046875,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.291566371917725,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.006967306137084961,
+                "race_macro_mae_s": 5.3841712474823,
+                "rmse_s": 7.529039747149709,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.9997549057006836,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.085554122924805,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.9139554500579834,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.016820430755615234,
+                "race_macro_mae_s": 3.999754786491394,
+                "rmse_s": 7.56578610487804,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 6.1753435134887695,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 6.262015342712402,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 6.088672637939453,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.06770062446594238,
+                "race_macro_mae_s": 6.175343990325928,
+                "rmse_s": 7.752766023295356,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.9429380708803468,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.9338021497581246,
+            "rows": 25
+          },
+          "fixture-07": {
+            "mae_s": 2.95207399200257,
+            "rows": 25
+          }
+        },
+        "r2": -0.11559903251254999,
+        "race_macro_mae_s": 2.942938070880347,
+        "rmse_s": 7.924757463110119,
+        "rows": 50
+      },
+      "window": 15,
+      "with_state": false,
+      "with_tyre": true
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 3.415872097015381,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.5144035816192627,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.317340612411499,
+                "rows": 25
+              }
+            },
+            "r2": -0.04946863651275635,
+            "race_macro_mae_s": 3.415872097015381,
+            "rmse_s": 7.686288133329032,
+            "rows": 50
+          },
+          "parameters": 323,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.3678863048553467,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.3530356884002686,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.382736921310425,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.07594513893127441,
+                "race_macro_mae_s": 3.3678863048553467,
+                "rmse_s": 7.782640692900139,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.2233409881591797,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.168527603149414,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.2781546115875244,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.17088806629180908,
+                "race_macro_mae_s": 3.2233411073684692,
+                "rmse_s": 8.1187579312774,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.649714469909668,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.884221076965332,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.415208339691162,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.0002663135528564453,
+                "race_macro_mae_s": 4.649714708328247,
+                "rmse_s": 7.50394691881223,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 4.636393070220947,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 4.569640636444092,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 4.703145503997803,
+                "rows": 25
+              }
+            },
+            "r2": -0.39709436893463135,
+            "race_macro_mae_s": 4.636393070220947,
+            "rmse_s": 8.868390268096325,
+            "rows": 50
+          },
+          "parameters": 921,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.951467275619507,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.8881967067718506,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.014738082885742,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.1513216495513916,
+                "race_macro_mae_s": 3.9514673948287964,
+                "rmse_s": 8.050637204558038,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 5.385042667388916,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.386424541473389,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.383660793304443,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.6272099018096924,
+                "race_macro_mae_s": 5.385042667388916,
+                "rmse_s": 9.570920341028673,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 5.1451592445373535,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.18806266784668,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.102255344390869,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.5152701139450073,
+                "race_macro_mae_s": 5.145159006118774,
+                "rmse_s": 9.235851705504707,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.0740388949244606,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.9832816144365357,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.1647961754123837,
+                "rows": 25
+              }
+            },
+            "r2": -0.15512409363493562,
+            "race_macro_mae_s": 3.0740388949244597,
+            "rmse_s": 8.063920476963359,
+            "rows": 50
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.08195424079895,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.1190025806427,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.044905662536621,
+                "rows": 25
+              }
+            },
+            "r2": -0.12695002555847168,
+            "race_macro_mae_s": 3.0819541215896606,
+            "rmse_s": 7.964971865923393,
+            "rows": 50
+          },
+          "parameters": 309,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 4.54714298248291,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.616013050079346,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.478273391723633,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.028264880180358887,
+                "race_macro_mae_s": 4.547143220901489,
+                "rmse_s": 7.608243697586535,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.5959203243255615,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.443788528442383,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.7480530738830566,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.2457338571548462,
+                "race_macro_mae_s": 3.5959208011627197,
+                "rmse_s": 8.37422381547799,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.517102003097534,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.41256046295166,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.6216437816619873,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.22739076614379883,
+                "race_macro_mae_s": 3.5171021223068237,
+                "rmse_s": 8.312340756375285,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.9429380708803468,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.9338021497581246,
+            "rows": 25
+          },
+          "fixture-07": {
+            "mae_s": 2.95207399200257,
+            "rows": 25
+          }
+        },
+        "r2": -0.11559903251254999,
+        "race_macro_mae_s": 2.942938070880347,
+        "rmse_s": 7.924757463110119,
+        "rows": 50
+      },
+      "window": 15,
+      "with_state": true,
+      "with_tyre": false
+    },
+    {
+      "models": {
+        "gru": {
+          "ensemble": {
+            "mae_s": 4.201475143432617,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 4.283803939819336,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 4.119146347045898,
+                "rows": 25
+              }
+            },
+            "r2": -0.012601494789123535,
+            "race_macro_mae_s": 4.201475143432617,
+            "rmse_s": 7.550073676349824,
+            "rows": 50
+          },
+          "parameters": 344,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.3577771186828613,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.304379940032959,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.411175012588501,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.15774691104888916,
+                "race_macro_mae_s": 3.35777747631073,
+                "rmse_s": 8.073070132529885,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 5.7397379875183105,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.777298450469971,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.70217752456665,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.08102226257324219,
+                "race_macro_mae_s": 5.7397379875183105,
+                "rmse_s": 7.800981254477852,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.625370025634766,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.761972427368164,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.488768100738525,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.024648666381835938,
+                "race_macro_mae_s": 4.625370264053345,
+                "rmse_s": 7.5948535760925076,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "mlp": {
+          "ensemble": {
+            "mae_s": 3.5244970321655273,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.612299919128418,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.4366934299468994,
+                "rows": 25
+              }
+            },
+            "r2": 0.001666724681854248,
+            "race_macro_mae_s": 3.5244966745376587,
+            "rmse_s": 7.496692182340009,
+            "rows": 50
+          },
+          "parameters": 1071,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.247993230819702,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.313775062561035,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.1822118759155273,
+                    "rows": 25
+                  }
+                },
+                "r2": 0.02236020565032959,
+                "race_macro_mae_s": 3.2479934692382812,
+                "rmse_s": 7.418589681999743,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 5.334804058074951,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 5.521530628204346,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 5.148077487945557,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.12383711338043213,
+                "race_macro_mae_s": 5.334804058074951,
+                "rmse_s": 7.953963619602675,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 4.3495330810546875,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 4.451347827911377,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.247718334197998,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.11194336414337158,
+                "race_macro_mae_s": 4.3495330810546875,
+                "rmse_s": 7.911762954107775,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        },
+        "sequence_boosting": {
+          "ensemble": {
+            "mae_s": 3.07294841342671,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 2.983492792434879,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.1624040344185427,
+                "rows": 25
+              }
+            },
+            "r2": -0.15370618623826893,
+            "race_macro_mae_s": 3.072948413426711,
+            "rmse_s": 8.058969751986728,
+            "rows": 50
+          },
+          "parameters": "tree_not_comparable",
+          "seeds": []
+        },
+        "tcn": {
+          "ensemble": {
+            "mae_s": 3.009816884994507,
+            "per_race": {
+              "fixture-06": {
+                "mae_s": 3.017488479614258,
+                "rows": 25
+              },
+              "fixture-07": {
+                "mae_s": 3.0021450519561768,
+                "rows": 25
+              }
+            },
+            "r2": -0.11533153057098389,
+            "race_macro_mae_s": 3.0098167657852173,
+            "rmse_s": 7.923807423869927,
+            "rows": 50
+          },
+          "parameters": 333,
+          "seeds": [
+            {
+              "scores": {
+                "mae_s": 3.3149263858795166,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.3987655639648438,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.2310876846313477,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.06111335754394531,
+                "race_macro_mae_s": 3.3149266242980957,
+                "rmse_s": 7.728813252419254,
+                "rows": 50
+              },
+              "seed": 11
+            },
+            {
+              "scores": {
+                "mae_s": 3.5472099781036377,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.630120277404785,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 3.4642999172210693,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.07298469543457031,
+                "race_macro_mae_s": 3.5472100973129272,
+                "rmse_s": 7.7719266257049675,
+                "rows": 50
+              },
+              "seed": 29
+            },
+            {
+              "scores": {
+                "mae_s": 3.9128997325897217,
+                "per_race": {
+                  "fixture-06": {
+                    "mae_s": 3.7808678150177,
+                    "rows": 25
+                  },
+                  "fixture-07": {
+                    "mae_s": 4.044931411743164,
+                    "rows": 25
+                  }
+                },
+                "r2": -0.2677764892578125,
+                "race_macro_mae_s": 3.912899613380432,
+                "rmse_s": 8.447987460127107,
+                "rows": 50
+              },
+              "seed": 47
+            }
+          ],
+          "training_time_s": null,
+          "training_time_status": "not measured in deterministic fixture"
+        }
+      },
+      "rolling_median_5": {
+        "mae_s": 2.9429380708803468,
+        "per_race": {
+          "fixture-06": {
+            "mae_s": 2.9338021497581246,
+            "rows": 25
+          },
+          "fixture-07": {
+            "mae_s": 2.95207399200257,
+            "rows": 25
+          }
+        },
+        "r2": -0.11559903251254999,
+        "race_macro_mae_s": 2.942938070880347,
+        "rmse_s": 7.924757463110119,
+        "rows": 50
+      },
+      "window": 15,
+      "with_state": true,
+      "with_tyre": true
+    }
+  ],
+  "decision": "fixture-only; no model superiority claim",
+  "evidence_status": "fixture-only: not evidence",
+  "fixture_only": true,
+  "seeds": [
+    11,
+    29,
+    47
+  ]
+}

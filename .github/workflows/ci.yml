@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-      - run: python -m pip install -e '.[dev]' -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[ml,audit,dev]'
+      - run: python -m pip install -e '.[dev]' -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[ml,audit,research,dev]'
       - run: make lint
       - run: make type
 
@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
           cache: pip
-      - run: python -m pip install -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[ml,audit,dev]'
+      - run: python -m pip install -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[ml,audit,research,dev]'
       - run: make test
 
   test-with-torch:
@@ -40,7 +40,7 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
-      - run: python -m pip install -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[ml,audit,dev]'
+      - run: python -m pip install -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[ml,audit,research,dev]'
       - run: make test-torch
 
   demo:
@@ -51,7 +51,7 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-      - run: python -m pip install -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[dl,audit,dev]'
+      - run: python -m pip install -e './F1-StewardLens[dev]' -e './F1-Telemetry-Pit-Crew[f1,dev]' -e './F1-Intelligence-Lab[dl,audit,research,dev]'
       - run: make demo
 
   docker:
