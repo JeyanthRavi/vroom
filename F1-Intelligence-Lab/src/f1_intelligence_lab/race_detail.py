@@ -124,5 +124,5 @@ def page():
 
 @router.get('/detail-assets/{asset}',include_in_schema=False)
 def assets(asset: str):
-    if asset not in {'detail.js','detail.css'}: raise HTTPException(404)
+    if asset not in {'detail.js','detail.css','ml.js','cross-season.js','restart.js'}: raise HTTPException(404)
     return Response((Path(__file__).parent/'static'/asset).read_text(),media_type='text/css' if asset.endswith('css') else 'application/javascript')

@@ -66,5 +66,5 @@ def test_existing_absolute_frontend_api_paths_remain_compatible() -> None:
 def test_portal_openapi_only_advertises_portal_operations() -> None:
     schema = client.get("/openapi.json").json()
 
-    assert set(schema["paths"]) == {"/health", "/api/ecosystem/catalog", "/api/ecosystem/scout", "/api/ecosystem/replay", "/api/ecosystem/check", "/api/races/demo", "/api/races/template", "/api/races/analyze", "/api/library/sessions", "/api/library/jobs", "/api/library/import", "/api/library/races/{session_id}", "/api/race-details/{sid}", "/api/race-details/{sid}/load"}
+    assert set(schema["paths"]) == {"/health", "/api/ecosystem/catalog", "/api/ecosystem/scout", "/api/ecosystem/replay", "/api/ecosystem/check", "/api/races/demo", "/api/races/template", "/api/races/analyze", "/api/library/sessions", "/api/library/jobs", "/api/library/import", "/api/library/races/{session_id}", "/api/race-details/{sid}", "/api/race-details/{sid}/load", "/api/ml/races/{sid}", "/api/ml/experiment", "/api/ml/cross-season", "/api/ml/restart-research"}
 

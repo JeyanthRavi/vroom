@@ -25,7 +25,7 @@ Open http://127.0.0.1:8765/. Import historical races through the library; the or
 
 The project includes an audited next-lap prediction dataset pipeline with 13 features, whole-race chronological splits, and a separate 2026 holdout. The local audit accepted 38 races. Generated datasets and audit outputs are excluded from this repository; see [data preparation](F1-Intelligence-Lab/ML-DATA-PREPARATION.md) for the workflow and limitations.
 
-**No model has been trained yet.** Baseline comparison and first-model training are the next step. Existing analysis and simulated agents do not require a trained ML model or paid LLM service.
+The first models have been trained locally. The validation-selected tree model achieved **2.00-second race-average MAE** on three held-out test races versus **2.71 seconds** for the last-lap baseline. See [results and limitations](F1-Intelligence-Lab/FIRST-MODEL-RESULTS.md) and [training and local serving instructions](F1-Intelligence-Lab/ML-TRAINING.md). Race-detail pages now offer an opt-in historical prediction viewer for audited races, with driver filters, actual-versus-predicted charts and error tables. The 2026 holdout remains reserved. Local artifacts must be configured; they are not included in GitHub.
 
 ## Scope and safety
 

@@ -7,8 +7,8 @@ from .ml_prep import FEATURES, META, LABEL, digest, dt, split_for
 
 CATEGORICAL={'circuit','previous_compound','control_state_at_cutoff'}
 
-def load_split(directory, split):
-    if split not in {'train','validation','test'}:
+def load_split(directory, split, *, allow_future_evaluation=False):
+    if split not in {'train','validation','test'} and not (split=='future_holdout' and allow_future_evaluation):
         raise ValueError('Use train, validation or test. Future holdout is reserved for later evaluation.')
     directory=Path(directory)
     manifest=json.loads((directory/'manifest.json').read_text())

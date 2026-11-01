@@ -16,6 +16,8 @@ from .ecosystem_web import ecosystem_page
 from .race_api import router as race_router, page as race_page
 from .library_api import router as library_router
 from .race_detail import router as detail_router
+from .ml_api import router as ml_router
+from .demo_api import router as demo_router
 
 
 app = FastAPI(
@@ -59,6 +61,8 @@ app.include_router(ecosystem_router)
 app.include_router(race_router)
 app.include_router(library_router)
 app.include_router(detail_router)
+app.include_router(ml_router)
+app.include_router(demo_router)
 
 
 @app.get("/health", tags=["operations"])

@@ -1,0 +1,13 @@
+{
+  "name": "vroom-historical-replay",
+  "execution": "Manual CLI sequence documented in ML-RELEASE.md; not a scheduler",
+  "notifications": {"on_failure": "CLI nonzero exit and local server error log"},
+  "stages": [
+    {"name":"verify_cached_audit","type":"data","inputs":["cached_sources"],"outputs":["audited_rows"],"timeout_minutes":5},
+    {"name":"reconstruct_event_time_states","type":"transform","inputs":["audited_rows"],"outputs":["2025_features","2026_features"],"validation":{"schema_check":true,"null_check":true},"timeout_minutes":5},
+    {"name":"fit_2025_only","type":"train","inputs":["2025_features"],"outputs":["frozen_models","validation_metrics"],"timeout_minutes":10},
+    {"name":"frozen_regression","type":"evaluate","inputs":["frozen_models","2026_features","validation_metrics"],"outputs":["regression_metrics"],"gate":{"metric":"2025_validation_race_macro_mae_s","operator":"<=","reference":"rolling_median","enforced_by":"export_demo.run"},"timeout_minutes":5},
+    {"name":"export_verified_replay","type":"deploy","inputs":["frozen_models","regression_metrics"],"outputs":["replay_bundle"],"rollback":{"method":"restore prior F1_DEMO_EXPORT and restart; original inference untouched"},"timeout_minutes":5},
+    {"name":"check_replay_health","type":"monitor","inputs":["replay_bundle"],"outputs":["health_status"],"timeout_minutes":1}
+  ]
+}

@@ -1,5 +1,21 @@
 # F1 Intelligence Lab
 
+## Trained ML and deep-learning experiments
+
+The [frozen 2026 cross-season evaluation](CROSS-SEASON-2026.md) is complete.
+The learned models did not beat the rolling-median baseline overall; results
+and per-race failure cases are in race-detail section 09. Enable its saved
+report with `F1_CROSS_SEASON_RUN`. 2026 is no longer an untouched holdout.
+
+The local race-detail page includes historical model predictions and a separate
+ML/DL research comparison. See [sequence experiment protocol](SEQUENCE-EXPERIMENT.md)
+and [measured results](SEQUENCE-RESULTS.md). The experiment trains a compact
+PyTorch GRU across three seeds, tyre/control ablations, and matched-cohort tree
+baselines. Sequence boosting won validation; the GRU is not automatically promoted.
+Set `F1_DL_RUN` to a completed sequence-run directory to enable the read-only
+`/api/ml/experiment` and page section 08. This serves saved aggregate metrics,
+not live neural inference. Model artifacts remain local and git-ignored.
+
 Planning the next stage: [complete website and Android ecosystem blueprint](blueprint/README.md). This is proposed work, separate from the implemented local tools described below.
 
 F1 Intelligence Lab is a local analysis product, separate from the planned News & Stories product. The default homepage is now **Race Lab**; the original directory is at `/workstations/`.
@@ -119,9 +135,18 @@ applications, their sample datasets, compatibility routes, and portal schema.
 The historical race audit and leakage-controlled feature pipeline are documented in
 [ML-DATA-PREPARATION.md](ML-DATA-PREPARATION.md). It preserves the source library,
 quarantines unverified sessions, and creates whole-race chronological partitions.
-This is dataset preparation, not a trained-model accuracy claim.
+This is dataset preparation, not a trained-model accuracy claim. The next stage is
+implemented in the [offline baseline and first-model experiment](ML-TRAINING.md).
 
 ## Container deployment
+
+The new [ML/DL replay release and model card](ML-RELEASE.md) includes corrected
+race-state features, 2025-only retraining, frozen 2026 regression results,
+résumé wording and a minimal read-only demo deployment. Open `/model-demo/`
+when `F1_DEMO_EXPORT` points at a verified export. Public hosting is not yet set up.
+
+See [2025-only restart-aware ML/DL experiments](RESTART-MODELS.md) for the
+long-lap handling changes, measured trade-offs, and reproduction instructions.
 
 The Dockerfile expects the workspace folder containing all three neighboring
 projects as its build context:
