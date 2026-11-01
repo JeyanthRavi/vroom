@@ -1,11 +1,14 @@
 # F1 Intelligence Lab
 
+> **Data-rights notice:** this is an unofficial research project. Third-party data and marks remain with their owners, and access does not grant redistribution rights. See [the repository notice](../NOTICE.md) and [DATA-RIGHTS-REVIEW.md](DATA-RIGHTS-REVIEW.md).
+
 ## Trained ML and deep-learning experiments
 
 The [frozen 2026 cross-season evaluation](CROSS-SEASON-2026.md) is complete.
 The learned models did not beat the rolling-median baseline overall; results
 and per-race failure cases are in race-detail section 09. Enable its saved
-report with `F1_CROSS_SEASON_RUN`. 2026 is no longer an untouched holdout.
+report with `F1_CROSS_SEASON_RUN`. The models were evaluated on previously
+examined 2026 races; not an independent holdout.
 
 The local race-detail page includes historical model predictions and a separate
 ML/DL research comparison. See [sequence experiment protocol](SEQUENCE-EXPERIMENT.md)

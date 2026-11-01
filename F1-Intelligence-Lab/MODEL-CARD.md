@@ -20,7 +20,7 @@ or live inference. [Open the replay](https://vroom-race-replay-jeyanth.quantum-b
 - **Performance:** 0.8423 s equal-race validation MAE; 5.1714 s on previously
   examined 2026 regression versus 6.0457 s median baseline. 2026 RMSE 74.4971 s
   and R² 0.0322 show substantial residual interruption errors.
-- **Limitations:** previously seen test season, sparse restart slices, delayed
+- **Limitations:** evaluated on previously examined 2026 races; not an independent holdout; sparse restart slices; delayed
   source-publication risk, conservative states when events are missing, regime
   changes and outlier target laps. No claim of superiority on every metric.
 - **Comparison:** corrected-state versions slightly worsen overall 2026 MAE

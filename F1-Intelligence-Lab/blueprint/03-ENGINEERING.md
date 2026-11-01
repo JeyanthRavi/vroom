@@ -1,5 +1,7 @@
 # 03 — Engineering, data, editorial operations and AI
 
+> **PROPOSED — NOT IMPLEMENTED.** This document is a planning artifact, not a description of current product capabilities.
+
 The key architectural decision is to separate **producing knowledge** from **serving readers**. A student laptop can produce a small reviewed dataset; a static site can serve that dataset while the laptop is off. This does not provide real-time updates, arbitrary server-side computation or cloud account synchronization.
 
 ## 1. Current baseline

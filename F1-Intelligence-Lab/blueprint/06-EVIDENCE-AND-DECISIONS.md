@@ -1,5 +1,7 @@
 # Evidence, assumptions and decision record
 
+> **PROPOSED — NOT IMPLEMENTED.** This document is a planning artifact, not a description of current product capabilities.
+
 Planning baseline: 26 October 2026. Sources describe capabilities and constraints, not guaranteed future availability. Recheck them at implementation and release. This is a planning record, not legal advice, a rights clearance, a completed UX audit or a production certification.
 
 ## 1. What is confirmed

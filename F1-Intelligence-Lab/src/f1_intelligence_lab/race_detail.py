@@ -9,10 +9,11 @@ from pathlib import Path
 from urllib.parse import quote, unquote, urljoin, urlparse
 from urllib.request import Request, urlopen
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import HTMLResponse, Response
 from .library_api import library
 from .openf1_provider import Client, BASE
+from .security import require_admin
 
 router = APIRouter()
 LOCK = threading.Lock()
@@ -102,7 +103,7 @@ def detail(sid: str):
     except KeyError: raise HTTPException(404,'Session not in library')
 
 @router.post('/api/race-details/{sid}/load',status_code=202)
-def refresh(sid: str):
+def refresh(sid: str, _admin: None = Depends(require_admin)):
     try: library.session(sid)
     except KeyError: raise HTTPException(404,'Session not in library')
     if not re.fullmatch(r'openf1-\d+',sid): raise HTTPException(422,'OpenF1 session required')

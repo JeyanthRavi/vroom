@@ -1,5 +1,7 @@
 # 05 — Execution, backlog, testing and release
 
+> **PROPOSED — NOT IMPLEMENTED.** This document is a planning artifact, not a description of current product capabilities.
+
 ## 1. Delivery strategy
 
 Ship complete user journeys in small releases. A beautiful empty ecosystem is less valuable than one excellent race dossier. Keep research-heavy features behind explicit gates rather than letting them block useful editorial work.

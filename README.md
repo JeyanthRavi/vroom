@@ -1,5 +1,7 @@
 # Vroom — F1 Race Intelligence
 
+> **Unofficial research project.** Not affiliated with Formula 1, the FIA, or any team. Third-party data and marks remain with their owners; public redistribution permission for the historical replay is unresolved. See [NOTICE.md](NOTICE.md) and [the data-rights review](F1-Intelligence-Lab/DATA-RIGHTS-REVIEW.md).
+
 A research web platform for exploring Formula 1 results, driver pace, tyre stints, pit stops, race-control events, telemetry, and official FIA decisions.
 
 ## Project layout

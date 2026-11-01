@@ -42,7 +42,8 @@ def test_routes_are_read_only_until_explicit_load(tmp_path,monkeypatch):
     lib=Library(tmp_path)
     lib.store({'id':'openf1-1','event':'Monza','year':2025},[],{'records':12})
     monkeypatch.setattr(detail,'library',lib)
-    client=TestClient(app)
+    monkeypatch.setenv('F1_ADMIN_TOKEN','test-token')
+    client=TestClient(app,headers={'x-f1-admin-token':'test-token'})
     assert client.get('/api/race-details/openf1-1').json()['state']=='not_loaded'
     assert client.get('/api/race-details/missing').status_code==404
     assert client.post('/api/race-details/missing/load').status_code==404
@@ -51,3 +52,12 @@ def test_routes_are_read_only_until_explicit_load(tmp_path,monkeypatch):
     detail.LOCK.acquire()
     try: assert client.post('/api/race-details/openf1-1/load').status_code==409
     finally: detail.LOCK.release()
+
+def test_detail_load_is_disabled_without_admin_configuration(tmp_path,monkeypatch):
+    from fastapi.testclient import TestClient
+    from f1_intelligence_lab.app import app
+    lib=Library(tmp_path);lib.store({'id':'openf1-1','event':'Monza','year':2025},[],{})
+    monkeypatch.setattr(detail,'library',lib)
+    monkeypatch.delenv('F1_ADMIN_TOKEN',raising=False)
+    monkeypatch.delenv('F1_ALLOW_LOCAL_IMPORT',raising=False)
+    assert TestClient(app).post('/api/race-details/openf1-1/load').status_code==403

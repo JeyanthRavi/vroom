@@ -1,4 +1,8 @@
-"""Export checksum-verified historical predictions, never weights or source caches."""
+"""Export checksum-verified historical results, never weights or source caches.
+
+Aggregate mode is the safe default. Full mode is an explicit, local-only choice
+while redistribution permission for lap-level source data remains unresolved.
+"""
 import argparse
 import json
 from pathlib import Path
@@ -12,7 +16,69 @@ from .ml_prep import digest
 from .robust_train import only_2025,predict_saved
 from .restart_evaluate import verify
 
-def run(dataset,source,training,evaluation,output):
+def _score_rows(rows, models):
+    scores = {}
+    for model in models:
+        errors = [abs(row['actual'] - row['predictions'][model]) for row in rows]
+        scores[model] = {
+            'eligible_laps': len(errors),
+            'mae_s': float(np.mean(errors)) if errors else None,
+            'median_ae_s': float(np.median(errors)) if errors else None,
+        }
+    return scores
+
+
+def aggregate_payload(payload):
+    """Remove lap- and driver-level observations from a full replay payload."""
+    models = payload['models']
+    races = []
+    all_errors = {model: [] for model in models}
+    for session in payload['sessions']:
+        rows = session['rows']
+        for model in models:
+            all_errors[model].extend(
+                abs(row['actual'] - row['predictions'][model]) for row in rows
+            )
+        races.append({
+            'id': session['id'],
+            'circuit': session['circuit'],
+            'date': session['date'],
+            'split': session['split'],
+            'summary': _score_rows(rows, models),
+        })
+    histograms = {}
+    calibration = {}
+    for model, errors in all_errors.items():
+        values = np.asarray(errors, dtype=float)
+        counts, edges = np.histogram(values, bins=[0, 0.5, 1, 2, 5, 10, 30, np.inf])
+        histograms[model] = {
+            'bin_upper_s': [0.5, 1, 2, 5, 10, 30, None],
+            'counts': counts.tolist(),
+        }
+        calibration[model] = {
+            'eligible_laps': int(values.size),
+            'within_1s_fraction': float(np.mean(values <= 1)) if values.size else None,
+            'within_5s_fraction': float(np.mean(values <= 5)) if values.size else None,
+        }
+    return {
+        'schema': 2,
+        'export_mode': 'aggregate',
+        'model_version': payload['model_version'],
+        'selected_on_2025': payload['selected_on_2025'],
+        'models': models,
+        'control_version': payload['control_version'],
+        'races': races,
+        'error_histograms': histograms,
+        'calibration': calibration,
+        'validation': payload['validation'],
+        'regression': payload['regression'],
+        'limitations': payload['limitations'],
+    }
+
+
+def run(dataset,source,training,evaluation,output,mode='aggregate'):
+    if mode not in {'aggregate', 'full'}:
+        raise ValueError('mode must be aggregate or full')
     train=Path(training);ev=Path(evaluation);out=Path(output)
     verify(train,list(json.loads((train/'artifact_hashes.json').read_text())))
     verify(ev,['results.json'])
@@ -43,20 +109,22 @@ def run(dataset,source,training,evaluation,output):
                     predictions={n:float(p[i]) for n,p in values.items()}))
             sessions.append(dict(id=sid,circuit=d['x'][first]['circuit'],date=d['meta'][first]['race_start'],split=split,rows=rows))
     out.mkdir(parents=True,exist_ok=False)
-    payload=dict(schema=1,model_version=digest((train/'artifact_hashes.json').read_bytes())[:12],
+    payload=dict(schema=1,export_mode='full',model_version=digest((train/'artifact_hashes.json').read_bytes())[:12],
         selected_on_2025=choice,models=list(values),control_version=version,sessions=sessions,
         validation=result['scores']['validation'],regression=regression['scores'],
-        limitations='Historical predictions, not live inference. In-sample training and reused validation/test races are labelled. 2026 is a previously seen regression set. Long laps remain included. No causal strategy advice.')
-    save_json(out/'data.json',payload)
+        limitations='Historical predictions, not live inference. In-sample training and reused validation/test races are labelled. Evaluated on previously examined 2026 races; not an independent holdout. Long laps remain included. No causal strategy advice.')
+    save_json(out/'data.json',aggregate_payload(payload) if mode=='aggregate' else payload)
     assets=Path(__file__).parent/'static'
     for dest,src in [('index.html','model-demo.html'),('demo.js','model-demo.js')]:
         (out/dest).write_bytes((assets/src).read_bytes())
-    save_json(out/'manifest.json',{p.name:digest(p.read_bytes()) for p in out.iterdir() if p.is_file()})
-    print(f'Exported {len(sessions)} races; default selected on 2025: {choice}')
+    files={p.name:digest(p.read_bytes()) for p in out.iterdir() if p.is_file()}
+    save_json(out/'manifest.json',{'schema':2,'export_mode':mode,'files':files})
+    print(f'Exported {len(sessions)} races in {mode} mode; default selected on 2025: {choice}')
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ['dataset','source','training','evaluation','output']:p.add_argument('--'+name,required=True)
+    p.add_argument('--mode',choices=['aggregate','full'],default='aggregate')
     a=p.parse_args();torch.set_num_threads(1)
-    with threadpool_limits(limits=1):run(a.dataset,a.source,a.training,a.evaluation,a.output)
+    with threadpool_limits(limits=1):run(a.dataset,a.source,a.training,a.evaluation,a.output,a.mode)
 if __name__=='__main__':main()

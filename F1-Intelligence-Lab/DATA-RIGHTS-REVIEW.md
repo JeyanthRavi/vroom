@@ -44,3 +44,11 @@ for rights questions. Ask which rights holder can authorize this specific use.
 
 Do not send this draft without the user's authorization. Retain any response and
 its exact scope before describing the data as licensed or cleared.
+
+## Status log
+
+No message was sent as part of the final-release work. The owner can record any later contact and its exact scope here.
+
+| Date sent | Recipient / channel | Reply date | Reply summary | Scope granted or denied | Evidence location |
+|---|---|---|---|---|---|
+|  |  |  |  |  |  |

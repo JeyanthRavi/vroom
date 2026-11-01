@@ -101,7 +101,8 @@ def test_import_queue_and_failure_recovery(tmp_path,monkeypatch):
     import f1_intelligence_lab.library_api as api
     lib=Library(tmp_path);monkeypatch.setattr(api,'library',lib)
     monkeypatch.setattr(api,'run_worker',lambda key:None)
-    client=TestClient(app)
+    monkeypatch.setenv('F1_ADMIN_TOKEN','test-token')
+    client=TestClient(app,headers={'x-f1-admin-token':'test-token'})
     args={'provider':'openf1','year':2024,'event':'Monza','session_code':'R'}
     first=client.post('/api/library/import',json=args)
     assert first.status_code==202
@@ -112,6 +113,15 @@ def test_import_queue_and_failure_recovery(tmp_path,monkeypatch):
     assert client.post('/api/library/import',json=args).json()['id']!=key
     assert client.post('/api/library/import',json=dict(args,event='https://evil.example')).status_code==422
     assert client.get('/api/library/races/missing').status_code==404
+
+
+def test_import_is_disabled_without_admin_configuration(monkeypatch):
+    monkeypatch.delenv('F1_ADMIN_TOKEN',raising=False)
+    monkeypatch.delenv('F1_ALLOW_LOCAL_IMPORT',raising=False)
+    args={'provider':'openf1','year':2024,'event':'Monza','session_code':'R'}
+    response=TestClient(app).post('/api/library/import',json=args)
+    assert response.status_code==403
+    assert 'disabled' in response.json()['detail'].lower()
 
 
 def test_cross_session_comparison_rejected(tmp_path):

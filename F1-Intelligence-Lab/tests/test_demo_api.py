@@ -3,10 +3,12 @@ import hashlib
 from fastapi.testclient import TestClient
 from f1_intelligence_lab.demo_app import app
 
-def package(tmp_path,monkeypatch):
+def package(tmp_path,monkeypatch,legacy=False,mode='aggregate'):
     content={'index.html':'<html>replay</html>','demo.js':'// replay','data.json':'{}'}
     for n,v in content.items():(tmp_path/n).write_text(v)
-    (tmp_path/'manifest.json').write_text(json.dumps({n:hashlib.sha256(v.encode()).hexdigest() for n,v in content.items()}))
+    files={n:hashlib.sha256(v.encode()).hexdigest() for n,v in content.items()}
+    manifest=files if legacy else {'schema':2,'export_mode':mode,'files':files}
+    (tmp_path/'manifest.json').write_text(json.dumps(manifest))
     monkeypatch.setenv('F1_DEMO_EXPORT',str(tmp_path))
 
 def test_replay_and_health(tmp_path,monkeypatch):
@@ -17,6 +19,13 @@ def test_replay_and_health(tmp_path,monkeypatch):
     assert 'nosniff'==client.get('/model-demo/demo.js').headers['x-content-type-options']
     assert client.get('/api/library/import').status_code==404
     assert client.get('/model-demo/manifest.json').status_code==404
+    assert client.get('/model-demo/export-metadata.json').json()['export_mode']=='aggregate'
+    assert client.get('/model-demo/data.json').headers['referrer-policy']=='no-referrer'
+
+def test_legacy_manifest_is_labelled_full(tmp_path,monkeypatch):
+    package(tmp_path,monkeypatch,legacy=True)
+    assert TestClient(app).get('/model-demo/export-metadata.json').json()=={
+        'manifest_schema':1,'export_mode':'legacy_full'}
 
 def test_corrupt_export_fails_closed(tmp_path,monkeypatch):
     package(tmp_path,monkeypatch);(tmp_path/'data.json').write_text('corrupt')

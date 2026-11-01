@@ -8,11 +8,12 @@ from collections import ChainMap
 from pathlib import Path
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
 from telemetry_pit_crew.api import service
 from .library import Library, SessionMap, LapMap
+from .security import require_admin
 
 library = Library()
 service.sessions = ChainMap(service.sessions, SessionMap(library))
@@ -67,7 +68,7 @@ def jobs():
 
 
 @router.post('/api/library/import', status_code=202, tags=['library'])
-def start_import(payload: ImportRequest):
+def start_import(payload: ImportRequest, _admin: None = Depends(require_admin)):
     request = payload.model_dump()
     request['event'] = request['event'].strip()
     if len(request['event']) < 2:

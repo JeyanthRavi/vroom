@@ -1,5 +1,7 @@
 # 04 — Growth, retention, distribution and business
 
+> **PROPOSED — NOT IMPLEMENTED.** This document is a planning artifact, not a description of current product capabilities.
+
 No plan can guarantee a viral hit. This plan optimizes for understandable value, voluntary return, useful sharing and sustainable production. All targets below are proposed pilot decision rules, not observed metrics or industry benchmarks.
 
 ## 1. Growth thesis

@@ -1,5 +1,7 @@
 # Telemetry Pit Crew
 
+> **Data-rights notice:** this is an unofficial research project. OpenF1/FastF1-derived data and all third-party marks remain with their owners. See [the repository notice](../NOTICE.md) and [the current data-rights review](../F1-Intelligence-Lab/DATA-RIGHTS-REVIEW.md).
+
 A web-based, evidence-linked multi-agent Formula 1 lap analysis project. It compares telemetry traces, computes deterministic evidence, and asks four specialist agents to explain the most important performance differences.
 
 ![Status](https://img.shields.io/badge/status-runnable-34c759) ![Python](https://img.shields.io/badge/python-3.9%2B-3776ab)

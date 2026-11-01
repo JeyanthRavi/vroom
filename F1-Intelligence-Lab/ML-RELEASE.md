@@ -80,9 +80,9 @@ PYTHONPATH=src python -m f1_intelligence_lab.restart_evaluate \
 
 PYTHONPATH=src python -m f1_intelligence_lab.export_demo \
   --dataset "$DATASET" --source "$SOURCE_DATA" --training "$TRAIN_RUN" \
-  --evaluation "$EVAL_RUN" --output demo-export
+  --evaluation "$EVAL_RUN" --output demo-export-aggregate
 
-F1_DEMO_EXPORT="$PWD/demo-export" PYTHONPATH=src \
+F1_DEMO_EXPORT="$PWD/demo-export-aggregate" PYTHONPATH=src \
   python -m uvicorn f1_intelligence_lab.demo_app:app --host 127.0.0.1 --port 8766
 ```
 
@@ -106,7 +106,9 @@ package rejection are tested. Thirty loopback full-data requests had median
 
 The export contains 36 races and five model/baseline choices; no model pickle,
 API keys, raw caches or user files. It is about 7.2 MB. For static hosting, publish
-only `demo-export/index.html`, `demo.js`, `data.json` and `manifest.json` together.
+only `demo-export-aggregate/index.html`, `demo.js`, `data.json` and `manifest.json` together.
+The exporter defaults to aggregate mode. `--mode full` is an explicit local-only
+choice while lap-level redistribution permission remains unresolved.
 For a small ASGI container, from this directory:
 
 ```bash
@@ -142,15 +144,6 @@ data refresh needs a new coverage/error review, not automatic retraining.
 
 ## Résumé wording
 
-**Vroom — F1 ML/DL Race Analysis** · Python, PyTorch, scikit-learn, FastAPI, JavaScript
-
-- Built an event-time feature pipeline and trained gradient-boosting and GRU
-  next-lap regressors on 2025 race data with race-separated validation.
-- Evaluated frozen models on 7,195 eligible laps from 15 previously examined
-  2026 races; achieved 5.17-second equal-race MAE versus a 6.05-second rolling
-  median baseline, with documented interruption and restart failure analysis.
-- Published a 36-race historical replay dashboard with driver/model selection,
-  predicted-versus-actual charts, checksum-verified artifacts and reproducible tests.
-
-Describe this as a public historical replay, not a production live ML service.
-Do not claim live prediction, unseen-2026 accuracy, all races, or that DL beats boosting.
+Résumé wording is generated from verified release artifacts in
+[`RESUME-CLAIMS.md`](RESUME-CLAIMS.md) during Phase 10. Do not copy metrics from
+this document into a résumé independently.

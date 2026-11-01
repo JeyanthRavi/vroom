@@ -38,6 +38,15 @@ Retain the version ID above. After a later faulty deployment, redeploy that save
 version using Sites, then verify the deployment status and public assets again.
 No newer-version rollback has been exercised on this public Site yet.
 
+### Immediate privacy rollback while rights remain unresolved
+
+This is an owner action; the release process does not change hosting visibility automatically.
+
+1. Open the hosting project identified above and change its audience from public to private/owner-only. If that host does not offer private visibility, disable or unpublish the deployment without deleting the saved version.
+2. From a signed-out browser, request `/`, `/demo.js`, and `/data.json`. Each must require authentication or return a non-success response; a `200` response means the rollback is incomplete.
+3. Keep the saved version ID and local checksum manifest so the reviewed build remains recoverable.
+4. Before any later public restoration, obtain and record the relevant rights clarification, build the default aggregate export, verify its checksums, and repeat anonymous browser checks.
+
 ## Remaining limits
 
 - [Rights review](DATA-RIGHTS-REVIEW.md): public redistribution permission remains

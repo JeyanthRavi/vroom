@@ -80,6 +80,10 @@ def test_import_does_not_mutate_demo():
     assert client.post('/api/races/analyze', json={'csv':'invalid'}).status_code == 422
 
 
+def test_http_import_enforces_documented_500kb_limit():
+    assert client.post('/api/races/analyze',json={'csv':'x'*500_001}).status_code==422
+
+
 def test_input_order_does_not_change_analysis_and_sparse_slope():
     records = ['AAA,2,80,HARD,1,0,GREEN','AAA,4,82,HARD,1,0,GREEN','AAA,8,86,HARD,1,0,GREEN']
     a = analyze(HEADER+'\n'.join(records))

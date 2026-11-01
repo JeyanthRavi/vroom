@@ -1,5 +1,7 @@
 # 02 — UX, visual design, Android and widgets
 
+> **PROPOSED — NOT IMPLEMENTED.** This document is a planning artifact, not a description of current product capabilities.
+
 This is a design specification, not a completed design audit. Proposed tokens and thresholds require rendered testing before they become approved defaults.
 
 ## 1. Experience principles

@@ -1,5 +1,7 @@
 # StewardLens
 
+> **Data-rights notice:** this is an unofficial research project. Linked FIA documents and all third-party data and marks remain with their owners. See [the repository notice](../NOTICE.md) and [the current data-rights review](../F1-Intelligence-Lab/DATA-RIGHTS-REVIEW.md).
+
 StewardLens is an educational Formula 1 research prototype. It assembles an
 evidence packet for an incident, asks specialist agents to examine different
 parts of the case, and returns an inspectable simulated steward decision.

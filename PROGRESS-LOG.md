@@ -25,3 +25,44 @@ Claims changed in docs:
 
 - None.
 
+## Phase 1 — Safety, rights and honesty   (2026-11-02)
+
+Done:
+
+- Added aggregate/full export modes in `F1-Intelligence-Lab/src/f1_intelligence_lab/export_demo.py`; aggregate is the CLI default and removes driver/lap rows and observed durations.
+- Added manifest schema 2 with `export_mode`, legacy-manifest compatibility, checksummed asset validation, a sanitized metadata route, and visible aggregate/full/legacy badges.
+- Generated the new default `F1-Intelligence-Lab/demo-export-aggregate/` (36 race summaries, 108 KB). The frozen legacy full package remains unchanged for local audit; it is not the Docker/default deployment input.
+- Added CSP, `X-Content-Type-Options`, and `Referrer-Policy` headers to every replay response.
+- Added `F1_ADMIN_TOKEN` authentication to provider import and race-detail network/write endpoints. With no token they return 403, except when `F1_ALLOW_LOCAL_IMPORT=1` and both client and configured bind host are loopback.
+- Added and tested the documented 500 KB CSV ceiling.
+- Added `NOTICE.md`, rights banners to all four READMEs, a blank permission status log, a precise owner-run privacy rollback procedure, and owner decisions to `OPEN-QUESTIONS.md`. No message or hosting change was made.
+- Marked all six blueprint chapters **PROPOSED — NOT IMPLEMENTED**.
+- Replaced résumé copy in `F1-Intelligence-Lab/ML-RELEASE.md` with a pointer to the Phase 10 generated claims document.
+- Reviewed the requested overclaim terms across Markdown, HTML, JavaScript, and Python. Remaining matches are either explicit limitations, source descriptions (for example, linked official FIA documents), measured/frozen findings, internal variable names such as `best`, or clearly proposed plans.
+
+Verified:
+
+- Focused safety suite: `46 passed in 4.84s`.
+- Full repository suite with PyTorch: `171 passed in 6.50s`.
+- Full repository suite without PyTorch: `152 passed, 5 skipped in 4.10s`; all skips explicitly require PyTorch.
+- Aggregate-package smoke test: checksum-verified health and metadata endpoints returned successfully; schema 2 contained 36 race summaries and no `sessions` key.
+- `pip-audit` was unavailable in the clean environment. Fallback `pip list --outdated` reported `mpmath 1.3.0 → 1.4.1`, `pypdf 5.9.0 → 6.21.4`, and `setuptools 58.0.4 → 82.0.1`; no dependency was changed without compatibility testing.
+- Tracked-file secret-pattern review found environment-variable names, test-only placeholder tokens, and documentation references only; no credential file, private key, `.env`, or committed secret value was found.
+- `git diff --check`: clean.
+
+Not done / blocked:
+
+- Public redistribution permission remains unresolved. The owner must decide whether to make the current hosted full replay private and must record any later permission response.
+- Source-code licence choice remains an owner decision.
+
+Claims changed in docs:
+
+| Location | Previous wording | Release wording / treatment |
+|---|---|---|
+| `F1-Intelligence-Lab/README.md` | “2026 is no longer an untouched holdout” | “evaluated on previously examined 2026 races; not an independent holdout” |
+| `F1-Intelligence-Lab/MODEL-CARD.md` | “previously seen test season” | Uses the standard previously-examined/non-independent wording |
+| Replay UI and export limitations | “previously seen regression set” / “2026 regression” | Uses the standard previously-examined/non-independent wording |
+| Replay landing copy | “Real cached race data” with lap-level explorer assumed | States aggregate summaries are the default and labels full/legacy packages |
+| Blueprint chapters | Feature prose could be read as current capability | Every chapter now opens with **PROPOSED — NOT IMPLEMENTED** |
+| `ML-RELEASE.md` résumé section | Hand-maintained résumé metrics | Removed; points to artifact-generated `RESUME-CLAIMS.md` |
+

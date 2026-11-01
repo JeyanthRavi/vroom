@@ -1,0 +1,9 @@
+{
+  "schema": 2,
+  "export_mode": "aggregate",
+  "files": {
+    "index.html": "2760638a55396ced921d8224efd9864b7c86bc6f449c4ae65c1d7971b10510f6",
+    "data.json": "0b09b3360c3ad27d2d5db44dca89ed2c8e7b98b5190181afb6defca33618c7ba",
+    "demo.js": "9f4b911beb8bead2966d194388332392f8e06e75426085efba886ff2085793f9"
+  }
+}

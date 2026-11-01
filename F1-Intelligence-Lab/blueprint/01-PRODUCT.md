@@ -1,5 +1,7 @@
 # 01 — Product strategy and requirements
 
+> **PROPOSED — NOT IMPLEMENTED.** This document is a planning artifact, not a description of current product capabilities.
+
 Status: proposed. Requirements are written for a near-zero-cash solo/student build. Customer demand, activation and willingness-to-pay are unmeasured.
 
 ## 1. Product thesis
