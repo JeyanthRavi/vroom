@@ -97,3 +97,24 @@ Claims changed in docs:
 - Replaced obsolete hard-coded suite counts with the current `make test` verification command.
 - Replaced the stale “2026 holdout remains reserved” root README narrative with the measured, limitation-first summary and standard previously-examined wording.
 
+## Phase 3 — Research design   (2026-11-02)
+
+Done:
+
+- Created `research/PROTOCOL.md` before any RQ1–RQ4 experiment code.
+- Fixed questions, hypotheses, 2025 rolling-origin development, whole-race splits, baselines, metrics, paired 10,000-resample race bootstrap, decision rules, claims language, and artifact/determinism requirements.
+- Fixed the forward-holdout boundary as race start strictly after 2026-11-02. Previously examined 2026 data is regression-only and cannot substitute.
+
+Verified:
+
+- Protocol checked against the non-negotiable rules: no 2026 tuning, no live/causal/official claim, whole-race splits, calibration disjointness, baseline comparison, fixed seeds, and fixture-only labeling are explicit.
+- `git diff --check`: clean.
+
+Not done / blocked:
+
+- Forward holdout is pending until at least three verified races start after the protocol boundary.
+
+Claims changed in docs:
+
+- None; this phase pre-registers conditions under which future claims would be allowed.
+

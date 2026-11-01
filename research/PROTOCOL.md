@@ -1,0 +1,124 @@
+# Vroom research protocol
+
+**Status:** pre-registered before RQ1–RQ4 experiment code  
+**Protocol date:** 2026-11-02  
+**Forward-holdout boundary:** race start strictly after 2026-11-02  
+**Scope:** retrospective research; no live, causal, official, safety, strategy, or betting claim
+
+This document fixes questions, partitions, metrics, decision rules, and intended claims before new experiment code is written. Any later deviation must be appended with a reason and must not be chosen after seeing affected labels.
+
+## Shared data and leakage rules
+
+- Reuse the existing hash-verified audit outputs and whole-race chronological splits. No row from one race may appear in more than one partition.
+- Development and model selection use 2025 only. Rolling-origin folds train on all eligible earlier 2025 races and validate on the next chronological block; races remain intact.
+- Existing 2025 partitions retain their frozen meanings: training before 1 September; validation 1 September–31 October; test 1 November–31 December.
+- All 2026 results are labeled exactly: **evaluated on previously examined 2026 races; not an independent holdout.** They are regression checks only and cannot select features, hyperparameters, variants, thresholds, or claims.
+- The new forward holdout contains every verified race with a start strictly after 2026-11-02. It is opened once by `forward_holdout.py`, which writes `protocol.json` and source hashes before reading labels. Fewer than three verified races means **forward holdout pending**; fixture tests and the opening script ship, but 2026 is not substituted.
+- Every feature timestamp must be at or before the prediction cutoff. Target-lap state, target duration, later race-control events, post-race classification, future pit activity, and retrospectively derived outcome fields are forbidden inputs.
+- Calibration races are disjoint from fitting races. Feature preprocessing is fit on training data only.
+
+## Shared baselines and evaluation
+
+Every regression table includes, on exactly the same eligible rows:
+
+1. last completed lap;
+2. rolling median of 3 completed laps;
+3. rolling median of 5 completed laps;
+4. rolling mean of completed history;
+5. per-circuit prior median computed from training races only.
+
+The strongest baseline is selected on the relevant 2025 development folds, never 2026. The headline regression metric is equal-race MAE in seconds. Pooled RMSE and R² are descriptive. Comparisons report paired per-race differences, wins/races, and a 95% percentile interval from 10,000 deterministic bootstrap resamples of whole races. Races are the resampling unit; the interval assumes exchangeable races and does not remove temporal, circuit, or regulation dependence. No p-value search is performed.
+
+### Shared decision language
+
+- **Success:** the pre-specified candidate's 95% paired race-bootstrap interval lies entirely below zero against the strongest same-row baseline on the 2025 test set, the point estimate improves, and no primary safety/calibration criterion fails.
+- **Failure:** the interval lies entirely above zero, or a required integrity/calibration criterion fails.
+- **Inconclusive:** the interval includes zero, coverage/sample requirements are unmet, or fewer than three forward-holdout races exist.
+- Results on previously examined 2026 races can identify regression/failure modes but cannot turn an inconclusive development result into success.
+
+## RQ1 — Separate pace from interruption
+
+**Question.** Does separating conditional green-flag pace from near-term neutralisation risk improve mixed-target next-lap forecasts and interpretation relative to one regression?
+
+**Hypothesis.** A two-stage system improves equal-race MAE on the original mixed target without degrading calibration of neutralisation risk.
+
+### Task A: pace
+
+- Target: next-lap duration only when the target is green flag and neither pit-in nor pit-out.
+- Inputs: the existing ten contiguous completed-lap history and cutoff-safe tyre/race-state features.
+- Candidates: rolling-median baseline, existing histogram gradient boosting, existing GRU.
+- Primary metric: equal-race MAE; shared regression metrics and intervals also apply.
+
+### Task B: neutralisation hazard
+
+- Binary targets: first SC, VSC, or RED deployment begins within H=1 and H=3 laps.
+- Inputs: race-state v2, current lap number, circuit, completed-lap pace variance, cutoff-observed local-yellow count, cutoff-observed cars in pit window, and distance to training-defined tyre-age thresholds.
+- Models: empirical base rate; weighted logistic regression; histogram gradient boosting classifier; small GRU or TCN with comparable inputs.
+- Class imbalance: training weights only; no future resampling or outcome-derived feature.
+- Primary: PR-AUC. Secondary: ROC-AUC, Brier score, log loss, fixed ten-bin reliability and ECE, plus per-race/per-circuit counts. Undefined single-class metrics are reported as unavailable, never coerced.
+
+### Combined forecast and decision
+
+Combine hazard probability and conditional pace with a training-only interruption-duration reference. Evaluate on the original mixed target against single-stage candidates and the strongest baseline. RQ1 succeeds only if the combined system meets the shared success rule and hazard PR-AUC exceeds the empirical prevalence on the 2025 test set. Otherwise report failure or inconclusive plainly.
+
+## RQ2 — Calibrated uncertainty
+
+**Question.** Do split conformal and conformalised quantile regression give useful near-nominal next-lap intervals on whole unseen races?
+
+**Hypothesis.** On 2025 test races, empirical coverage is no more than five percentage points below nominal at 80% and 90%, with finite width; coverage degrades on the previously examined 2026 cohort.
+
+- Fit point/quantile boosting on 2025 training races only.
+- Calibration: held-out 2025 validation races, disjoint from training. Quantiles use α/2 and 1−α/2; conformal correction uses the finite-sample “higher” quantile.
+- Variants: global split conformal, CQR, and Mondrian GREEN/non-GREEN only when each calibration group has at least 30 rows; otherwise mark that variant unsupported.
+- Report per race at 80% and 90%: empirical coverage, Wilson interval, mean interval width in seconds, pinball loss, and interval score.
+- Success requires both 2025 nominal levels to meet the five-point undercoverage tolerance in the macro race average, with no invalid bounds. Wider intervals are not called better merely for covering more.
+- The additive API fields are `lower`, `upper`, and `nominal_coverage`; existing response fields remain unchanged.
+
+## RQ3 — Distribution shift and drift
+
+**Question.** Which observable feature shifts accompany the 2025→2026 performance drop, and can a development-only detector flag them before labels?
+
+**Hypothesis.** At least one pre-label feature shows substantial shift and adversarial validation separates seasons above chance, but simple adaptations may not recover performance.
+
+- Compare eligible 2025 rows with the previously examined 2026 rows using population stability index with fixed training-derived bins and two-sample Kolmogorov–Smirnov statistics per numeric feature.
+- Train an adversarial season classifier on whole-race folds; report race-grouped AUC and permutation/top-feature importance. This is a detectability diagnostic, not causation.
+- Show rolling-origin equal-race MAE for baselines and frozen candidates race by race.
+- Test recency weighting, per-circuit normalisation, and rolling-median residual targets. Select a single adaptation using 2025 rolling folds only; apply it once to examined 2026 as a labeled regression check and queue it unchanged for the forward holdout.
+- RQ3 “detectable shift” succeeds if race-grouped adversarial AUC has a 95% race-bootstrap interval entirely above 0.5. Adaptation succeeds only under the shared paired-MAE rule on 2025 test; 2026 never selects it.
+
+## RQ4 — Sequence-model fairness check
+
+**Question.** Under matched histories and parameter budgets, do GRU or TCN sequence models add value beyond sequence boosting and a parameter-matched MLP?
+
+**Hypothesis.** Sequence models may match, but are not assumed to beat, the simpler model; longer contiguous history is the only pre-specified direction.
+
+- Models: sequence boosting, existing GRU, temporal convolutional network, parameter-matched MLP, and every shared baseline.
+- Seeds: 11, 29, and 47 for neural candidates; report ensemble and each seed.
+- Ablations: windows 5/10/15; with/without race state; with/without tyre features. Report every cell, not only the winner.
+- Early stopping and all architecture choices use 2025 validation only. CPU training only.
+- Report parameter count, CPU wall time, seed mean/standard deviation, equal-race MAE, pooled RMSE/R², per-race paired intervals and win counts.
+- RQ4 succeeds for a neural family only if its three-seed ensemble meets the shared success rule against both sequence boosting and the strongest baseline on the 2025 test set. Otherwise the conclusion is simpler-model win, failure, or inconclusive.
+
+## Statistics and artifact policy
+
+- Deterministic seed for bootstrap and classical models: 20261102. Neural seeds are fixed above.
+- Coverage Wilson intervals, reliability bins, ECE, interval score, and paired bootstrap are unit-tested against hand calculations.
+- Each CLI creates a new directory containing `protocol.json` before label access, `results.json`, `per_race.csv`, `predictions.csv`, `REPORT.md`, `environment.json`, and `manifest.json` covering every other artifact.
+- Plots use a headless backend and color-blind-safe palette. Every figure has units, title, and a sibling `.alt.txt` description.
+- A fixture-only run is labeled **fixture-only: not evidence** in its report and consolidated results. It cannot support a résumé metric.
+
+## Claims table
+
+| Intended claim | Permitted only if | Otherwise say |
+|---|---|---|
+| Separating pace and interruption improves mixed-target forecasting | RQ1 shared success rule and hazard PR-AUC above prevalence on 2025 test; forward holdout later confirms | “Two-stage pipeline evaluated; improvement was inconclusive/negative” |
+| Hazard model identifies near-term neutralisation risk | PR-AUC, calibration, base rate and sample counts are all reported; result is not fixture-only | “Hazard modelling feasibility experiment” |
+| Intervals are calibrated | 2025 test macro coverage meets the pre-specified tolerance at both levels | “Conformal intervals were evaluated; observed coverage was …” |
+| 2025→2026 covariate shift is detectable | RQ3 grouped-AUC interval is entirely above 0.5 | “Shift diagnostics were inconclusive” |
+| An adaptation improves generalisation | Selected on 2025 rolling folds and meets shared 2025 test rule; forward holdout later confirms | “Adaptation queued; examined-2026 result is a regression check” |
+| TCN/GRU beats simpler models | RQ4 neural success rule is met and later forward evidence agrees | “Neural and simpler sequence models were compared under matched evaluation” |
+| Forward generalisation | At least three post-boundary verified races are opened once by the frozen script | “Forward holdout pending” |
+
+## Optional RQ5
+
+A descriptive matched-sample undercut comparison may be added only after RQ1–RQ4. It matches on circuit, tyre age, compound and pre-stop gap, reports coverage and confounding, and never uses causal wording. Thin coverage means skip and document the reason.
