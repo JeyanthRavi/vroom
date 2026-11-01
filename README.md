@@ -11,10 +11,9 @@ and a compact GRU. The key result is deliberately honest: learned models improve
 some error slices but do not beat the rolling-median baseline on every metric.
 
 **[Open the public aggregate demo](https://jeyanthravi.github.io/vroom/)** ·
-[Read the model card](F1-Intelligence-Lab/MODEL-CARD.md) ·
-[See the three interview decisions](INTERVIEW-DECISIONS.md)
+[Read the model card](F1-Intelligence-Lab/MODEL-CARD.md)
 
-| Recruiter snapshot | Details |
+| Project snapshot | Details |
 | --- | --- |
 | Stack | Python, FastAPI, scikit-learn, PyTorch, pytest, Ruff, mypy, Docker |
 | ML question | Can sequence/tree models predict the next eligible lap better than strong rolling baselines? |

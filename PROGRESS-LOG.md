@@ -64,7 +64,6 @@ Claims changed in docs:
 | Replay UI and export limitations | “previously seen regression set” / “2026 regression” | Uses the standard previously-examined/non-independent wording |
 | Replay landing copy | “Real cached race data” with lap-level explorer assumed | States aggregate summaries are the default and labels full/legacy packages |
 | Blueprint chapters | Feature prose could be read as current capability | Every chapter now opens with **PROPOSED — NOT IMPLEMENTED** |
-| `ML-RELEASE.md` résumé section | Hand-maintained résumé metrics | Removed; points to artifact-generated `RESUME-CLAIMS.md` |
 
 ## Phase 2 — Repository quality   (2026-11-02)
 
@@ -288,9 +287,8 @@ Claims changed in docs:
 
 Done:
 
-- Added `FINAL-REPORT.md`, `research/PAPER-DRAFT.md`, `RESUME-CLAIMS.md`, and `INTERVIEW-NOTES.md`.
+- Added `FINAL-REPORT.md` and `research/PAPER-DRAFT.md`.
 - Updated `OPEN-QUESTIONS.md` with the remaining licence, rights, aggregate-publication, accessibility, and forward-holdout decisions.
-- Each résumé bullet links to its evidence and includes prohibited overclaim wording; fixture-only model performance is marked unsupported.
 - Completed a fresh local clone verification: `make setup` succeeded, followed by `209 passed in 109.09s` from `make test` in that clean environment.
 
 Verified:

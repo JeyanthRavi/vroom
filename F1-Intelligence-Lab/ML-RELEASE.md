@@ -141,9 +141,3 @@ and rollback smoke test. Container health is checked every 30 seconds when run.
 No background monitoring service or notification subscription is installed.
 Static replay has no incoming feature stream to monitor for drift; each future
 data refresh needs a new coverage/error review, not automatic retraining.
-
-## Résumé wording
-
-Résumé wording is generated from verified release artifacts in
-[`RESUME-CLAIMS.md`](../RESUME-CLAIMS.md) during Phase 10. Do not copy metrics from
-this document into a résumé independently.
